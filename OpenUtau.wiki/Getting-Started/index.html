@@ -1,0 +1,2136 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://nagotown.github.io/ou_wiki/OpenUtau.wiki/Getting-Started/">
+      
+      
+        <link rel="prev" href="../Install/">
+      
+      
+        <link rel="next" href="../FAQ/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Getting Started - OpenUtau Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#about-openutau" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OpenUtau Wiki" class="md-header__button md-logo" aria-label="OpenUtau Wiki" data-md-component="logo">
+      
+  <img src="../../favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OpenUtau Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting Started
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nagotown/ou_wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OpenUtau Wiki" class="md-nav__button md-logo" aria-label="OpenUtau Wiki" data-md-component="logo">
+      
+  <img src="../../favicon.png" alt="logo">
+
+    </a>
+    OpenUtau Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nagotown/ou_wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For beginners
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    For beginners
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-openutau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About OpenUtau
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating projects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tempo-and-time-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tempo and Time Signature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opening-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opening projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Saving projects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Saving projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autosave-backups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autosave Backups
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting audio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tracks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tracks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating tracks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importing-tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importing tracks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing tracks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transcribe-audio-to-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transcribe audio to notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navigation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-note-editing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic note editing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic note editing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slur-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slur notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-edits-transformers-and-legacy-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch Edits, Transformers and Legacy Plugins
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit expressions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-pitchbends" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit pitchbends
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-vibrato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit vibrato
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-phoneme-envelopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit phoneme envelopes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beta-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beta version
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Keyboard-Shortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keyboard Shortcuts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Phonemizers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phonemizers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Resamplers-and-Wavtools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resamplers and Wavtools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Expressions-%28Flags%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About expressions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Legacy-Plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UTAU Plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Voicebank-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Voicebank development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-note-%E2%80%90-character.yaml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech note ‐ character.yaml
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ENUNU-NNSVS-Support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ENUNU NNSVS Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DiffSinger-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DiffSinger support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VOICEVOX-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VOICEVOX support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release-Notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For Developers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    For Developers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Compiling-from-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiling OpenUtau from source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-new-phonemizers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing new phonemizers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Compiling-G2p-Models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiling G2p Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Adding-support-for-a-new-synthesis-engine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding support for a new synthesis engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contributing-to-OpenUtau%27s-localization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing to OpenUtau's localization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../USTX-file-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    USTX file format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%5BPROPOSAL%5D-svs.io-%E2%80%90-singing-voice-synthesis-backend-API/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    [PROPOSAL] svs.io ‐ singing voice synthesis backend API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-note-%E2%80%90-music-is-music%2C-phonetics-is-phonetics-%28also-why-you-don%27t-need-legacy-plugins%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech note ‐ music is music, phonetics is phonetics (also why you don't need legacy plugins)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Known-Bugs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Known bugs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Fork-OpenUtau-and-develop-a-new-editor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-openutau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About OpenUtau
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating projects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tempo-and-time-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tempo and Time Signature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opening-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opening projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Saving projects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Saving projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autosave-backups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autosave Backups
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting audio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tracks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tracks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating tracks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importing-tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importing tracks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing tracks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transcribe-audio-to-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transcribe audio to notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navigation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-note-editing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic note editing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic note editing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slur-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slur notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-edits-transformers-and-legacy-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch Edits, Transformers and Legacy Plugins
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit expressions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-pitchbends" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit pitchbends
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-vibrato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit vibrato
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-phoneme-envelopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit phoneme envelopes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beta-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beta version
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Getting Started</h1>
+
+<h2 id="about-openutau">About OpenUtau<a class="headerlink" href="#about-openutau" title="Permanent link">&para;</a></h2>
+<p>Please see <a href="../Tutorials/">Tutorials</a> for an overview of OpenUtau and how it differs from conventional UTAU.</p>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<p>For installing the OpenUtau Editor, voicebanks, and resampler, please see the <a href="../Install/">Install</a> page.</p>
+<h2 id="projects">Projects<a class="headerlink" href="#projects" title="Permanent link">&para;</a></h2>
+<h3 id="creating-projects">Creating projects<a class="headerlink" href="#creating-projects" title="Permanent link">&para;</a></h3>
+<p>When you start OpenUtau, you will see a blank start screen.</p>
+<p>You can start by clicking the "New" on the Top Left and creating a blank project.</p>
+<p><img alt="new project" src="https://i.imgur.com/CO1whEG.png" /></p>
+<h4 id="tempo-and-time-signature">Tempo and Time Signature<a class="headerlink" href="#tempo-and-time-signature" title="Permanent link">&para;</a></h4>
+<p>Click on the tempo or time signature in the top left corner to edit it.</p>
+<p><img alt="tempo timesig" src="https://i.imgur.com/5ML7X13.gif" /></p>
+<p>Time signatures can have any positive whole number on top, and any power of 2 on the bottom.<br />
+Tempos can be any number, including decimals.  </p>
+<p>You can also add a tempo and time signature change by right-clicking the bar/measure labels.  </p>
+<p>Unlike changing at the Top Left, which will change the tempo/time sign for the entire project,<br />
+This method changes only the tempo/time sign from the point you have right-clicked. </p>
+<p><img alt="tempo and timesig change" src="https://i.imgur.com/jxjnW1O.gif" /></p>
+<h3 id="opening-projects">Opening projects<a class="headerlink" href="#opening-projects" title="Permanent link">&para;</a></h3>
+<p>Open projects using <strong>File &gt; Open</strong>, or <code>Ctrl+O</code>.<br />
+You can open the following formats.
+- .ustx: OpenUtau project file
+- .ust: UTAU project file
+- .vsqx: VOCALOID&frac34; project file
+- .mid/.midi: General music score file
+- <a href="https://github.com/sdercolin/utaformatix-data">.ufdata</a>: <a href="https://sdercolin.github.io/utaformatix3/">UtaFormatix</a>'s internal data format. Compatible with most vocal synthesis project files.
+- .musicxml: A universal music score file format for handling Western music staff notation as data.</p>
+<h3 id="saving-projects">Saving projects<a class="headerlink" href="#saving-projects" title="Permanent link">&para;</a></h3>
+<p>OpenUtau projects are saved as <code>.ustx</code> files.<br />
+Save the current project using <strong>File &gt; Save</strong>, or <code>Ctrl+S</code>.<br />
+Save the project as a new file using <strong>File &gt; Save As</strong>.</p>
+<p>After saving the project, you can also export all tracks as separate <code>.ust</code> files using <strong>File &gt; Export Project &gt; Export Ust Files</strong>. The files will be saved in an Export folder next to the original <code>.ustx</code> file. </p>
+<h4 id="autosave-backups">Autosave Backups<a class="headerlink" href="#autosave-backups" title="Permanent link">&para;</a></h4>
+<p>OpenUtau automatically saves project backups every 30 seconds. It also automatically saves backups when it detects a crash.
+For saved projects, backups are saved next to the file with the name “filename-autosave.ustx”.
+For unsaved projects, backups are saved in the “Backups” folder within the data folder (located in places like the Singers or Resamplers folders).</p>
+<p>If the program crashed or was force-closed previously, a project recovery dialog will appear upon the next startup, allowing you to restore the previous state.</p>
+<h3 id="exporting-audio">Exporting audio<a class="headerlink" href="#exporting-audio" title="Permanent link">&para;</a></h3>
+<p>After saving the project, use <strong>File &gt; Export Audio &gt; Export wav Files</strong> to render all tracks as separate <code>.wav</code> files.<br />
+You can also save all of the tracks mixed to a single <code>.wav</code> file via <strong>Mixdown To Wav File</strong>.  </p>
+<p>The files will be saved in an Export folder next to the original <code>.ustx</code> file. </p>
+<h2 id="tracks">Tracks<a class="headerlink" href="#tracks" title="Permanent link">&para;</a></h2>
+<h3 id="creating-tracks">Creating tracks<a class="headerlink" href="#creating-tracks" title="Permanent link">&para;</a></h3>
+<p>Click the <strong>+</strong> icon in the left panel to create a new track.</p>
+<p><img alt="create track" src="https://i.imgur.com/Fk69Epl.gif" /></p>
+<h3 id="importing-tracks">Importing tracks<a class="headerlink" href="#importing-tracks" title="Permanent link">&para;</a></h3>
+<p>Imported tracks will be added to the current project under all of your existing tracks.</p>
+<p>You can import tracks from <code>.ustx</code>, <code>.ust</code>, and <code>.vsqx</code> files using <strong>File &gt; Import Tracks</strong>.<br />
+You can import audio from <code>.wav</code>, <code>.mp3</code>, <code>.ogg</code>, and <code>.flac</code> files using <strong>File &gt; Import Audio</strong>.<br />
+You can import tracks MIDI using <strong>File &gt; Import MIDI</strong>.</p>
+<h3 id="editing-tracks">Editing tracks<a class="headerlink" href="#editing-tracks" title="Permanent link">&para;</a></h3>
+<p>Select a singer from the menu in the track header.</p>
+<p><img alt="select singer" src="https://i.imgur.com/PIzAx6s.gif" /></p>
+<p>You can optionally select a phonemizer, which will automatically convert note lyrics into a form the voicebank can play. For more details, please check <a href="../Phonemizers/">Phonemizers</a>.</p>
+<p><img alt="phonemizer" src="https://i.imgur.com/wcMNzKy.gif" /></p>
+<p>The <code>M</code> in the right corner of the track header mutes the track, while the <code>S</code> solos the track. The settings cog in the lower right allows you to select a Resampler and Wavtool.</p>
+<p>You are also able to click and drag the volume slider to adjust the volume of the track. Right click to reset this slider to +00.0.</p>
+<p><img alt="track volume and settings" src="https://i.imgur.com/MJY5vtJ.gif" /></p>
+<p>Click in the track area to create a new part. You can drag the part to move it around, drag the end to change the length, and right click to delete parts.</p>
+<p><img alt="edit part" src="https://i.imgur.com/aAFe6XU.gif" /></p>
+<p>The right click dialog also allows you to rename a part.</p>
+<p><img alt="rename part" src="https://i.imgur.com/NmStbDA.gif" /></p>
+<p>Double click on a part to open the note editor.</p>
+<p><img alt="open part" src="https://i.imgur.com/ZWOQ2Ss.gif" /></p>
+<h3 id="navigation">Navigation<a class="headerlink" href="#navigation" title="Permanent link">&para;</a></h3>
+<p>Click on the bar/measure labels to move the playback cursor, and press space to start/stop playing.</p>
+<p><img alt="playback" src="https://i.imgur.com/jalr2JP.gif" /></p>
+<p>To scroll vertically, scroll normally.</p>
+<p><img alt="verti scroll" src="https://i.imgur.com/QegYsJX.gif" /></p>
+<p>To scroll horizontally, you can hold shift and scroll, or hover your cursor over the horizontal scroll bar and scroll.</p>
+<p><img alt="hori scroll" src="https://i.imgur.com/3UH3Kt6.gif" /></p>
+<p>To zoom horizontally, hover your cursor over the bar/measure labels and scroll.<br />
+You can also use 'Ctrl + scroll' instead.</p>
+<p><img alt="hori zoom" src="https://i.imgur.com/yOTVNEi.gif" /></p>
+<p>To zoom vertically, hover your cursor over the vertical zoom icon and scroll.</p>
+<p><img alt="verti zoom" src="https://i.imgur.com/a8IE9W2.gif" /></p>
+<h3 id="transcribe-audio-to-notes">Transcribe audio to notes<a class="headerlink" href="#transcribe-audio-to-notes" title="Permanent link">&para;</a></h3>
+<p>OpenUtau can autometically transcribe wave parts to note parts.</p>
+<p>Before using, please download the model from <a href="https://github.com/xunmengshe/OpenUtau/releases/download/0.0.0.0/some-0.0.1.oudep">here</a> and install it using "Tools → Install Dependency (.oudep)"</p>
+<p>Right click on a wave part and click "Transcribe audio to create a note part". The transcription process takes about 1 minute.</p>
+<p>The model is trained on clean solo vocal, so it works best on this kind of audio. It may not work well on music with instrumental or with heavy reverberation.</p>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<p>Toggle tips using the question mark button or pressing <code>T</code> on the keyboard.</p>
+<p><img alt="tips" src="https://i.imgur.com/6qI2FBD.gif" /></p>
+<h3 id="navigation_1">Navigation<a class="headerlink" href="#navigation_1" title="Permanent link">&para;</a></h3>
+<p>Scroll, zoom, and playback function the same way as the track editor.</p>
+<h3 id="basic-note-editing">Basic note editing<a class="headerlink" href="#basic-note-editing" title="Permanent link">&para;</a></h3>
+<p>There are two note creation modes:</p>
+<p><code>Pen Tool</code></p>
+<blockquote>
+<p>Click to create notes, Right click to bring up an options menu. This is a good mode for tuning and intensive lyric editing due to the ease of access to batch editing tools.</p>
+</blockquote>
+<p><code>Pen Tool +</code></p>
+<blockquote>
+<p>Click to create notes, and right click to delete notes. This is a good mode for composition and UST creation, due to its speed.</p>
+</blockquote>
+<p><img alt="create" src="https://i.imgur.com/BKKtoFA.gif" /></p>
+<p>Double click to start inputting lyric, tab to finish and switch to next note.</p>
+<p><img alt="lyric" src="https://i.imgur.com/pNeA8Ls.gif" /></p>
+<p>Drag notes to move them around. Drag the end to change the length. Hold Alt while adjusting length to resize the following note.</p>
+<p><img alt="resize" src="https://i.imgur.com/oIMv2n4.gif" /></p>
+<p>Hold Ctrl and click and drag to select multiple notes.</p>
+<p><img alt="select" src="https://i.imgur.com/arCrjjJ.gif" /></p>
+<p>Use the arrow keys to move selected notes up/down by 1 semitone, and Ctrl + arrow keys to move notes up/down by 1 octave.</p>
+<p><img alt="move up down" src="https://i.imgur.com/y5PFub7.gif" /></p>
+<p>By default, notes and lengths will snap to the nearest 16<sup>th</sup> note. To toggle snap, click on the snap icon in the top left, or press <code>P</code> on your keyboard.</p>
+<p><img alt="snap" src="https://i.imgur.com/1nIYvrt.gif" /></p>
+<h4 id="slur-notes">Slur notes<a class="headerlink" href="#slur-notes" title="Permanent link">&para;</a></h4>
+<p>To input slur note (a syllable that sings across multiple musical notes), input the word in the first note and input <code>+</code> in following notes.</p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/609e5487-6dfc-4ff9-9c5a-b22a67d5140f" /></p>
+<p>For multisyllable languages such as English, use <code>+</code> to distribute a new syllable and use <code>+~</code> to extend the current syllable.</p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/7537b521-66e6-4be7-a111-9c90e9d6bb99" /></p>
+<h3 id="batch-edits-transformers-and-legacy-plugins">Batch Edits, Transformers and Legacy Plugins<a class="headerlink" href="#batch-edits-transformers-and-legacy-plugins" title="Permanent link">&para;</a></h3>
+<p>These can be accessed via the text options along the top of the Piano Roll view.</p>
+<p><img alt="transformer" src="https://i.imgur.com/6XI0w5z.gif" /></p>
+<p>These are applied to the selected notes (or to the whole part if none are selected) at once.<br />
+Lyric Transformers are used for simple 1-to-1 lyric conversions.</p>
+<p>Legacy Plugins provide limited support for UTAU plugins. To add a plugin, copy the folder into the Plugins folder of OpenUtau. Not all plugins will function normally or completely. Some popular plugins (eg. VCV conversion, CVVC conversion) are handled by track phonemizers.</p>
+<p><img alt="legacy" src="https://i.imgur.com/70eNNC9.gif" /></p>
+<h3 id="edit-expressions">Edit expressions<a class="headerlink" href="#edit-expressions" title="Permanent link">&para;</a></h3>
+<p>Please see <a href="../Expressions-%28Flags">Expressions (Flags)</a>).</p>
+<h3 id="edit-pitchbends">Edit pitchbends<a class="headerlink" href="#edit-pitchbends" title="Permanent link">&para;</a></h3>
+<p>You can show/hide pitchbends using the pitchbend icon in the top left, or by pressing <code>I</code> on your keyboard. Hidden pitchbends will still be applied to the notes.</p>
+<p><img alt="show hide pitchbends" src="https://i.imgur.com/atuJhyF.gif" /></p>
+<p>Click on the pitchbend to create new points. Drag the point to move it around.</p>
+<p><img alt="create pitchbend" src="https://i.imgur.com/pBvL2sD.gif" /></p>
+<p>Right click on the pitchbend to pick a shape.</p>
+<p><img alt="pitchbend shape" src="https://i.imgur.com/EuoimMj.gif" /></p>
+<p>Right click on a point for the option to delete it.</p>
+<p><img alt="delete pitchbend" src="https://i.imgur.com/d2gpswg.gif" /></p>
+<h3 id="edit-vibrato">Edit vibrato<a class="headerlink" href="#edit-vibrato" title="Permanent link">&para;</a></h3>
+<p>You can show/hide vibrato using the vibrato icon in the top left, or by pressing <code>U</code> on your keyboard. Hidden vibrato will still be applied to notes.</p>
+<p><img alt="show hide vibrato" src="https://i.imgur.com/sf86vTG.gif" /></p>
+<p>Click on the vibrato icon below a note to toggle it on or off.</p>
+<p><img alt="toggle vibrato" src="https://i.imgur.com/hxwS8Wy.gif" /></p>
+<p>You can adjust the vibrato starting point, fade-in length, depth, fade-out length, frequency, and phase.</p>
+<p><img alt="edit vibrato" src="https://i.imgur.com/U1hsNem.gif" /></p>
+<h3 id="edit-phoneme-envelopes">Edit phoneme envelopes<a class="headerlink" href="#edit-phoneme-envelopes" title="Permanent link">&para;</a></h3>
+<p>You can show/hide envelopes using the envelope icon in the top left, or by pressing <code>O</code> on your keyboard. Phonemization and envelope edits are applied even when hidden.</p>
+<p><img alt="show hide envelopes" src="https://i.imgur.com/4ugAXeW.gif" /></p>
+<p>Drag the pink lines to adjust the timing of phonemes within notes. Right click to reset the timing. You can right click and drag to reset multiple phonemes at once.</p>
+<p><img alt="envelope timing" src="https://i.imgur.com/0PDVaNx.gif" /></p>
+<p>Drag the bottom left corner to adjust the starting point of the envelope. Right click on the circle to reset.</p>
+<p><img alt="starting point" src="https://i.imgur.com/icQ8PUQ.gif" /></p>
+<p>Drag the top left corner to adjust the overlap amount. Right click on the circle to reset.</p>
+<p><img alt="overlap" src="https://i.imgur.com/reLOTps.gif" /></p>
+<h2 id="beta-version">Beta version<a class="headerlink" href="#beta-version" title="Permanent link">&para;</a></h2>
+<p>OpenUtau provides two release channels: stable and beta. Sometimes you may want to use the beta version to try out new features, or because you encountered a bug in stable version. </p>
+<p>To switch to the beta version, go to "Tools → Preferences", turn on "Beta", and check for update.</p>
+<p>If the method above doesn't work, you can also manually download the latest beta version from https://github.com/stakira/OpenUtau/releases</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

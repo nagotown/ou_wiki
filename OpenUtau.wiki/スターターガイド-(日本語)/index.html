@@ -1,0 +1,2087 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://nagotown.github.io/ou_wiki/OpenUtau.wiki/%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BF%E3%83%BC%E3%82%AC%E3%82%A4%E3%83%89-%28%E6%97%A5%E6%9C%AC%E8%AA%9E%29/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>スターターガイド (日本語) - OpenUtau Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openutau" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OpenUtau Wiki" class="md-header__button md-logo" aria-label="OpenUtau Wiki" data-md-component="logo">
+      
+  <img src="../../favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OpenUtau Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              スターターガイド (日本語)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nagotown/ou_wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OpenUtau Wiki" class="md-nav__button md-logo" aria-label="OpenUtau Wiki" data-md-component="logo">
+      
+  <img src="../../favicon.png" alt="logo">
+
+    </a>
+    OpenUtau Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nagotown/ou_wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For beginners
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    For beginners
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Keyboard-Shortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keyboard Shortcuts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Phonemizers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phonemizers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Resamplers-and-Wavtools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resamplers and Wavtools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Expressions-%28Flags%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About expressions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Legacy-Plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UTAU Plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Voicebank-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Voicebank development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-note-%E2%80%90-character.yaml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech note ‐ character.yaml
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ENUNU-NNSVS-Support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ENUNU NNSVS Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DiffSinger-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DiffSinger support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VOICEVOX-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VOICEVOX support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release-Notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For Developers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    For Developers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Compiling-from-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiling OpenUtau from source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-new-phonemizers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing new phonemizers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Compiling-G2p-Models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiling G2p Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Adding-support-for-a-new-synthesis-engine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding support for a new synthesis engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contributing-to-OpenUtau%27s-localization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing to OpenUtau's localization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../USTX-file-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    USTX file format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%5BPROPOSAL%5D-svs.io-%E2%80%90-singing-voice-synthesis-backend-API/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    [PROPOSAL] svs.io ‐ singing voice synthesis backend API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-note-%E2%80%90-music-is-music%2C-phonetics-is-phonetics-%28also-why-you-don%27t-need-legacy-plugins%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech note ‐ music is music, phonetics is phonetics (also why you don't need legacy plugins)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Known-Bugs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Known bugs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Fork-OpenUtau-and-develop-a-new-editor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#openutau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenUtauとは
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openutau_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenUTAUのインストール
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resampler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        resamplerのインストール
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        シンガーのインストール
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        プロジェクト
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="プロジェクト">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        プロジェクトの作成
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        テンポと拍子
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="テンポと拍子">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        表情
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="表情">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        デフォルトの表情
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        表情の追加
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        プロジェクトを開く
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        プロジェクトの保存
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        音声ファイルの出力
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        トラック
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="トラック">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        トラックの作成
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        トラックのインポート
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        トラックの編集
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="トラックの編集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        日本語用のphonemizer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ナビゲーション
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        音声をノートに変換する
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ノートの編集
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ノートの編集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ナビゲーション
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ノートの編集の基本
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ノートの編集の基本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        スラー
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一括編集とプラグイン
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        表情の編集
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="表情の編集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vel-velocity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VEL (velocity)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vol-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOL (volume)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atk-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ATK (attack)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dec-decay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DEC (decay)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eng-resampler-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ENG (Resampler Engine)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod-modulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MOD (modulation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        カスタムフラグ (数値のないフラグ)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        その他の表情
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ピッチベンドの編集
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ビブラートの編集
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        エンベロープの編集
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ベータ版
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>スターターガイド (日本語)</h1>
+
+<h2 id="openutau">OpenUtauとは<a class="headerlink" href="#openutau" title="Permanent link">&para;</a></h2>
+<p>OpenUtauの概要、従来のUTAUとの違いなどは<a href="https://github.com/stakira/OpenUtau/wiki/%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB-(%E6%97%A5%E6%9C%AC%E8%AA%9E)">チュートリアル (日本語)</a>をご覧ください。</p>
+<h2 id="openutau_1">OpenUTAUのインストール<a class="headerlink" href="#openutau_1" title="Permanent link">&para;</a></h2>
+<p><a href="https://w.atwiki.jp/openutau_ja/pages/14.html">OpenUtau Wiki 日本語版 インストール</a>をご覧ください。</p>
+<h2 id="resampler">resamplerのインストール<a class="headerlink" href="#resampler" title="Permanent link">&para;</a></h2>
+<p>OpenUtauにはwavtool機能とresampler機能が含まれた**Worldline**が内蔵されています。</p>
+<p>外部のresamplerをインストールするには、OpenUtauをインストールしたフォルダーにある”Resamplers”フォルダーに .exe や .dll ファイルを入れます。  </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Linuxの場合、<code>Resamplers</code>フォルダーは<code>~/.local/share/OpenUtau/Resamplers</code>にあります。</p>
+</div>
+<p>もしUTAUを使っている場合、すでにあるresamplerをフォルダー内にコピー＆ペーストしてインストールできます。<br />
+<a href="https://github.com/stakira/OpenUtau/wiki/Resampler%E3%81%A8Wavtool(%E6%97%A5%E6%9C%AC%E8%AA%9E)">ResamplerとWavtool(日本語)</a>のリストで互換性があるか確認してください。</p>
+<p>トラックを追加したあと、トラックヘッダーの右下にある歯車マークを押してresamplerとwavtoolを選択することができます。その場合、現在選択されているresamplerと互換性のあるwavtoolだけが表示されることに注意してください。例えばWorldlineを選択している場合、選択できるwavtoolは"simple"または"convergence"のみです。</p>
+<h2 id="_1">シンガーのインストール<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>UTAU音源やENUNUモデルなどのボイスバンクはOpenUtauでは**シンガー**と呼ばれます。<br />
+シンガーは**ツール &gt; シンガーをインストール**からインストールできます。</p>
+<p><img alt="install voicebank" src="https://i.imgur.com/FpIZ21J.png" /></p>
+<p>システム言語が日本語でない場合、日本語OSで作られたzipファイルを解凍すると、多くの場合ファイル名が文字化けします。**シンガーをインストール**機能を使えば正確なファイル名で解凍することができます。ファイル名が正しく解凍できるのであれば、**手動で解凍**することもできます。</p>
+<p>シンガーをインストールする時、ファイルをエンコードするオプションウィンドウがポップアップします。エンコードが思ったようにいかなかった時、このオプションを使用することができます（例えば、日本語音源を中国のユーザーが作った場合など）。どのようにエンコードされるかをリストで確認できます。</p>
+<p><img alt="select file encoding" src="https://i.imgur.com/sSpDhPc.png" />  </p>
+<p>**シンガーの場所(追加)**からシンガーのあるフォルダーパスを追加で設定することもできます（UTAUのvoiceフォルダーなど）。</p>
+<p><strong>ツール &gt; シンガー</strong> メニューからインストールしたシンガーを確認できます。</p>
+<h2 id="_2">プロジェクト<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">プロジェクトの作成<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>OpenUtauを起動すると、新しい空のプロジェクトが開かれます。<br />
+**ファイル &gt; 新規作成**から新しいプロジェクトを作成することができます。</p>
+<p><img alt="new project" src="https://i.imgur.com/td8Imgw.png" /></p>
+<h3 id="_4">テンポと拍子<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>テンポと拍子を変えるには、左上の角にあるテンポと拍子が表示されている部分をクリックしてください。</p>
+<p><img alt="tempo timesig" src="https://i.imgur.com/5ML7X13.gif" /></p>
+<p>拍子には、分子に任意の正の整数を、分母に2のべき乗の数字を設定できます。
+テンポには、小数を含む任意の数字を設定できます。</p>
+<p>拍子ラベルを右クリックをすることで、テンポと拍子を途中で変更することもできます。</p>
+<p><img alt="tempo and timesig change" src="https://i.imgur.com/jxjnW1O.gif" /></p>
+<h4 id="_5">表情<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>表情では、UTAUのフラグのように、ノートごとにパラメーターを変更できます。表情の種類はプロジェクトごとに保存されます。設定を変えるには <strong>ツール &gt; 表情</strong> を開きます。</p>
+<p><img alt="expressions" src="https://i.imgur.com/XxXvpLj.gif" /></p>
+<h5 id="_6">デフォルトの表情<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>名前</th>
+<th>略称</th>
+<th>説明</th>
+<th>範囲</th>
+<th>デフォルト</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Velocity</td>
+<td>VEL</td>
+<td>子音速度（子音部分の伸縮）</td>
+<td>0 - 200</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Volume</td>
+<td>VOL</td>
+<td>ノートの音量</td>
+<td>0 - 200</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Attack</td>
+<td>ATK</td>
+<td>エンベロープ開始部分の音量</td>
+<td>0 - 200</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Decay</td>
+<td>DEC</td>
+<td>エンベロープ終了部分の音量</td>
+<td>0 - 100</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Voice color</td>
+<td>CLR</td>
+<td>音源のアペンド/カラー</td>
+<td>範囲はありません。オプションから設定。</td>
+<td>空白</td>
+</tr>
+<tr>
+<td>Resampler engine</td>
+<td>ENG</td>
+<td>その場でエンジンを変更する</td>
+<td>範囲はありません。オプションから設定。</td>
+<td>, worldline64.exe</td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>GEN</td>
+<td>gフラグ（フォルマントシフト）</td>
+<td>-100 - 100</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Breath</td>
+<td>BRE</td>
+<td>Bフラグ（ブレシネス）</td>
+<td>0 - 100</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Lowpass</td>
+<td>LPF</td>
+<td>Hフラグ（ローパスフィルター）</td>
+<td>0 - 100</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Modulation</td>
+<td>MOD</td>
+<td>原音のピッチのぶれをどれぐらい反映するか</td>
+<td>0 - 100</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Altarnate</td>
+<td>ALT</td>
+<td>重複音素の選択（あ2など）</td>
+<td>0 - 16</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Tone shift</td>
+<td>SHFT</td>
+<td>音域の選択 <code>訳注：変更すると他音階の音素に切り替わります</code></td>
+<td>-36 - 36</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_7">表情の追加<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h5>
+<p>左下にある+または-ボタンを押すことで表情を追加したり削除したりできます。削除できない表情もあります。追加できる表情には、数値タイプとカスタムの2種類があります。</p>
+<p>数値タイプでは、名前、略称、エンジンに渡すフラグ、最小値、最大値、デフォルトの値を入力する必要があります。フラグ欄には、数字を含まない単独のフラグを入力する必要があります。プロジェクト全体にフラグをかけたい場合（例：Mt+20）、デフォルト欄にその数字を入力してください。</p>
+<p><img alt="add expression" src="https://i.imgur.com/kzKnSgf.gif" /></p>
+<p>カスタムは数値を必要としないフラグ、例えばループ型エンジンのループ／伸縮（<code>,e,Me</code>）の切り替えなどに使用できます。<br />
+カスタムしたフラグセットを使うには「<code>,Mt-20Mo20,Mt20Mb50</code>」と入力します。<br />
+名前、略称、エンジンにフラグとして値を渡すかどうかのチェックボックス、カスタム値（選択肢）を入力してください。</p>
+<p><img alt="add options" src="https://i.imgur.com/FyQ6XMd.gif" /></p>
+<h3 id="_8">プロジェクトを開く<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>プロジェクトファイルは、<strong>ファイル &gt; 開く</strong>、もしくは<code>Ctrl + O</code>から開くことができます。<br />
+ここでは<code>.ustx</code>, <code>.ust</code>, <code>.vsqx</code>ファイルを開くことができます。</p>
+<h3 id="_9">プロジェクトの保存<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>OpenUtauのプロジェクトは<code>.ustx</code>ファイルで保存されます。<br />
+上書き保存をするには**ファイル &gt; 保存**、または<code>Ctrl + S</code>を、別名で保存するには**ファイル &gt; 別名で保存** を押します。</p>
+<p>プロジェクトを保存した後であれば、各パートごとに分かれた<code>.ust</code>ファイルを**ファイル &gt; プロジェクトファイルをエクスポート &gt; USTをエクスポート**から出力することもできます。ファイルは元の <code>.ustx</code> ファイルの隣の Export フォルダーに保存されます。</p>
+<h3 id="_10">音声ファイルの出力<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>プロジェクトを保存した後であれば、**ファイル &gt; 音声をエクスポート &gt; wavファイルを出力**から、トラックごとに分かれた<code>.wav</code>ファイルを出力することができます。ファイルは元の <code>.ustx</code> ファイルの隣の Export フォルダーに保存されます。</p>
+<h3 id="_11">トラック<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<h4 id="_12">トラックの作成<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<p>左のパネルにある**+**ボタンを押すと、新しいトラックを作ることができます。</p>
+<p><img alt="create track" src="https://i.imgur.com/Fk69Epl.gif" /></p>
+<h4 id="_13">トラックのインポート<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<p>インポートしたトラックは一番下に追加されます。</p>
+<p><code>.ustx</code>, <code>.ust</code>, <code>.vsqx</code> ファイルは、**ファイル &gt; トラックをインポート**からインポートできます。
+<code>.wav</code>, <code>.mp3</code>, <code>.ogg</code>, <code>.flac</code> ファイルは、**ファイル &gt; 音声をインポート**からインポートできます。
+MIDIファイルは、**ファイル &gt; MIDIをインポート**からインポートできます。</p>
+<h3 id="_14">トラックの編集<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>トラックヘッダーのメニューから、シンガーを選択してください。</p>
+<p><img alt="select singer" src="https://i.imgur.com/PIzAx6s.gif" /></p>
+<p>音源に合ったphonemizerを選択することで、ノートの歌詞を連続音やCVVCなどに自動変換できます。 <br />
+詳細は<a href="../Phonemizers/">Phonemizers</a>ページをご確認ください。</p>
+<p><img alt="phonemizer" src="https://i.imgur.com/wcMNzKy.gif" /></p>
+<blockquote>
+<h4 id="phonemizer">日本語用のphonemizer<a class="headerlink" href="#phonemizer" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="Phonemizers#ja-presamp-japanese-vcv--cvvc">[JA VCV &amp; CVVC] Japanese presamp Phonemizer</a><br />
+連続音・CVVC・単独音を同時に使用できます。音源に<code>presamp.ini</code>があれば読み込んで使用します。</li>
+<li><a href="Phonemizers#ja-vcv-japanese-vcv">[JA VCV] Japanese VCV Phonemizer</a><br />
+連続音化のみを行うphonemizer</li>
+<li><a href="Phonemizers#ja-cvvc-japanese-cvvc">[JA CVVC] Japanese CVVC Phonemizer</a><br />
+CVVC化のみを行うphonemizer  </li>
+</ul>
+<p><code>[か]</code>のように囲われた歌詞は連続音化／CVVC化されません<br />
+より詳しい説明は、<a href="https://github.com/stakira/OpenUtau/wiki/Phonemizers%EF%BC%88%E6%97%A5%E6%9C%AC%E8%AA%9E%EF%BC%89">Phonemizers（日本語）</a>  </p>
+</blockquote>
+<p>トラックヘッダーの右側にある<code>M</code>を押してトラックをミュートし、<code>S</code>を押してソロにすることができます。<br />
+その下にある歯車を押すとトラック設定が開き、wavtoolとresamplerを選択することができます。</p>
+<p>また、ボリュームスライダーをクリック／ドラッグすることでトラックの音量を操作できます。右クリックで+00.0にリセットすることができます。</p>
+<p><img alt="track volume and settings" src="https://i.imgur.com/MJY5vtJ.gif" /></p>
+<p>トラックエリアをクリックすると、新しいパートを作ることができます。ドラッグで移動、右端をドラッグすると長さを変えることができ、右クリックメニューからパートを消すことができます。</p>
+<p><img alt="edit part" src="https://i.imgur.com/aAFe6XU.gif" /></p>
+<p>右クリックでパートの名前を変えることもできます。</p>
+<p><img alt="rename part" src="https://i.imgur.com/NmStbDA.gif" /></p>
+<p>パートをダブルクリックするとノートの編集画面を開くことができます。</p>
+<p><img alt="open part" src="https://i.imgur.com/ZWOQ2Ss.gif" /></p>
+<h3 id="_15">ナビゲーション<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>拍子ラベルのバーをクリックすると、再生のカーソルを動かすことができます。また、スペースキーで再生と一時停止を切り替えることができます。</p>
+<p><img alt="playback" src="https://i.imgur.com/jalr2JP.gif" /></p>
+<p>縦にスクロールするには、普通にスクロールして下さい。</p>
+<p><img alt="verti scroll" src="https://i.imgur.com/QegYsJX.gif" /></p>
+<p>横にスクロールするには、シフトを押しながらスクロールするか、上にある横スクロールバーをドラッグするか横スクロールバーの上にカーソルを置いてスクロールしてください。</p>
+<p><img alt="hori scroll" src="https://i.imgur.com/3UH3Kt6.gif" /></p>
+<p>横向きに拡大するには、拍子ラベルのバーの上にカーソルを置いてスクロールしてください。</p>
+<p><img alt="hori zoom" src="https://i.imgur.com/yOTVNEi.gif" /></p>
+<p>縦向きに拡大するには、スクロールバーの上にあるズームアイコンの上にカーソルを置いてスクロールしてください。</p>
+<p><img alt="verti zoom" src="https://i.imgur.com/a8IE9W2.gif" /></p>
+<h3 id="_16">音声をノートに変換する<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>自動で音声をノートに変換できます。</p>
+<p>使用前に、<a href="https://github.com/xunmengshe/OpenUtau/releases/download/0.0.0.0/some-0.0.1.oudep">こちら</a> からモデルをダウンロードして"ツール → 依存関係ファイルをインストール(.oudep)"からインストールしてください。</p>
+<p>音声を右クリックして「Transcribe audio to create a note part」をクリックします。変換には1分ほどかかります。</p>
+<p>モデルはソロボーカルで訓練されているため、そのような音声だと上手くいきやすいです。楽器が入っていたりリバーブが深かったりすると上手くいかない可能性があります。</p>
+<h2 id="_17">ノートの編集<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<p>ヒントの表示/非表示を切り替えるには、？マークのボタンを押すかキーボードの<code>T</code>を押してください。</p>
+<p><img alt="tips" src="https://i.imgur.com/6qI2FBD.gif" /></p>
+<h3 id="_18">ナビゲーション<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p>スクロール・ズーム・再生の操作はトラック画面と同一です。</p>
+<h3 id="_19">ノートの編集の基本<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>ノートの作成ツールは二つあります。</p>
+<p><code>ペンツール</code></p>
+<blockquote>
+<p>クリックでノートを作成、右クリックでノートのオプションメニューが開きます。右クリックメニューでは一括編集ツールや歌詞の一括入力などが使用できます。
+<code>＋ペンツール</code>
+クリックでノートを作成、右クリックでノートを削除します。作曲やUST作成をスピーディーに行えるモードです。
+<img alt="create" src="https://i.imgur.com/BKKtoFA.gif" /></p>
+</blockquote>
+<p>ダブルクリックで歌詞を編集でき、Tabキーで次のノートに移動します。</p>
+<p><img alt="lyric" src="https://i.imgur.com/pNeA8Ls.gif" /></p>
+<p>ドラッグでノートを上下左右に動かすことができます。右端をドラッグすると長さを変えることができます。<br />
+Altキーを押しながら二つのノートの間をドラッグすることで、ノートの境界線を動かすことができます。</p>
+<p><img alt="resize" src="https://i.imgur.com/oIMv2n4.gif" /></p>
+<p>Ctrlキーを押しながらクリック／ドラッグすることで複数のノートを選択することができます。</p>
+<p><img alt="select" src="https://i.imgur.com/arCrjjJ.gif" /></p>
+<p>ノートを選択した状態で上下キーを押すと半音単位で音階を動かすことができ、上下キーと同時にCtrlキーも押すとオクターブ単位で音階を動かすことができます。</p>
+<p><img alt="move up down" src="https://i.imgur.com/y5PFub7.gif" /></p>
+<p>デフォルトでは、ノートの位置と長さは16分音符単位でスナップされるようになっています。スナップのオンオフを切り替えるには、上にあるスナップアイコンを押すか、<code>P</code>キーを押してください。</p>
+<p><img alt="snap" src="https://i.imgur.com/1nIYvrt.gif" /></p>
+<h4 id="_20">スラー<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<p>スラー音符（複数の音符にまたがって歌う音節）を入力するには、最初のノートに単語を入力し、次のノートに<code>+</code>を入力します。</p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/609e5487-6dfc-4ff9-9c5a-b22a67d5140f" /></p>
+<p>英語など1単語にシラブルが複数含まれる言語の場合、新しいシラブルを割り当てるには <code>+</code> を使用し、現在のシラブルを伸ばすには <code>+~</code> を使用します。</p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/7537b521-66e6-4be7-a111-9c90e9d6bb99" /></p>
+<h3 id="_21">一括編集とプラグイン<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p>一括編集ツールと従来のプラグインはピアノロール画面の上部にあるメニューから選択できます。</p>
+<p><img alt="transformer" src="https://i.imgur.com/6XI0w5z.gif" /></p>
+<p>これらは選択したノートにまとめて（何も選択されていないときはパート全体に）適用されます。</p>
+<p>従来のプラグインでは、本家UTAU用のプラグインを限定的なサポートで使うことができます。プラグインを追加するには、<code>.exe</code>ファイルなどが入ったフォルダーをOpenUtauのPluginsフォルダーにコピーしてください。<br />
+全てのプラグインが完璧に動作するわけではありません。また、今までプラグインで行っていた歌詞の連続音化・CVVC化はトラックのPhonemizerで行います。</p>
+<p><img alt="legacy" src="https://i.imgur.com/70eNNC9.gif" /></p>
+<h3 id="_22">表情の編集<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<p>表情名の左にある下矢印を押して、編集したい表情を選択します。</p>
+<p><img alt="select expression" src="https://i.imgur.com/5gzG0ch.gif" /></p>
+<p>歯車アイコンを押すと、プロジェクト全体の表情設定画面が開きます。</p>
+<p><img alt="project expressions" src="https://i.imgur.com/ACjYqcS.gif" /></p>
+<p>クリックで数値を設定し、右クリックでリセットします。</p>
+<p><img alt="edit expression" src="https://i.imgur.com/2PKCb2p.gif" /></p>
+<h4 id="vel-velocity">VEL (velocity)<a class="headerlink" href="#vel-velocity" title="Permanent link">&para;</a></h4>
+<p>UTAUの子音速度にあたります。これはノート／音素の左端からoto.iniの固定範囲で設定した部分までの長さを伸縮します。</p>
+<p><img alt="vel" src="https://i.imgur.com/ls2ECcq.gif" /></p>
+<h4 id="vol-volume">VOL (volume)<a class="headerlink" href="#vol-volume" title="Permanent link">&para;</a></h4>
+<p>ノート／音素の全体の音量を上げたり下げたりします。</p>
+<p><img alt="vol" src="https://i.imgur.com/11QKExP.gif" /></p>
+<h4 id="atk-attack">ATK (attack)<a class="headerlink" href="#atk-attack" title="Permanent link">&para;</a></h4>
+<p>ノート／音素の開始部分の音量を上げたり下げたりします。</p>
+<p><img alt="atk" src="https://i.imgur.com/lw5wg26.gif" /></p>
+<h4 id="dec-decay">DEC (decay)<a class="headerlink" href="#dec-decay" title="Permanent link">&para;</a></h4>
+<p>ノート／音素の終了部分の音量を下げます。</p>
+<p><img alt="dec" src="https://i.imgur.com/MNU1Bws.gif" /></p>
+<h4 id="eng-resampler-engine">ENG (Resampler Engine)<a class="headerlink" href="#eng-resampler-engine" title="Permanent link">&para;</a></h4>
+<p>選択したエンジンがその音素の合成に使用されます。" "が選択された場合、トラックで設定したものを使用します。</p>
+<p><img alt="eng-setting" src="https://i.imgur.com/Fm2fZZ2.png" />
+<img alt="eng" src="https://i.imgur.com/BtgIg3u.gif" /></p>
+<h4 id="mod-modulation">MOD (modulation)<a class="headerlink" href="#mod-modulation" title="Permanent link">&para;</a></h4>
+<p>収録時のピッチのぶれをどれだけフラットにするかの値です。0で完全にフラットになります。</p>
+<h4 id="_23">カスタムフラグ (数値のないフラグ)<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<p>eフラグなどの数値のないフラグを使用するには、表情の設定からフラグを追加してください。
+タイプを「カスタム」、カスタム値を「,e」にすると表情で「フラグなし／eフラグを使う」を選択できるようになります。</p>
+<p><img alt="flage-setting" src="https://i.imgur.com/7DEflzM.png" />
+<img alt="flage" src="https://i.imgur.com/Q6NUw93.gif" /></p>
+<h4 id="_24">その他の表情<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<p>UTAUのフラグに準じます。</p>
+<h3 id="_25">ピッチベンドの編集<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<p>ピッチベンドの表示と非表示を切り替えるには、<code>I</code>キーを押すか、左上のピッチアイコンを押してください。非表示になったピッチベンドは消えるわけではなく、ノートに適用されたままになります。</p>
+<p><img alt="show hide pitchbends" src="https://i.imgur.com/atuJhyF.gif" /></p>
+<p>クリックでピッチベンドに新たな点を作り、ドラッグで移動させることができます。</p>
+<p><img alt="create pitchbend" src="https://i.imgur.com/pBvL2sD.gif" /></p>
+<p>右クリックでピッチベンドのカーブの形を選択することができます。</p>
+<p><img alt="pitchbend shape" src="https://i.imgur.com/EuoimMj.gif" /></p>
+<p>点の上で右クリックして表示されるメニューから、点を消すことができます。</p>
+<p><img alt="delete pitchbend" src="https://i.imgur.com/d2gpswg.gif" /></p>
+<h3 id="_26">ビブラートの編集<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<p>ビブラートの表示と非表示を切り替えるには、<code>U</code>キーを押すか、左上のビブラートアイコンを押してください。非表示になったビブラートは消えるわけではなく、ノートに適用されたままになります。</p>
+<p><img alt="show hide vibrato" src="https://i.imgur.com/sf86vTG.gif" /></p>
+<p>ノートの下にあるビブラートアイコンをクリックすることで、ビブラートのオンオフを切り替えることができます。</p>
+<p><img alt="toggle vibrato" src="https://i.imgur.com/hxwS8Wy.gif" /></p>
+<p>ビブラートの開始位置、フェードインの長さ、深さ、フェードアウトの長さ、周期、位相を変更することができます。</p>
+<p><img alt="edit vibrato" src="https://i.imgur.com/U1hsNem.gif" /></p>
+<h3 id="_27">エンベロープの編集<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<p>エンベロープの表示と非表示を切り替えるには、<code>O</code>キーを押すか、左上のエンベロープアイコンを押してください。非表示になった音素とエンベロープの設定は消えるわけではなく、ノートに適用されたままになります。</p>
+<p><img alt="show hide envelopes" src="https://i.imgur.com/4ugAXeW.gif" /></p>
+<p>ピンクの線をドラッグすることで、ノートの範囲内で音素のタイミングを変更することができます。右クリックでリセットできます。<br />
+右クリックを押しながらドラッグをすることで、複数の音素のタイミングをまとめてリセットすることができます。</p>
+<p><img alt="envelope timing" src="https://i.imgur.com/0PDVaNx.gif" /></p>
+<p>左下の点をドラッグすることで、エンベロープの開始位置を変更することができます。右クリックでリセットできます。</p>
+<p><img alt="starting point" src="https://i.imgur.com/icQ8PUQ.gif" /></p>
+<p>左上の点をドラッグすることで、オーバーラップを変更することができます。右クリックでリセットできます。</p>
+<p><img alt="overlap" src="https://i.imgur.com/reLOTps.gif" /></p>
+<h2 id="_28">ベータ版<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h2>
+<p>OpenUtauには安定版とベータ版の2バージョンあります。新しい機能を試したり、安定版でバグがあったとき、ベータ版を使いたいことがあるかもしれません。</p>
+<p>ベータ版に切り替えるには、「ツール &gt; 設定」に移動し、「ベータ版」をオンにしてアップデートを確認してください。</p>
+<p>上記の方法が上手くいかない場合は、<a href="https://github.com/stakira/OpenUtau/releases">こちら</a>から最新のベータ版を手動でダウンロードすることもできます。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

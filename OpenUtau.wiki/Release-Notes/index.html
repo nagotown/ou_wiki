@@ -1,0 +1,2808 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://nagotown.github.io/ou_wiki/OpenUtau.wiki/Release-Notes/">
+      
+      
+        <link rel="prev" href="../VOICEVOX-support/">
+      
+      
+        <link rel="next" href="../Compiling-from-source/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Release Notes - OpenUtau Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#01568-beta-03-16-2026" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OpenUtau Wiki" class="md-header__button md-logo" aria-label="OpenUtau Wiki" data-md-component="logo">
+      
+  <img src="../../favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OpenUtau Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Release Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nagotown/ou_wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OpenUtau Wiki" class="md-nav__button md-logo" aria-label="OpenUtau Wiki" data-md-component="logo">
+      
+  <img src="../../favicon.png" alt="logo">
+
+    </a>
+    OpenUtau Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nagotown/ou_wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For beginners
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    For beginners
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Keyboard-Shortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keyboard Shortcuts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Phonemizers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phonemizers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Resamplers-and-Wavtools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resamplers and Wavtools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Expressions-%28Flags%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About expressions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Legacy-Plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UTAU Plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Voicebank-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Voicebank development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-note-%E2%80%90-character.yaml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech note ‐ character.yaml
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ENUNU-NNSVS-Support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ENUNU NNSVS Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DiffSinger-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DiffSinger support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VOICEVOX-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VOICEVOX support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Enhancements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bug Fixes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Misc
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For Developers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    For Developers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Compiling-from-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiling OpenUtau from source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-new-phonemizers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing new phonemizers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Compiling-G2p-Models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiling G2p Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Adding-support-for-a-new-synthesis-engine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding support for a new synthesis engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contributing-to-OpenUtau%27s-localization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing to OpenUtau's localization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../USTX-file-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    USTX file format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%5BPROPOSAL%5D-svs.io-%E2%80%90-singing-voice-synthesis-backend-API/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    [PROPOSAL] svs.io ‐ singing voice synthesis backend API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-note-%E2%80%90-music-is-music%2C-phonetics-is-phonetics-%28also-why-you-don%27t-need-legacy-plugins%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech note ‐ music is music, phonetics is phonetics (also why you don't need legacy plugins)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Known-Bugs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Known bugs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Fork-OpenUtau-and-develop-a-new-editor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Enhancements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bug Fixes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Misc
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<blockquote>
+<p>The latest stable version is <a href="./#01565-09-14-2025">0.1.565</a>.<br />
+See also <a href="https://github.com/stakira/OpenUtau/wiki/Known-Bugs">Known Bugs</a>.</p>
+</blockquote>
+<!-- Use the following GitHub CLI command to get a list of pull requests:
+gh pr list --state merged --repo stakira/OpenUtau --limit 1000 --json number,title,author,url,mergedAt --jq ".[] | select(.mergedAt >= \"2025-07-22T00:00:00Z\") | \"- [#\(.number)](../%5C%28.url)) - \(.title) - ([@\(.author.login)](https://github.com/\(.author.login)))\""
+
+## Features
+## Bug Fixes
+## Phonemizer Changes
+## Misc
+-->
+
+<h1 id="01568-beta-03-16-2026">~<a href="https://github.com/stakira/OpenUtau/releases/tag/0.1.568">0.1.568 Beta</a> (03-16-2026)<a class="headerlink" href="#01568-beta-03-16-2026" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>The .ustx version has been updated to 0.9. It cannot be opened with previous versions of OpenUtau.</strong></p>
+</div>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1870">#1870</a> - Add feature to split vocal part at playhead cursor - (<a href="https://github.com/arx-ein">@arx-ein</a>)</li>
+</ul>
+<p>https://private-user-images.githubusercontent.com/29670169/523278795-73b5ffc8-40ea-4393-b16a-279cd997dd44.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzQ2ODc2NzEsIm5iZiI6MTc3NDY4NzM3MSwicGF0aCI6Ii8yOTY3MDE2OS81MjMyNzg3OTUtNzNiNWZmYzgtNDBlYS00MzkzLWIxNmEtMjc5Y2Q5OTdkZDQ0Lm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAzMjglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMzI4VDA4NDI1MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWZiMWUwYmZmOGQ3ODNhYjVhNzhhMzRiY2IyY2NjN2NlOGY1NDg4MGYzNWM4NTU0YTg3ZTEyODgzZmU4N2YwZTgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.LaCDOQYqfqbrDn8qWXFsdfgPzwFQFRi8tT6LWcerd08</p>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1888">#1888</a> - Add Theme Editor - (<a href="https://github.com/atouu">@atouu</a>)</li>
+</ul>
+<p>https://private-user-images.githubusercontent.com/67765922/529491503-ad67c9e5-43c7-446e-b9b6-2ed3f305fef2.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzQ2ODc3MTksIm5iZiI6MTc3NDY4NzQxOSwicGF0aCI6Ii82Nzc2NTkyMi81Mjk0OTE1MDMtYWQ2N2M5ZTUtNDNjNy00NDZlLWI5YjYtMmVkM2YzMDVmZWYyLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAzMjglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMzI4VDA4NDMzOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWE1M2MzYzY2MGIxMzM4Yjg5ODhjNjY0NmIyNmJhNjJhMmQ3YTlhZjRlYWUyNDVkOGU0NTJhZDA4MWI5MWM1ODUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.Op3qGo50ZXW7loaXMNAQ9_egvI1v9BxdU5RltQOpyWs</p>
+<ul>
+<li>
+<p><a href="https://github.com/stakira/OpenUtau/pull/1905">#1905</a> - Add Curve Tools and Curve Selection/Copy/Paste - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)<br />
+  <img width="584" height="162" alt="image" src="https://github.com/user-attachments/assets/9ff2f94e-f68d-4a87-864b-9478c2fd5c3d" /></p>
+</li>
+<li>
+<p><a href="https://github.com/stakira/OpenUtau/pull/1910">#1910</a> - Make Piano Roll Attachable to MainWindow - (<a href="https://github.com/atouu">@atouu</a>)</p>
+</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1941">#1941</a> - PianoRoll Enhancements - (<a href="https://github.com/atouu">@atouu</a>)</li>
+</ul>
+<p>https://private-user-images.githubusercontent.com/67765922/532454721-72e31930-841d-4420-a327-665f1ef2e73d.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzQ2ODc3MjAsIm5iZiI6MTc3NDY4NzQyMCwicGF0aCI6Ii82Nzc2NTkyMi81MzI0NTQ3MjEtNzJlMzE5MzAtODQxZC00NDIwLWEzMjctNjY1ZjFlZjJlNzNkLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAzMjglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMzI4VDA4NDM0MFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTI0YWNjNTI0MjViYmM5OWIxMzU4MDAxMmNiNWFhMTNkYTI5MzJjYzdjMWY4NGFiNjdiNDQ2ZjAzMGUwMmI0OGMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.A1AwGR4I9zk2omtpBhYr3p4q-Go_lcjE4AERrWxGw6c</p>
+<ul>
+<li>
+<p><a href="https://github.com/stakira/OpenUtau/pull/1968">#1968</a> - Trim and fade for the wave part - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)<br />
+  <img width="854" height="314" alt="image" src="https://github.com/user-attachments/assets/c269d234-6bdd-47cf-b198-282c037e7a32" /></p>
+</li>
+<li>
+<p><a href="https://github.com/stakira/OpenUtau/pull/1987">#1987</a> - Smooth Pitch Shape - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</p>
+</li>
+</ul>
+<p>https://private-user-images.githubusercontent.com/130257355/556271138-f4d08a88-f3f8-42b2-a97f-8a32fbc41fca.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzQ2ODc3MjEsIm5iZiI6MTc3NDY4NzQyMSwicGF0aCI6Ii8xMzAyNTczNTUvNTU2MjcxMTM4LWY0ZDA4YTg4LWYzZjgtNDJiMi1hOTdmLThhMzJmYmM0MWZjYS5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMzI4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDMyOFQwODQzNDFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jMzdmZDA3NDJjMzY5OGU2NjI4ZjkyODMyMjFiYTY5Y2UyN2VkMzZlMjA2OWM4NzE3NTg0OGFlYzQ3MzEyNGMwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.fyw6jOYIBM-iAb78wEfJ5Wr1R66z810u3i-wENxGC5Y</p>
+<h3 id="feature-enhancements">Feature Enhancements<a class="headerlink" href="#feature-enhancements" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1902">#1902</a> - Responsive Track Header - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1940">#1940</a> - Disable the menu when undo is not possible / Display the command name (take2) - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1944">#1944</a> - Loading external batch edits - (<a href="https://github.com/AnAndroNerd">@AnAndroNerd</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1993">#1993</a> - Enhanced Pitch Line Drawing Tool (Supports Sine Waves/S-Curves) - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/2000">#2000</a> - [Transcribe] Refactor and unify APIs, add GAME algorithm and long chunk detection - (<a href="https://github.com/yqzhishen">@yqzhishen</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/2004">#2004</a> - [Transcribe] RMVPE support - (<a href="https://github.com/emeraldsingers">@emeraldsingers</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1947">#1947</a> - simple package manager - (<a href="https://github.com/stakira">@stakira</a>)</li>
+</ul>
+<h2 id="bug-fixes">Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1855">#1855</a> - Fix: load consonants from YAML file - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1864">#1864</a> - Ust Import Enhancement - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1914">#1914</a> - Replace backslash with slash in archive entry keys when installing singer. - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1919">#1919</a> - Fix error phoneme pitch - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1920">#1920</a> - Fix key event issues - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1929">#1929</a> - Make plugin async and fix plugin when shell is use - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1930">#1930</a> - Fix Worldline crashes for some Windows machines - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1935">#1935</a> - Fix track expsressions duplicate bug - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1872">#1872</a> - fix(coreml): w/a fallback to EnableOnSubgraphs=0 on exception - (<a href="https://github.com/fumiama">@fumiama</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/2009">#2009</a> - CoreML fixes - (<a href="https://github.com/AnAndroNerd">@AnAndroNerd</a>)</li>
+</ul>
+<h2 id="misc">Misc<a class="headerlink" href="#misc" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1861">#1861</a> - feat(onnx): only show gpu selection on dml runner - (<a href="https://github.com/fumiama">@fumiama</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1876">#1876</a> - Update macOS x64 runner version in github actions workflow - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1928">#1928</a> - Set InvokeAsync priority to background in ProgressBarNotification - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1937">#1937</a> - Add Worldline Build Workflow - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1938">#1938</a> - Rebuild Worldline - (<a href="https://github.com/app/github-actions">@app/github-actions</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1942">#1942</a> - Exempt Feature Requests - (<a href="https://github.com/BagelHero">@BagelHero</a>)</li>
+</ul>
+<h1 id="01567-beta-11-29-2025">~<a href="https://github.com/stakira/OpenUtau/releases/tag/0.1.567">0.1.567 Beta</a> (11-29-2025)<a class="headerlink" href="#01567-beta-11-29-2025" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>The .ustx version has been updated. It cannot be opened with previous versions of OpenUtau.</strong></p>
+</div>
+<h2 id="features_1">Features<a class="headerlink" href="#features_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1396">#1396</a> - Add RandomizeTiming function to batch edit - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li>By combining it with tuning randomization, you can create doubling.</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1805">#1805</a> - Supprt Track Expressions, Import entire flags and Skip flag output when the value is default - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<p>https://github.com/user-attachments/assets/b34de0f8-b4c4-4ff3-98d8-79409bbb7903
+- <a href="https://github.com/stakira/OpenUtau/pull/1815">#1815</a> - Support dropping multiple files at once - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)
+- <a href="https://github.com/stakira/OpenUtau/pull/1821">#1821</a> - Custom Theme Support - (<a href="https://github.com/AnAndroNerd">@AnAndroNerd</a>) <img width="967" height="677" alt="image" src="https://github.com/user-attachments/assets/490c33f0-faa6-4fc5-aafb-3609fb17893d" /></p>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1839">#1839</a> - Support for ignoring auto-VCV during ust import - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/commit/c71fdb65a1d25521fcbdfbb108e51fb276c9159e">#c71fdb6</a> - Removes worldline-r2 for now (<a href="https://github.com/stakira">@stakira</a>)</li>
+</ul>
+<h2 id="bug-fixes_1">Bug Fixes<a class="headerlink" href="#bug-fixes_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1745">#1745</a> - Translate the message displayed when SOME is not installed - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1834">#1834</a> - Fix Rider errors - (<a href="https://github.com/AnAndroNerd">@AnAndroNerd</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1845">#1845</a> - Fix yaml timing entry overrides with new instance of the phonemizer - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1846">#1846</a> - Set PlayingMaster to false on PlayTestSound - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1848">#1848</a> - Fix Voice Color Remapping Bug - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<h1 id="01566-beta-11-28-2025">~<a href="https://github.com/stakira/OpenUtau/releases/tag/0.1.566">0.1.566 Beta</a> (11-28-2025)<a class="headerlink" href="#01566-beta-11-28-2025" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>The .ustx version has been updated. It cannot be opened with previous versions of OpenUtau.</strong></p>
+</div>
+<h2 id="features_2">Features<a class="headerlink" href="#features_2" title="Permanent link">&para;</a></h2>
+<h3 id="new-features">New Features<a class="headerlink" href="#new-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/commit/fb9e157d57327fe801eff7a044032379940ee895">#fb9e157</a> - Worldline-R2 renderer test version 1. Select it from the renderer dropdown menu in header tracker. (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1428">#1428</a> - Microtonal tuning function and batch editing of randomization - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<p>https://github.com/user-attachments/assets/c21c6356-2350-4f74-8760-67cac776e728
+- <a href="https://github.com/stakira/OpenUtau/pull/1645">#1645</a> - Add feature to merge vocal parts - (<a href="https://github.com/arx-ein">@arx-ein</a>)
+- <a href="https://github.com/stakira/OpenUtau/pull/1674">#1674</a> - Add Commonnote Batch Edits - (<a href="https://github.com/AnAndroNerd">@AnAndroNerd</a>)
+- <a href="https://github.com/stakira/OpenUtau/pull/1678">#1678</a> - Add new batch edit "Replace '-' with '+~'". - (<a href="https://github.com/AnAndroNerd">@AnAndroNerd</a>)
+- <a href="https://github.com/stakira/OpenUtau/pull/1778">#1778</a> - Add OverwriteLinePitchTool  - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)
+- <a href="https://github.com/stakira/OpenUtau/pull/1804">#1804</a> - Ctrl+Shift+V to paste as plain notes - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)
+<img alt="image" src="https://github.com/user-attachments/assets/9e9225bc-c7d1-4ae6-8541-c6549920fa7a" /></p>
+<h3 id="feature-enhancements_1">Feature Enhancements<a class="headerlink" href="#feature-enhancements_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1468">#1468</a> - Allow assignment of an oto set to multiple colors - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1540">#1540</a> - Fix "Lyrics Replacement" and Improved "Edit Lyrics" - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1635">#1635</a> - Togglable expressions view - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1638">#1638</a> - Auto focus to the text field in dialogs - (<a href="https://github.com/arx-ein">@arx-ein</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1748">#1748</a> - Fix auto focused text field in dialogs not accepting keyboard inputs - (<a href="https://github.com/arx-ein">@arx-ein</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1654">#1654</a> - Improve and translate the error report - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1744">#1744</a> - Fix bug in voicebank error checker - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1807">#1807</a> - Fix VoicebankErrorChecker could not correctly detect bit depth - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1668">#1668</a> - Add Legacy Plugins and Reset Batch Edits to right click menu on Piano Roll - (<a href="https://github.com/AnAndroNerd">@AnAndroNerd</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1685">#1685</a> - Always uses CPU for vogen rendering - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1730">#1730</a> - convert <code>-</code> to <code>+~</code> instead of <code>+</code> when importing other formats - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1742">#1742</a> - Support import multiple audios at once; remove 'import midi' menu item - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1753">#1753</a> - Musicxml import: support <code>&lt;backup&gt;</code> and <code>&lt;chord&gt;</code>, support slurs, ties and multisyllabic words - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1797">#1797</a> - Allow wavtool/resampler picker to open native UNIX executables - (<a href="https://github.com/atayeem">@atayeem</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1802">#1802</a> - Support .mrq file when .frq isn't present [MOD+] - (<a href="https://github.com/Astel123457">@Astel123457</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1829">#1829</a> - Store MainWindow and PianorollWindow Size - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<h2 id="bug-fixes_2">Bug Fixes<a class="headerlink" href="#bug-fixes_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1613">#1613</a> - Reload when singer's avatar is changed - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1625">#1625</a> - Fix playhead resets to its initial position when using 'Do nothing' on pause. - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1806">#1806</a> - Check if miniaudio is not paused before resetting currentTimeMs. - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1626">#1626</a> - Fix playhead moving when playing samples - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1627">#1627</a> - Fixes related to VOICEVOXRenderer. - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1641">#1641</a> - Fix tone generator crackling - (<a href="https://github.com/Kabinet0">@Kabinet0</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1646">#1646</a> - Fix note editing tool toggle button behavior - (<a href="https://github.com/arx-ein">@arx-ein</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1667">#1667</a> - escape dollar sign in default gitignore used in publishing singer - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1690">#1690</a> - Fix VoiceColorRemapping Crash - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1702">#1702</a> - Add save dialog when opening file with Open Recent menu - (<a href="https://github.com/arx-ein">@arx-ein</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1724">#1724</a> - Fix Windows legacy plugins on macOS and Linux - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1743">#1743</a> - [SBP update] Instance-based Dictionary - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1766">#1766</a> - Fixed issue where parts didn't extend when adding notes - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1771">#1771</a> - Fix DIR was displayed as unsupported expression in the Classic Renderer - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1774">#1774</a> - feat(onnx): drop Vortice.DXGI &amp; update dml to 1.23.0 - (<a href="https://github.com/fumiama">@fumiama</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1798">#1798</a> - worldline memory leak fix - (<a href="https://github.com/AnAndroNerd">@AnAndroNerd</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1809">#1809</a> - Fix the pianoroll progress bar - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1810">#1810</a> - Fix the left-aligned track number - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1819">#1819</a> - Fix voicebank merger error message - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<h2 id="phonemizer-changes">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1719">#1719</a> - <code>New!</code> Add Diffsinger Filipino Phonemizer (DIFFS FIL) - (<a href="https://github.com/julieraptor">@julieraptor</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1671">#1671</a> - <code>New!</code> Add Millefeuille and Marzipan Phonemizers - Take 2 - (<a href="https://github.com/imsupposedto">@imsupposedto</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1534">#1534</a> - <code>Syllable Based Phonemizers</code> Replacement update - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1619">#1619</a> - <code>FIL VCV &amp; CVVC</code> Add ConsException to CC transitions - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1651">#1651</a> - <code>JA VCV &amp; CVVC</code> Adds Normalization to [- C]s in Japanese Presamp Phonemizer based on CFLAGS - (<a href="https://github.com/AnAndroNerd">@AnAndroNerd</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1666">#1666</a> - <code>KO CV</code> Improved behavior, Changed setting file to yaml - (<a href="https://github.com/EX3exp">@EX3exp</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1712">#1712</a> - <code>ZH CVV+</code> Bugfix Chinese CVV Plus Phonemizer - (<a href="https://github.com/AnAndroNerd">@AnAndroNerd</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1738">#1738</a> - <code>IT G2P + Phonemizers</code> Replace Italian G2p with improved version + adjust phonemizers - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1796">#1796</a> - <code>ZH CVVC</code> Add [REPLACE] support for Chinese CVVC Phonemizer - (<a href="https://github.com/Slidingwall">@Slidingwall</a>)</li>
+</ul>
+<h2 id="misc_1">Misc<a class="headerlink" href="#misc_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1472">#1472</a> - Improvements preferences and related to singers folder - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1551">#1551</a> - Improve loading popup consistency and visuals - (<a href="https://github.com/Kabinet0">@Kabinet0</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1808">#1808</a> - Fix bugs in loading screen changes - (<a href="https://github.com/Kabinet0">@Kabinet0</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1592">#1592</a> - Beta won't ask for downgrading to stable - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1628">#1628</a> - Add Linux Appimage package - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1630">#1630</a> - Make a tar.gz Linux artifact instead of zip - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1683">#1683</a> - Move recovery project notification to welcome page - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1689">#1689</a> - Add text to the Singer Setup Dialog - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1726">#1726</a> - Update error message for encrypted singer - (<a href="https://github.com/adlez27">@adlez27</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1755">#1755</a> - Stop rendering on project load - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1782">#1782</a> - Enlarge the “Waiting Rendering” - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1843">#1843</a> - Update DML to 1.15.4 - (<a href="https://github.com/KakaruHayate">@KakaruHayate</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1673">#1673</a> - Fix broken link to ENUNU wiki page in README.md - (<a href="https://github.com/cedkim">@cedkim</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1684">#1684</a> - Install NSIS in github acitons - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1705">#1705</a> - Add a mention of .NET 8 to bug-report.yml - (<a href="https://github.com/AnAndroNerd">@AnAndroNerd</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1812">#1812</a> - support NNAPI for downstream(mobile) - (<a href="https://github.com/KakaruHayate">@KakaruHayate</a>)</li>
+</ul>
+<hr />
+<h1 id="01565-09-14-2025">~<a href="https://github.com/stakira/OpenUtau/releases/tag/0.1.565">0.1.565</a> (09-14-2025)<a class="headerlink" href="#01565-09-14-2025" title="Permanent link">&para;</a></h1>
+<h2 id="bug-fixes_3">Bug Fixes<a class="headerlink" href="#bug-fixes_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1692">#1692</a> - Revert "fix legacy plugin output" - (<a href="https://github.com/stakira">@stakira</a>)</li>
+</ul>
+<h3 id="summary-of-new-features-since-the-last-stable-release">Summary of new features since the last stable release!<a class="headerlink" href="#summary-of-new-features-since-the-last-stable-release" title="Permanent link">&para;</a></h3>
+<h4 id="main-windows">Main Windows<a class="headerlink" href="#main-windows" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Splash window</li>
+<li>Welcome page</li>
+</ul>
+<h4 id="piano-roll">Piano roll<a class="headerlink" href="#piano-roll" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Search notes by alias</li>
+<li>Clear caches for each phrase</li>
+<li>Add DrawLine Pitch Tool and improvement Tools</li>
+<li>Support displaying real curves from DiffSinger variance predictor</li>
+<li>'reset all' editing macro</li>
+<li>Move to the next track part with PageUp/PageDown keys</li>
+</ul>
+<h4 id="render">Render<a class="headerlink" href="#render" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Classic renderer: support direct</li>
+<li>Support SimpleENUNUServer0.5.0</li>
+<li>Support Diffsinger multi-dictionary</li>
+</ul>
+<h4 id="misc_2">Misc<a class="headerlink" href="#misc_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Refactor preferences page to using a navigation sidebar, rearrange preference items</li>
+<li>Voicebank Merger</li>
+<li>Recovery project function</li>
+<li>MusicXML Import</li>
+</ul>
+<hr />
+<h1 id="01564-beta-08-31-2025">~<a href="https://github.com/stakira/OpenUtau/releases/tag/0.1.564">0.1.564 Beta</a> (08-31-2025)<a class="headerlink" href="#01564-beta-08-31-2025" title="Permanent link">&para;</a></h1>
+<h2 id="bug-fixes_4">Bug Fixes<a class="headerlink" href="#bug-fixes_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1623">#1623</a> - Added font settings for macOS - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/commit/1a6924a0932eaf48c73dd52717b7e2eae386e807">#1a6924a</a> - voicebank error checker nullness fixes (<a href="https://github.com/stakira">@stakira</a>)</li>
+</ul>
+<h2 id="misc_3">Misc<a class="headerlink" href="#misc_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1622">#1622</a> - Sync translated strings from crowdin to official repo - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<hr />
+<h1 id="01562-beta-07-21-2025">~<a href="https://github.com/stakira/OpenUtau/releases/tag/0.1.562">0.1.562 Beta</a> (07-21-2025)<a class="headerlink" href="#01562-beta-07-21-2025" title="Permanent link">&para;</a></h1>
+<h2 id="bug-fixes_5">Bug Fixes<a class="headerlink" href="#bug-fixes_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1610">#1610</a> - (Re) MOD+ related bug fixes - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1614">#1614</a> - Fix crash when playing test sound on an unavailable audio device - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1616">#1616</a> - Fix list items could not be controlled by keyboard - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_1">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1609">#1609</a> - <code>FILtoJA</code> Fixes to <code>ng</code> note.lyric bug - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1612">#1612</a> - <code>S-VOICEVOX JA</code> Fixed a processing branch for phrases containing slur - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+</ul>
+<hr />
+<h1 id="01560-beta-07-19-2025">~<a href="https://github.com/stakira/OpenUtau/releases/tag/0.1.560">0.1.560 Beta</a> (07-19-2025)<a class="headerlink" href="#01560-beta-07-19-2025" title="Permanent link">&para;</a></h1>
+<div class="admonition danger">
+<p class="admonition-title">Caution</p>
+<p>There is a bug that prevents the use of MOD+.</p>
+</div>
+<h2 id="features_3">Features<a class="headerlink" href="#features_3" title="Permanent link">&para;</a></h2>
+<h3 id="new-features_1">New Features<a class="headerlink" href="#new-features_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1509">#1509</a> - Add welcome page - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1550">#1550</a> - Fixed unexpected behavior of welcome page - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)<br />
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/bbb5bcba-ce56-4312-b122-1f49351cd8dc" /></li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1488">#1488</a> - [DiffSinger]Ctrl+R for Load rendered pitch - (<a href="https://github.com/lunaiproject">@lunaiproject</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1506">#1506</a> - Enunu style support - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1531">#1531</a> - Search notes by alias - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)<br />
+  <img alt="image" src="https://github.com/user-attachments/assets/78579056-ad46-4118-81c4-3079f9794a55" /></li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1539">#1539</a> - Support displaying real curves from DiffSinger variance predictor - (<a href="https://github.com/yqzhishen">@yqzhishen</a>)<br />
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/09eb6a91-0cba-4a2e-ba6b-02a21bc6ac06" /></li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1596">#1596</a> - Voicebank Merger - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)<br />
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/cb6139c5-6d34-437a-af80-422e66c1b676" /></li>
+</ul>
+<h3 id="feature-enhancements_2">Feature Enhancements<a class="headerlink" href="#feature-enhancements_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1447">#1447</a> - Removed 0.9f limit of Preutter delta - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1456">#1456</a> - Resize the beginning of part - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1485">#1485</a> - Improved mouse cursor - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1521">#1521</a> - Hide DiffSinger Language Code in Phoneme Canvas - (<a href="https://github.com/mrtigermeat">@mrtigermeat</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1527">#1527</a> - Voicevox refactoring and additional functionality. - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1533">#1533</a> - Lyric box: add back "enter to apply" feature - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1548">#1548</a> - Allow scrolling main view when hovering over Singer List - (<a href="https://github.com/Kabinet0">@Kabinet0</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1554">#1554</a> - Improved pitch hit test for overlapping pitches - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1560">#1560</a> - Add "Install Wavtool/Resampler (.exe)" in menu - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1599">#1599</a> - Translate Exe Setup Dialog - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1567">#1567</a> - Added play file button to singers dialog - (<a href="https://github.com/Kabinet0">@Kabinet0</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1568">#1568</a> - Simplifies tempo importing - (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1571">#1571</a> - Use Wine directly instead of wrappers on Mac and Linux - (<a href="https://github.com/atouu">@atouu</a>)</li>
+</ul>
+<h2 id="bug-fixes_6">Bug Fixes<a class="headerlink" href="#bug-fixes_6" title="Permanent link">&para;</a></h2>
+<h3 id="major-changes">Major Changes<a class="headerlink" href="#major-changes" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1558">#1558</a> - Fix Up/Down keys not working - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1604">#1604</a> - Oto validation before worldline rendering - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li>Many crashes at worldline can now be prevented!</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1480">#1480</a> - Fixed issue with voice bank loading due to differences in spec between OS - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<h3 id="others">Others<a class="headerlink" href="#others" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1401">#1401</a> - Fixed a bug in Singer's error report - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1460">#1460</a> - Fix OpenUtau's data folders appearing in the wrong place on macOS - (<a href="https://github.com/Nyaacinth">@Nyaacinth</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1503">#1503</a> - Fixed Vibrato VolLink was not copied - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1541">#1541</a> - Fix "#Charset:" - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1555">#1555</a> - Fixes OpenUtau's data folders appearing in the wrong place on Linux - (<a href="https://github.com/Seele-Vollerei32">@Seele-Vollerei32</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1562">#1562</a> - Fixed OpenUtau getting stuck in the background when closing on Linux (and maybe Mac). - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1576">#1576</a> - Fix manifest loading - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1577">#1577</a> - fix legacy plugin output - (<a href="https://github.com/takunnma5286">@takunnma5286</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1586">#1586</a> - Check if plugin is exe or bat before using wine - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1594">#1594</a> - Fix unable to load empty ust - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1603">#1603</a> - Fix OpenUtau crashing when oto.ini contains two <code>#Charset:</code> lines - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_2">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1530">#1530</a> - <code>New!</code> Add Turkish CVVC Phonemizer  - (<a href="https://github.com/IsE333">@IsE333</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1597">#1597</a> - <code>New!</code> Add [FIL VCV &amp; CVVC] and [FIL to JA] phonemizers - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+</ul>
+<h2 id="misc_4">Misc<a class="headerlink" href="#misc_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1360">#1360</a> - Capitalize machine learning runner names in UI - (<a href="https://github.com/RedBlackAka">@RedBlackAka</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1362">#1362</a> - Update all macOS build targets to conform .NET 8 - (<a href="https://github.com/RedBlackAka">@RedBlackAka</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1439">#1439</a> - Log on Singer and Phonemizer change - (<a href="https://github.com/Astel123457">@Astel123457</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1479">#1479</a> - Updated operating instructions. - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1547">#1547</a> - Corrected description - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1524">#1524</a> - More flexible translation of error messages - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1528">#1528</a> - Add GitHub action tests on arm devices for windows, mac and linux - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1529">#1529</a> - update csharp-kana to 1.0.2 - (<a href="https://github.com/wolfgitpr">@wolfgitpr</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1536">#1536</a> - Sync translations from crowdin to official repo - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1564">#1564</a> - Fix drag and drop area in main window - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1565">#1565</a> - Fixed translated error messages being overwritten by upper level abstract messages - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1572">#1572</a> - [DiffSinger] Fix weired error message - (<a href="https://github.com/yqzhishen">@yqzhishen</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1575">#1575</a> - fix typo - (<a href="https://github.com/shuntia">@shuntia</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1591">#1591</a> - fix osx upload-artifact action - (<a href="https://github.com/odeinjul">@odeinjul</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1593">#1593</a> - Log system encoding - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1598">#1598</a> - Fix batch edit order - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1606">#1606</a> - Update Resampler Metafiles - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1607">#1607</a> - Installer: High DPI support, MUI2, desktop shortcut, cleanups - (<a href="https://github.com/RedBlackAka">@RedBlackAka</a>)</li>
+</ul>
+<hr />
+<h1 id="01550-beta-05-07-2025">~<a href="https://github.com/stakira/OpenUtau/releases/tag/0.1.550">0.1.550 Beta</a> (05-07-2025)<a class="headerlink" href="#01550-beta-05-07-2025" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>The .ustx version has been updated. It cannot be opened with previous versions of OpenUtau.</strong></p>
+</div>
+<h2 id="features_4">Features<a class="headerlink" href="#features_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1432">#1432</a> - Classic renderer: support direct - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1483">#1483</a> - Clear caches for each phrase - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)<br />
+<img alt="image" src="https://github.com/user-attachments/assets/45734db5-c205-4c25-a165-6c2eb2b83509" /></li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1499">#1499</a> - Added ability to draw a dash line for the default value of the curve. - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)<br />
+<img alt="image" src="https://github.com/user-attachments/assets/bdd9f2e2-4a86-4c27-a87a-fdeae3dab4ae" /></li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1400">#1400</a> - Improvement of Knife Tool and bug fixes for Tool+Ctrl key - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1496">#1496</a> - Reduced load wait times for VOICEVOX. - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1487">#1487</a> - Seperated steps for DiffSinger - (<a href="https://github.com/lunaiproject">@lunaiproject</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1166">#1166</a> - Add recovery project function - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)<br />
+<img alt="image" src="https://github.com/stakira/OpenUtau/assets/130257355/f9573d9a-b145-446b-86a3-97aa741e8f5a" /></li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1409">#1409</a> - More ExpSelector. - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)
+<img alt="image" src="https://github.com/user-attachments/assets/e56a4078-60ab-4ce7-ba19-00a6f058e3e5" /></li>
+</ul>
+<h2 id="bug-fixes_7">Bug Fixes<a class="headerlink" href="#bug-fixes_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1462">#1462</a> - Fixed many expression issues and improved the properties panel - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li>Remove expression when right-clicking combo box in properties panel</li>
+<li>Changed to remove instead of set the value when the same value as the default value of track expression is selected in the properties panel</li>
+<li>Fixed Phonemizer not running immediately after selecting voice color in properties panel</li>
+<li>Fixed a case where the expression of the first phoneme of the selected note should be displayed, but the one of the second or later phonemes was displayed</li>
+<li>When right-clicking on the UI to delete an expression, modified to delete unwanted expressions with the same abbr in the same note</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1449">#1449</a> - Fix part always snapping to measure line if the starting position of a part isn't in the current view - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1433">#1433</a> - Fix Command Injection Vulnerability in Classic Renderer - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1526">#1526</a> - Fix textbox caret behavior - (<a href="https://github.com/IsE333">@IsE333</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1515">#1515</a> - Fix unable to paste multiline lyrics into lyrics dialog - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1514">#1514</a> - Use available screen if no primary screen is set - (<a href="https://github.com/atouu">@atouu</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1512">#1512</a> - Don't use <code>/usr/bin</code>, just use <code>fc-match</code> - (<a href="https://github.com/Lord-Valen">@Lord-Valen</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1498">#1498</a> - Zip file produced by voicebank publisher should use slash, not backslash - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1478">#1478</a> - TrackHeader changes. - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_3">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1436">#1436</a> - <code>EN C+V</code> Code fixes and Dictionary updates - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1445">#1445</a> - <code>JA VCV &amp; CVVC</code> Enhanced test code and Bug fixes - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1426">#1426</a> - <code>EN ARPA+</code> Fixes vanila Arpabet phonemes conflicts to Romaji VV - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1501">#1501</a> - <code>EN VCCV</code> Update Starlight fix - (<a href="https://github.com/AnAndroNerd">@AnAndroNerd</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1505">#1505</a> - <code>EN</code> Update ARPA+, EN C+V, and EN-XSAMPA Phonemizers - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+</ul>
+<h2 id="misc_5">Misc<a class="headerlink" href="#misc_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1457">#1457</a> - Show window title in macOS - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1523">#1523</a> - More friendly error message for renderer that doesn't support autopitch - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1492">#1492</a> - When saving oto.ini, always include alias in oto lines even if the filename and alias are same - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1403">#1403</a> - Show Note Properties Panel by default - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<hr />
+<h1 id="01549-beta-02-24-2025">~<a href="https://github.com/stakira/OpenUtau/releases/tag/0.1.549">0.1.549 Beta</a> (02-24-2025)<a class="headerlink" href="#01549-beta-02-24-2025" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>This version is upgraded from .NET 6 to .NET 8, where in theory 10.14 support is dropped.</strong></p>
+</blockquote>
+<h2 id="features_5">Features<a class="headerlink" href="#features_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1424">#1424</a> - DiffSinger: support SHFC (pitch shift curve) - (<a href="https://github.com/yqzhishen">@yqzhishen</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1408">#1408</a> - Move to the next track part with PageUp/PageDown keys - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<p>https://private-user-images.githubusercontent.com/130257355/411304902-d9c39628-ada3-40e7-b7d1-cc0115a8c361.mp4
+- <a href="https://github.com/stakira/OpenUtau/pull/1419">#1419</a> - Change batch edit quantize to grid size - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)
+- <a href="https://github.com/stakira/OpenUtau/pull/1204">#1204</a> - Add hover tooltip to music key menu and snap div menu - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)
+- <a href="https://github.com/stakira/OpenUtau/pull/1386">#1386</a> - show singer default phonemizer in track phonemizer menu - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)
+<img alt="image" src="https://github.com/user-attachments/assets/6fabe7a6-4023-490d-8a23-2119ec82c27f" /></p>
+<h2 id="bug-fixes_8">Bug Fixes<a class="headerlink" href="#bug-fixes_8" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1375">#1375</a> - Musicxml: fix crash after importing a musicxml without tempo - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1376">#1376</a> - Remove conditions on phoneme definition checks of dspitch - (<a href="https://github.com/yqzhishen">@yqzhishen</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1389">#1389</a> - fix slice tool extending the part too much - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1394">#1394</a> - Centering the Splash Window - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1395">#1395</a> - Fix Note Properties Panel not working after auto reloading oto - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1406">#1406</a> - Faster expression commands - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_4">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1329">#1329</a> - <code>New!</code> Add Arpabet C+V Phonemizer - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1425">#1425</a> - <code>ZH CVVC</code> length of VC should be based on the whole length of the syllable, including slur notes - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1275">#1275</a> - <code>DIFFS EN+</code> fixes to phoneme replacements with LangCode - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1371">#1371</a> - <code>EN ARPA+</code> Add dynamic variations for 'dynMid_vv' - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1399">#1399</a> - <code>KO</code> [KO Classic Phonemizers + BaseKoreanPhonemizer] Improve KO romanization + phonetic hint fix + typo fix - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1380">#1380</a> - <code>JA</code> Add "legacy" to the names of JA VCV and JA CVVC phonemizers - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<h2 id="misc_6">Misc<a class="headerlink" href="#misc_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1388">#1388</a> - Fix github actions not working on linux - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1374">#1374</a> - Add links to FAQ, and instructions for solving 'This app is damaged' on macOS into release page - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1390">#1390</a> - Add GitHub issue template for feature requests - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<hr />
+<h1 id="01547-beta-12-20-2024">~<a href="https://github.com/stakira/OpenUtau/releases/tag/0.1.547">0.1.547 Beta</a> (12-20-2024)<a class="headerlink" href="#01547-beta-12-20-2024" title="Permanent link">&para;</a></h1>
+<h2 id="features_6">Features<a class="headerlink" href="#features_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1327">#1327</a> - Adds a splash window - (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1152">#1152</a> - Add MusicXML Import - (<a href="https://github.com/porime42">@porime42</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1342">#1342</a> - Refactor preferences page to using a navigation sidebar, rearrange preference items - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1336">#1336</a> - Add Full Screen option - (<a href="https://github.com/RedBlackAka">@RedBlackAka</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1334">#1334</a> - Multi-selection support for ExpressionsDialog. - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+</ul>
+<h2 id="bug-fixes_9">Bug Fixes<a class="headerlink" href="#bug-fixes_9" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1325">#1325</a> - Key scale change function modified. - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_5">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1281">#1281</a> - <code>DIFFS JA</code> Diffsinger Ja phonemizer: support kana - (<a href="https://github.com/wolfgitpr">@wolfgitpr</a>)</li>
+</ul>
+<h2 id="translation">Translation<a class="headerlink" href="#translation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1332">#1332</a> - Update German translation - (<a href="https://github.com/RedBlackAka">@RedBlackAka</a>)</li>
+</ul>
+<h2 id="misc_7">Misc<a class="headerlink" href="#misc_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1356">#1356</a> - When inputting invalid number, textbox won't show yellow error message - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1353">#1353</a> - Upgrade OnnxRuntime and DirectML, fixing DiffSinger on mac arm64 - (<a href="https://github.com/RedBlackAka">@RedBlackAka</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1337">#1337</a> - Resolve a warning - (<a href="https://github.com/RedBlackAka">@RedBlackAka</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1358">#1358</a> - sync strings - (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1328">#1328</a> - When "saving as", or exporting wav, use the filename of the current file by default - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+</ul>
+<hr />
+<h1 id="01546-beta-11-13-2024">~<a href="https://github.com/stakira/OpenUtau/releases/tag/0.1.546">0.1.546 Beta</a> (11-13-2024)<a class="headerlink" href="#01546-beta-11-13-2024" title="Permanent link">&para;</a></h1>
+<h2 id="features_7">Features<a class="headerlink" href="#features_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1268">#1268</a> - Add DrawLine Pitch Tool - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)<br />
+<img alt="image" src="https://github.com/user-attachments/assets/a3fa6073-0990-45a1-ac38-b41bb86e2d0d" /></li>
+<li>This corresponds to the Line tool only in the Piano Roll and to the Line tool (Shift+Left click) and Horizontal Line tool (Shift+Ctrl+Left click) in the Expression panel.</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1295">#1295</a> - Support SimpleENUNUServer0.5.0 - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1287">#1287</a> - VOICEVOXRenderer Tempo change support - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1285">#1285</a> - When resetting expressions, only reset curve expressions where the note is selected; Remove duplicate editing macros - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<h2 id="bug-fixes_10">Bug Fixes<a class="headerlink" href="#bug-fixes_10" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1179">#1179</a> - [KoreanPhonemizerUtil] Fixed crashing when reading ini from non-utf-8 singers - (<a href="https://github.com/EX3exp">@EX3exp</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1290">#1290</a> - Fix openutau failing to import midi if it contains two lyric events at the same time - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1319">#1319</a> - fix diffsinger pitch: pre&amp;tail SP pitch - (<a href="https://github.com/wolfgitpr">@wolfgitpr</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1311">#1311</a> - Fix openutau crashing when trying to edit the preutterence of an invalid phoneme - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1284">#1284</a> - Fix openutau crashing after pressing Ctrl+Z in lyric box twice and enter - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1286">#1286</a> - Fix LyricBox UI - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1324">#1324</a> - Fix LyricBox - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1323">#1323</a> - Fix ExpEdit - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_6">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1303">#1303</a> - <code>New!</code> Add "Chinese CVV Plus Phonemizer" - (<a href="https://github.com/2xxbin">@2xxbin</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1276">#1276</a> - <code>ZH</code> update chinese g2p - (<a href="https://github.com/wolfgitpr">@wolfgitpr</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1321">#1321</a> - <code>EN VCCV</code> Missed exception for "skt" - (<a href="https://github.com/BagelHero">@BagelHero</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1320">#1320</a> - <code>EN VCCV</code> Starlight Fix - (<a href="https://github.com/AnAndroNerd">@AnAndroNerd</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1280">#1280</a> - <code>DIFFS</code> Diffsinger phonemizers: G2p results add langcode by default; Check if phoneme is supported by duration model - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1278">#1278</a> - <code>DIFFS</code> diffsinger phonemizers: error in one sentence won't affect the following sentences - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1289">#1289</a> - <code>EN ARPA+</code> Fix [CCV] lastC and removed some redundant CCV splitter - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1316">#1316</a> - <code>Based</code> Update SyllableBasedPhonemizer.cs - (<a href="https://github.com/lonelyapple011">@lonelyapple011</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1314">#1314</a> - <code>KO CV</code> Modify KoreanCVPhonemizer.cs - (<a href="https://github.com/2xxbin">@2xxbin</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1297">#1297</a> - <code>TH VCCV</code> Fix phoneme parser for Thai VCCV - (<a href="https://github.com/printto">@printto</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1305">#1305</a> - <code>KO</code> Add Romanized lyrics support to all Korean phonemizers - (<a href="https://github.com/2xxbin">@2xxbin</a>)</li>
+</ul>
+<h2 id="misc_8">Misc<a class="headerlink" href="#misc_8" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1308">#1308</a> - [High priority] Bump JSON package version version to 8.0.5 - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1317">#1317</a> - Rename 'OpenUtau Wiki' in the 'help' section on the toolbar to 'OpenUtau Documentation' - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1262">#1262</a> - Remove restart notes from preferences where it doesn't apply and installer improvements - (<a href="https://github.com/RedBlackAka">@RedBlackAka</a>)</li>
+</ul>
+<hr />
+<h1 id="01543-beta-09-02-2024">~<a href="https://github.com/stakira/OpenUtau/releases/tag/0.1.543">0.1.543 Beta</a> (09-02-2024)<a class="headerlink" href="#01543-beta-09-02-2024" title="Permanent link">&para;</a></h1>
+<h2 id="features_8">Features<a class="headerlink" href="#features_8" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1241">#1241</a> - VOICEVOX Volume operation F0 read support - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1248">#1248</a> - Support Diffsinger multi-dictionary - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1256">#1256</a> - Add checks for phoneme definitions in dsdict.yaml - (<a href="https://github.com/yqzhishen">@yqzhishen</a>)</li>
+</ul>
+<h2 id="bug-fixes_11">Bug Fixes<a class="headerlink" href="#bug-fixes_11" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1260">#1260</a> - Fix openutau crash when exporting midi file with a note above 127 - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1234">#1234</a> - Message box maximum height and scroll bars in place - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1255">#1255</a> - Avoid repeated dictionary and model loading in DiffSingerBasePhonemizer - (<a href="https://github.com/yqzhishen">@yqzhishen</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1257">#1257</a> - Improve error message when parameter is missing for DiffSinger acoustic models - (<a href="https://github.com/yqzhishen">@yqzhishen</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1232">#1232</a> - use the first available audio device - (<a href="https://github.com/krn1pnc">@krn1pnc</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_7">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1242">#1242</a> - <code>New!</code> Add SimpleVOICEVOX ENtoJA Phonemizer - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1189">#1189</a> - <code>EN ARPA+</code> Update ARPA+ G2p Dictionary (preparing for model retrain) - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1243">#1243</a> - <code>EN ARPA+</code> [ARPA+ Phonemizer] Re-adjusted consonant lengths - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1235">#1235</a> - <code>ZH</code> fix g2p input bug - (<a href="https://github.com/wolfgitpr">@wolfgitpr</a>)</li>
+</ul>
+<h2 id="translation_1">Translation<a class="headerlink" href="#translation_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1249">#1249</a> - Update Strings.ru-RU.axaml - (<a href="https://github.com/KagamineP">@KagamineP</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1253">#1253</a> - Update translations in Strings.de-DE.axaml - (<a href="https://github.com/RedBlackAka">@RedBlackAka</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1254">#1254</a> - Updated Vietnamese translation - (<a href="https://github.com/Huangphoux">@Huangphoux</a>)</li>
+</ul>
+<h2 id="misc_9">Misc<a class="headerlink" href="#misc_9" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1263">#1263</a> - Update README.md - (<a href="https://github.com/stakira">@stakira</a>)</li>
+</ul>
+<hr />
+<h1 id="01542-beta-08-04-2024">~<a href="https://github.com/stakira/OpenUtau/releases/tag/0.1.542">0.1.542 Beta</a> (08-04-2024)<a class="headerlink" href="#01542-beta-08-04-2024" title="Permanent link">&para;</a></h1>
+<h2 id="features_9">Features<a class="headerlink" href="#features_9" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1223">#1223</a> - Add a 'reset all' editing macro - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_8">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_8" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1202">#1202</a> - <code>New!</code> Thai VCCV Phonemizer - (<a href="https://github.com/printto">@printto</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1207">#1207</a> - <code>ZH</code> <code>ZH-YUE</code> update chinese/cantonese g2p - (<a href="https://github.com/wolfgitpr">@wolfgitpr</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1212">#1212</a> - <code>KO</code> Apply Korean sandhi rules to Classic phonemizers - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1208">#1208</a> - <code>DIFFS JA</code> [Bug fix; important] [JA Monophone G2P] Small phoneme fix - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1196">#1196</a> - <code>EN X-SAMPA</code> [Bug fix] [EN X-SAMPA Phonemizer] Fix several bugs + Add dark L vowels - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1191">#1191</a> - <code>EN ARPA+</code> Fix [CV] validation on ARPA+ Phonemizer - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1190">#1190</a> - <code>JA VCV &amp; CVVC</code> [Bug fix; important] [JA Presamp Phonemizer] Bugfix for empty [PRIORITY] and [REPLACE] newlines + update MsToTickAt() code - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+</ul>
+<h2 id="misc_10">Misc<a class="headerlink" href="#misc_10" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1227">#1227</a> - Fix import tracks - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1230">#1230</a> - Adds github action for release - (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/commit/69d7ecd4305d3524d2a5a0c0571fdfc8d42190a0">69d7ecd</a> - build worldline for old macos versions - (<a href="https://github.com/stakira">@stakira</a>)</li>
+</ul>
+<hr />
+<h1 id="01532-beta-07-27-2024">~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.532">0.1.532 Beta</a> (07-27-2024)<a class="headerlink" href="#01532-beta-07-27-2024" title="Permanent link">&para;</a></h1>
+<h2 id="misc_11">Misc<a class="headerlink" href="#misc_11" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1225">#1225</a> - Consolidates to a single audio backend - (<a href="https://github.com/stakira">@stakira</a>)</li>
+</ul>
+<hr />
+<h1 id="01529-07-24-2024">~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.529">0.1.529</a> (07-24-2024)<a class="headerlink" href="#01529-07-24-2024" title="Permanent link">&para;</a></h1>
+<h2 id="features_10">Features<a class="headerlink" href="#features_10" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1216">#1216</a> - VOICEVOX F0 editing support and folder structure modification - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1182">#1182</a> - Add 'Install singer' to singer menu in track header - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1194">#1194</a> - Added Shebang to Generated Shell File. - (<a href="https://github.com/ochakochatblanc">@ochakochatblanc</a>)  </li>
+<li>To run resampler on macOS wine</li>
+</ul>
+<h2 id="bug-fixes_12">Bug Fixes<a class="headerlink" href="#bug-fixes_12" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1176">#1176</a> - Fix pitch misplaced when using overwrite pitch tool - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1177">#1177</a> - Clear vibrato and MOD+ after pitch baking - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1178">#1178</a> - Show progress dialog when loading rendered pitch (and potentially other time-consuming batch edits) - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1195">#1195</a> - Fix pitch curve 'add point' misplaced - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1197">#1197</a> - Fix very long note produced by knife tool - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1198">#1198</a> - Fix issue when using exe wavtools on Linux - (<a href="https://github.com/parallelepiped2718">@parallelepiped2718</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1220">#1220</a> - Fix several bugs on pressing Ctrl+Z in TextBoxes - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<h2 id="translation_2">Translation<a class="headerlink" href="#translation_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1173">#1173</a> - Update Strings.pl-PL.axaml - (<a href="https://github.com/KluelessKisa">@KluelessKisa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1180">#1180</a> - Updated Korean strings - (<a href="https://github.com/EX3exp">@EX3exp</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1210">#1210</a> - Updated zh-CN strings - (<a href="https://github.com/ssmzhn">@ssmzhn</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1218">#1218</a> - Update Strings.pl-PL.axaml - (<a href="https://github.com/KluelessKisa">@KluelessKisa</a>)</li>
+</ul>
+<h2 id="misc_12">Misc<a class="headerlink" href="#misc_12" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1162">#1162</a> - Include frq files when publishing voice banks - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1174">#1174</a> - Remove NAudio midi importer - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1175">#1175</a> - Show error message to install Visual C++ - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1181">#1181</a> - GitHub actions test won't be canceled if it fails on one OS - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1213">#1213</a> - Update System.Text.Json to 8.0.4 because of vulnerability - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1217">#1217</a> - Add .ustx file association on Windows and MacOS - (<a href="https://github.com/RedBlackAka">@RedBlackAka</a>)</li>
+</ul>
+<hr />
+<h1 id="01501-beta-06-09-2024">~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.501">0.1.501 Beta</a> (06-09-2024)<a class="headerlink" href="#01501-beta-06-09-2024" title="Permanent link">&para;</a></h1>
+<div class="admonition danger">
+<p class="admonition-title">Caution</p>
+<p>0.1.497Beta has known bugs! Please use 0.1.501Beta.</p>
+</div>
+<h2 id="features_11">Features<a class="headerlink" href="#features_11" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1134">#1134</a> - Organising the reset menu , add reset all parameter menu - (<a href="https://github.com/LitMus9">@LitMus9</a>)
+<img alt="image" src="https://github.com/stakira/OpenUtau/assets/130257355/cf71f900-768f-428b-88b3-40eba3a6fe96" /></li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1141">#1141</a> - Read track names from midi, write track names into midi - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1142">#1142</a> - Add Overwrite Pitch Tool - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)<br />
+  There are no good icons available yet ( ˘ω˘ )</li>
+</ul>
+<p>https://github.com/stakira/OpenUtau/assets/130257355/9d7db5ce-37bf-44b5-92d6-3ce3a7bec8b8
+- <a href="https://github.com/stakira/OpenUtau/pull/1146">#1146</a> - First linkage with setparam - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)<br />
+<img alt="image" src="https://github.com/stakira/OpenUtau/assets/130257355/37badc70-cfe1-449f-a8e1-5e5930ebf595" /></p>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1153">#1153</a> - Ignore slur lyrics when merging notes with Ctrl+U - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1156">#1156</a> - Auto save even when ustx is not saved - (<a href="https://github.com/tansansuisui">@tansansuisui</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1158">#1158</a> - Changed font size to be calculated in order of height - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)<br />
+<img alt="image" src="https://github.com/stakira/OpenUtau/assets/130257355/b806b0db-b143-4066-8da8-069f84082278" /></li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1168">#1168</a> - Add "Open singers location" menu - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)<br />
+<img alt="image" src="https://github.com/stakira/OpenUtau/assets/130257355/cefd0f24-f81a-4d70-afa6-ab7f3974a7f8" /></li>
+</ul>
+<h2 id="bug-fixes_13">Bug Fixes<a class="headerlink" href="#bug-fixes_13" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1124">#1124</a> - Fix LyricsReplaceDialog bug - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1130">#1130</a> - Fix importing project into an unsaved project - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1131">#1131</a> - Enhance diffsinger error messages; diffsinger phonemizer fix - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1135">#1135</a> - Fixed error in voice color remapping - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1136">#1136</a> - Fix unable to open old projects that contains P flag - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1137">#1137</a> - Fix OU not launching if project fails to open - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1140">#1140</a> - Fix spaces being ignored in presamp.ini VCPAD - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1144">#1144</a> - Fix openutau crash when trying to install singer from an encrypted archive file - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1154">#1154</a> - Fix openutau crash when opening a project with a diffsinger voicebank that isn't installed on this PC - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1155">#1155</a> - Fix OpenUtau failed to search singers when the user runs OpenUtau for the first time - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1163">#1163</a> - Fixed crash when unzipping singer fails - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1169">#1169</a> - Fix openutau crash when g2p lyrics helper failed to provide a suggestion - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1171">#1171</a> - Fix wavtool not working when full path contains 2 byte characters - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1172">#1172</a> - Fix unable to save - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_9">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_9" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1132">#1132</a> - <code>Various Korean</code> Update Korean Phonemizers (#1121 + #1122) - (<a href="https://github.com/EX3exp">@EX3exp</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1143">#1143</a> - <code>JA VCV&amp;CVVC</code> Fix start glottalstop - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1150">#1150</a> - <code>JA VCV&amp;CVVC</code> Some starting consonant fixes/adjustments - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1149">#1149</a> - <code>JA VCV</code> Support * あ - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1147">#1147</a> - <code>DISSF JA</code> Add Japanese monophone G2P (tailored to AI voicebanks/phonemizers) + add support to Diffsinger Japanese Phonemizer - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1161">#1161</a> - <code>ZH CVVC</code> Fix note timing after tempo change - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1165">#1165</a> - <code>EN X-SAMPA</code> Multiple fixes - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+</ul>
+<h2 id="misc_13">Misc<a class="headerlink" href="#misc_13" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1125">#1125</a> - Fixed force activation of the main window when an error dialog is shown - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1138">#1138</a> - Showing positions that failed to render - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1160">#1160</a> - Add support for straycat's cache files - (<a href="https://github.com/Astel123457">@Astel123457</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1170">#1170</a> - Show InputGesture on notes context menu - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<hr />
+<h1 id="01463-beta-05-10-2024">~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.463">0.1.463 Beta</a> (05-10-2024)<a class="headerlink" href="#01463-beta-05-10-2024" title="Permanent link">&para;</a></h1>
+<h2 id="features_12">Features<a class="headerlink" href="#features_12" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1126">#1126</a> - Add option to move only the cursor and not scroll back when pausing playback - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<h2 id="bug-fixes_14">Bug Fixes<a class="headerlink" href="#bug-fixes_14" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1100">#1100</a> - Fix deleting expressions - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1118">#1118</a> - Add flag marge function - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li>Automatically merge expression flags to avoid duplication when opening old projects in a new OU.</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1112">#1112</a> - fix tool selection bug when default pen is pen plus - (<a href="https://github.com/lennyservant">@lennyservant</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1113">#1113</a> - Fix openutau crash when dragging an invalid zip file into openutau window - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1116">#1116</a> - Fix loading and error dialog - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1129">#1129</a> - Fix openutau unable to play if the first note starts at 0 tick - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_10">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_10" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1110">#1110</a> - <code>EN VCCV</code> Small Fixes for EN VCCV before stable release - (<a href="https://github.com/AnAndroNerd">@AnAndroNerd</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1115">#1115</a> - <code>EN X-SAMPA</code> Fallbacks for Canadian Raising in English X-Sampa Phonemizer - (<a href="https://github.com/AnAndroNerd">@AnAndroNerd</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1117">#1117</a> - <code>New!</code> Add KoreanG2P and DiffsingerKoreanG2PPhonemizer - (<a href="https://github.com/Cardroid">@Cardroid</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1120">#1120</a> - <code>DIFFS KO</code> <code>ENUNU KO</code> Improved KO DIFFS&amp;KO ENUNU Phonemizer - (<a href="https://github.com/EX3exp">@EX3exp</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1123">#1123</a> - <code>EN ARPA+</code> Fix <code>[ng g]</code> instances turning into <code>[ng]</code> when <code>CCV</code> is present - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+</ul>
+<h2 id="misc_14">Misc<a class="headerlink" href="#misc_14" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1108">#1108</a> - Error log minor fix - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1111">#1111</a> - [DiffSinger] Fix error message on <code>mel_scale</code> - (<a href="https://github.com/yqzhishen">@yqzhishen</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1127">#1127</a> - Fix github action tests failing on MacOS - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<hr />
+<h1 id="01443-beta-04-20-2024">~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.443">0.1.443 Beta</a> (04-20-2024)<a class="headerlink" href="#01443-beta-04-20-2024" title="Permanent link">&para;</a></h1>
+<h2 id="features_13">Features<a class="headerlink" href="#features_13" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1104">#1104</a> - [DiffSinger] Migrate to continuous acceleration profiles - (<a href="https://github.com/yqzhishen">@yqzhishen</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1093">#1093</a> - [DiffSinger] Add tensor caching system - (<a href="https://github.com/yqzhishen">@yqzhishen</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1090">#1090</a> - Cache frq for MOD+ - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li>Speeds up MOD+ significantly</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1092">#1092</a> - Modification of Voicevox around licenses - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+</ul>
+<h2 id="bug-fixes_15">Bug Fixes<a class="headerlink" href="#bug-fixes_15" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1085">#1085</a> - Fix font query result with multiple comma-separated values - (<a href="https://github.com/SoulMelody">@SoulMelody</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_11">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_11" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1095">#1095</a> - <code>EN VCCV</code> Update EnglishVCCVPhonemizer.cs - (<a href="https://github.com/GeneralNuisance0">@GeneralNuisance0</a>)</li>
+<li>Adds support for the Canadian raising vowels of [Y] and [W]</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1088">#1088</a> - <code>EN ARPA+</code> Fix <strong><code>[V V]</code></strong> diphthong sustain and Change ending <strong><code>t</code></strong> or <strong><code>d</code></strong> with <strong>'dx'</strong> via <strong><code>'</code></strong> suffix - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1101">#1101</a> - <code>EN X-SAMPA</code> Vowel fallback bug fixes - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+</ul>
+<h2 id="translation_3">Translation<a class="headerlink" href="#translation_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1081">#1081</a> - Update Japanese translations - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<h2 id="misc_15">Misc<a class="headerlink" href="#misc_15" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1086">#1086</a> - Translate error messages and put them in the expander - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1107">#1107</a> - Improved translation of error messages for more flexibility - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1102">#1102</a> - Fixed icons - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+</ul>
+<hr />
+<h1 id="01421-beta-03-28-2024">~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.421">0.1.421 Beta</a> (03-28-2024)<a class="headerlink" href="#01421-beta-03-28-2024" title="Permanent link">&para;</a></h1>
+<h2 id="features_14">Features<a class="headerlink" href="#features_14" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1043">#1043</a> - Add a feature to only render and play selected region - (<a href="https://github.com/liuycsd">@liuycsd</a>)</li>
+<li><code>Alt + Space</code> plays only the selected note and its surroundings</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1068">#1068</a> - Modulation plus - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li>Affects modulation to the pitch curve<br />
+<img alt="image" src="https://github.com/stakira/OpenUtau/assets/130257355/062bc644-5f9a-45eb-9acc-8e2d92c82a62" /></li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1073">#1073</a> - Part duration enhancement - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li>Added storing the length of the part in ustx.</li>
+<li>When entering and resizing notes, the part is automatically extended by one measure when the length of the part is less than one measure remaining.</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1075">#1075</a> - VOICEVOX support - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li>Partial support for the song function of the <a href="https://voicevox.hiroshiba.jp/">VOICEVOX</a>, popular with fans of text-to-speech!</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1053">#1053</a> - [DiffSinger] Add more mel checks between vocoder and acoustic model - (<a href="https://github.com/yqzhishen">@yqzhishen</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1058">#1058</a> - Add "Edit" menu to menu bar of main window and piano roll window (Undo, Redo, etc.) - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1059">#1059</a> - Add Normalize (P flag) to expressions - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1074">#1074</a> - Reset preset combo box in the note properties panel - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<h2 id="bug-fixes_16">Bug Fixes<a class="headerlink" href="#bug-fixes_16" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1051">#1051</a> - fix bugged piano roll when first opened while the project is playing - (<a href="https://github.com/lennyservant">@lennyservant</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1055">#1055</a> - fix strings startswith "\t- " in yaml - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1060">#1060</a> - Fix plugin failing to run when OU path contains space - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1061">#1061</a> - Diffsinger: fix openutau unable to load the other voicebanks if one diffsinger has mistake. - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1071">#1071</a> - Fix singer name translation - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1072">#1072</a> - Fix UPhonemeOverride.phoneme - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_12">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_12" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1038">#1038</a> - <code>New!</code> Add ARPAsing Plus Phonemizer - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1077">#1077</a> - <code>EN X-SAMPA</code> Add Support for VV Split Fallback for Xsampa vb's especially to Delta 5 vbs - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1052">#1052</a> - <code>JA VCV &amp; CVVC</code> The color of VC will be that of CV unless otherwise specified, and bug fixes - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<h2 id="translation_4">Translation<a class="headerlink" href="#translation_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1067">#1067</a> - Update Korean translation - (<a href="https://github.com/EX3exp">@EX3exp</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1080">#1080</a> - update simplified Chinese localization - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<h2 id="misc_16">Misc<a class="headerlink" href="#misc_16" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1057">#1057</a> - Move hanzi to pinyin converter to 'lyrics' category - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1076">#1076</a> - Update README.md (add g2p compiling wiki) - (<a href="https://github.com/Cadlaxa">@Cadlaxa</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1078">#1078</a> - Improved view position when pasting note - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1079">#1079</a> - Move save status(*) to the top of window title - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1052">#1052</a> - Add phonemizer expression - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<hr />
+<h1 id="01397-beta-02-25-2024">~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.397">0.1.397 Beta</a> (02-25-2024)<a class="headerlink" href="#01397-beta-02-25-2024" title="Permanent link">&para;</a></h1>
+<h2 id="features_15">Features<a class="headerlink" href="#features_15" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1047">#1047</a> - Add a singer publish tool to pack a singer into a zip file - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1037">#1037</a> - Add toggle for defaulting to pen plus too - (<a href="https://github.com/Astel123457">@Astel123457</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1045">#1045</a> - [DiffSinger] Add support for tension and voicing - (<a href="https://github.com/yqzhishen">@yqzhishen</a>)</li>
+</ul>
+<h2 id="bug-fixes_17">Bug Fixes<a class="headerlink" href="#bug-fixes_17" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1042">#1042</a> - Fix keyboard input: fix focus onMenuClose and fix some key bindings - (<a href="https://github.com/liuycsd">@liuycsd</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1046">#1046</a> - Fix NoteProperiesPanel bug - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1041">#1041</a> - Open voicebank icon file read-only - (<a href="https://github.com/liuycsd">@liuycsd</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1050">#1050</a> - Small bug fix for last VCCV merge - (<a href="https://github.com/AnAndroNerd">@AnAndroNerd</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_13">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_13" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1034">#1034</a> - Support "- C" in JA VCV&amp;CVVC Phonemizer - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1035">#1035</a> - DiffSinger phonemizers: Return error if lyric isn't found in the dictionary - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1029">#1029</a> - Eng VCCV Updates and Fixes - (<a href="https://github.com/AnAndroNerd">@AnAndroNerd</a>)</li>
+</ul>
+<h2 id="translation_5">Translation<a class="headerlink" href="#translation_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1049">#1049</a> - Update Japanese translations - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<h2 id="misc_17">Misc<a class="headerlink" href="#misc_17" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1048">#1048</a> - Add "no value" to expression - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1044">#1044</a> - Clear solo flag on copied tracks - (<a href="https://github.com/liuycsd">@liuycsd</a>)</li>
+</ul>
+<hr />
+<h1 id="01384-beta-02-06-2024">~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.384">0.1.384 Beta</a> (02-06-2024)<a class="headerlink" href="#01384-beta-02-06-2024" title="Permanent link">&para;</a></h1>
+<h2 id="features_16">Features<a class="headerlink" href="#features_16" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1025">#1025</a> - Add batch edit "Add breath" - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1018">#1018</a> - Add a button to change the tempo of the project without changing the positions of each note (in seconds) - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1030">#1030</a> - diffsinger renderer: stricter vocoder-acoustic compatibility check - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<h2 id="bug-fixes_18">Bug Fixes<a class="headerlink" href="#bug-fixes_18" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1033">#1033</a> - Fix the string duplicate issue - (<a href="https://github.com/Astel123457">@Astel123457</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1032">#1032</a> - fix not loading vogen voicebanks if "load all depth folders" is turned off - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1008">#1008</a> - Add case check on case-insensitive systems in voicebank check - (<a href="https://github.com/sdercolin">@sdercolin</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_14">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_14" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1027">#1027</a> - Create DiffSingerGermanPhonemizer.cs - (<a href="https://github.com/nobodyP">@nobodyP</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1031">#1031</a> - ZH CVVC: v_R shouldn't be too long for long notes, refactor ZH-YUE CVVC to be derived from ZH CVVC to reduce repeat code - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<h2 id="misc_18">Misc<a class="headerlink" href="#misc_18" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1017">#1017</a> - Add track expression logic - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<hr />
+<h1 id="01374-beta-02-02-2024">~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.374">0.1.374 Beta</a> (02-02-2024)<a class="headerlink" href="#01374-beta-02-02-2024" title="Permanent link">&para;</a></h1>
+<h2 id="features_17">Features<a class="headerlink" href="#features_17" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1011">#1011</a> - Add singer favorite function - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1021">#1021</a> - Show the current selection when setting encoding, singer type and default phonemizer - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<h2 id="bug-fixes_19">Bug Fixes<a class="headerlink" href="#bug-fixes_19" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1026">#1026</a> - Fix ReleaseSingersNotInUse bug - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_15">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_15" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1006">#1006</a> - DiffSinger: support different dictionaries for Chinese, Japanese and Cantonese - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1022">#1022</a> - diffsinger phonemizers: support glide phonemes - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<h2 id="misc_19">Misc<a class="headerlink" href="#misc_19" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1007">#1007</a> - language name localization - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1024">#1024</a> - Save recent open singer/project directory - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<hr />
+<h1 id="01367-beta-01-25-2024">~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.367">0.1.367 Beta</a> (01-25-2024)<a class="headerlink" href="#01367-beta-01-25-2024" title="Permanent link">&para;</a></h1>
+<h2 id="features_18">Features<a class="headerlink" href="#features_18" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1012">#1012</a> - Add option to load only top directories of singers - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/996">#996</a> - Add an option to import tempo when importing tracks - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<h2 id="bug-fixes_20">Bug Fixes<a class="headerlink" href="#bug-fixes_20" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1009">#1009</a> - Fix file system path handling by adding surrounding "" - (<a href="https://github.com/sdercolin">@sdercolin</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1002">#1002</a> - Diffsinger: fix unable to load sample and portrait height from character.yaml - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1003">#1003</a> - Enable IME input on X11 platforms such as Linux - (<a href="https://github.com/porime42">@porime42</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/976">#976</a> - Fix singer window goes behind the main window - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/985">#985</a> - Fix openutau crash when opening a ustx project whose first time signature isn't at 0 - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/966">#966</a> - Fix #Charaset - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_16">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_16" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1014">#1014</a> - Add Spanish and Italian Phonemizers for DiffSinger - (<a href="https://github.com/spicytigermeat">@spicytigermeat</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1019">#1019</a> - Diffsinger Rhythmizer phonemizer: Support hanzi input - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1001">#1001</a> - [ES SYL] Phonemizer refactor + custom dictionary support - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/1000">#1000</a> - G2p: add IsGlide method; EN ARPA: support glide phonemes. - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/995">#995</a> - [EN X-SAMPA] Distinguish between current word CC and previous word CC - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/994">#994</a> - Add ENUNUKoreanPhonemizer - (<a href="https://github.com/EX3exp">@EX3exp</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/993">#993</a> - Add DiffSingerKoreanPhonemizer - (<a href="https://github.com/EX3exp">@EX3exp</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/992">#992</a> - Add KoreanCVPhonemizer - (<a href="https://github.com/EX3exp">@EX3exp</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/991">#991</a> - Improve KoreanCBNNPhonemizer - (<a href="https://github.com/EX3exp">@EX3exp</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/990">#990</a> - Add BaseKoreanPhonemizer - (<a href="https://github.com/EX3exp">@EX3exp</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/989">#989</a> - Add KoreanPhonemizerUtil - (<a href="https://github.com/EX3exp">@EX3exp</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/984">#984</a> - Move DIFFS ZH-YUE and VOGEN ZH-YUE to ZH-YUE category - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<h2 id="translation_6">Translation<a class="headerlink" href="#translation_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/982">#982</a> - Improve Korean Translation, Add missing translation - (<a href="https://github.com/ppapman1">@ppapman1</a>)</li>
+</ul>
+<h2 id="misc_20">Misc<a class="headerlink" href="#misc_20" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/983">#983</a> - DiffSinger: Free memory for singers no longer in use - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/986">#986</a> - Add a github action to run unit tests for each PR - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<hr />
+<h1 id="01338-beta-12-16-2023">~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.338">0.1.338 Beta</a> (12-16-2023)<a class="headerlink" href="#01338-beta-12-16-2023" title="Permanent link">&para;</a></h1>
+<h2 id="features_19">Features<a class="headerlink" href="#features_19" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/981">#981</a> - Support using worldline resampler together with external wavtool - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/980">#980</a> - Add an option to disable showing singer icons on piano roll - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/979">#979</a> - When opening phonetic assistant, use the g2p used last time - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<h2 id="bug-fixes_21">Bug Fixes<a class="headerlink" href="#bug-fixes_21" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/977">#977</a> - fix error when opening singer view if the singer used in the ustx doesn't exist - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_17">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_17" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/961">#961</a> - Add Cantonese CVVC Phonemizer - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/959">#959</a> - Add Cantonese "Syo-style" Phonemizer - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/973">#973</a> - [ZH CVVC] Automatically add syllable ending if present (if next neighbor is null) - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/975">#975</a> - [Japanese Presamp Phonemizer] Add option for MUSTVC - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+</ul>
+<h2 id="misc_21">Misc<a class="headerlink" href="#misc_21" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/978">#978</a> - Refactor affix assignment as protected virtual method - (<a href="https://github.com/The-UTAU-Black-Supermarket">@The-UTAU-Black-Supermarket</a>)</li>
+</ul>
+<hr />
+<h1 id="01327-12-02-2023">~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.327">0.1.327</a> (12-02-2023)<a class="headerlink" href="#01327-12-02-2023" title="Permanent link">&para;</a></h1>
+<p>There are too many changes to keep track of!</p>
+<h3 id="december">December<a class="headerlink" href="#december" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/963">#963</a> - Check file name case on windows - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/962">#962</a> - Fix default font family name on linux for CJK locales - (<a href="https://github.com/SoulMelody">@SoulMelody</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/948">#948</a> - Fix creation of empty Oto from blank line in otoini - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<h3 id="november">November<a class="headerlink" href="#november" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/922">#922</a> - Use filename as alias - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/956">#956</a> - Add a "Install Dependency (.oudep)" item in Tools menu - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/946">#946</a> - Fix exception catching in audio transcribe - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/950">#950</a> - Add zh cvvc phonemizer test - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/953">#953</a> - Fix diffsinger phoneme misplace if lyric contains space; separate diffsinger Chinese phonemizer - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/955">#955</a> - Change export menu order - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/945">#945</a> - DiffSinger: Verify input names before running inference sessions - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/951">#951</a> - Update Strings.ru-RU.axaml - (<a href="https://github.com/KagamineP">@KagamineP</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/957">#957</a> - Show a dialog when dropping file if the file format is unsupported, Support ".midi" as an equivalent of ".mid" on dragging and dropping. - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/954">#954</a> - Improved stability of preferences - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/947">#947</a> - Make the URL in message box look like hyperlink - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/949">#949</a> - Improved stability of exporting error report - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/952">#952</a> - Improved stability of rendering - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/942">#942</a> - Add support for a custom vocoder for DiffSinger singer - (<a href="https://github.com/spicytigermeat">@spicytigermeat</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/911">#911</a> - Audio transcription with SOME - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/940">#940</a> - Update simplified chinese localization - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/939">#939</a> - [SyllableBasedPhonemizer API] Make alias extension restriction to same subbank optional - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/937">#937</a> - Fix openutau crashing when double clicking on the oto table of ENUNU and DiffSinger voicebanks - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/936">#936</a> - Lyric edit and general lyric replacement: apply to the whole part if no note is selected - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/935">#935</a> - Fix ENUNU phonemizer broken after BPM editing. - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/933">#933</a> - Add Korean-to-Japanese Phonemizer - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/932">#932</a> - [DE VCCV Phonemizer] Add missing vowel sound + consonant length adjustment - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/929">#929</a> - Set SingerType in SingersWindow - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/927">#927</a> - Fix Korean translation - (<a href="https://github.com/EX3exp">@EX3exp</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/912">#912</a> - Add "View" menu in PianoRollWindow - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/897">#897</a> - add mandarin/cantonese g2p - (<a href="https://github.com/wolfgitpr">@wolfgitpr</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/858">#858</a> - Fix voicebank error check - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/892">#892</a> - Show loading dialog / Set try-catch - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/887">#887</a> - Check wav file writeable when exporting - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/906">#906</a> - Fix TextBox font - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/926">#926</a> - [ZH CVVC Phonemizer] Fix CV handling: Starting CV fix + separate CV and VC voice color + Add VEL length calculation for VC - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/925">#925</a> - [EN X-SAMPA Phonemizer] Adjustment to recent SBP subbank refactor - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/941">#941</a> - Faster startup - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/917">#917</a> - Fix OpenUtau freezing when using classic plugins if there are overlapping notes - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/916">#916</a> - Editing macro: fix overlapping notes - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/915">#915</a> - Update Strings.ru-RU.axaml - (<a href="https://github.com/KagamineP">@KagamineP</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/913">#913</a> - Add hover tooltips for mute/solo toggle button and track settings button - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/903">#903</a> - Update ID Translation (by pyorririn) - (<a href="https://github.com/Astel123457">@Astel123457</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/909">#909</a> - Fix rendering track No. - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/907">#907</a> - Fix note property panel - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/905">#905</a> - Fix underlines are not displayed in Button - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/904">#904</a> - Don't show save dialog for new project - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/902">#902</a> - Copy error to clipboard - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/901">#901</a> - Update Japanese translation, English appearance - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/900">#900</a> - Support resizing notes from their heads - (<a href="https://github.com/yqzhishen">@yqzhishen</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/899">#899</a> - [ZH CVVC] Make VC use pitch of previous note - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/898">#898</a> - [KO VCV Phonemizer] Voice color fix + alternate support + extend end breath support - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/896">#896</a> - Better testing for phoneme attributes in multi-phoneme notes - (<a href="https://github.com/The-UTAU-Black-Supermarket">@The-UTAU-Black-Supermarket</a>)</li>
+</ul>
+<h3 id="october">October<a class="headerlink" href="#october" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/874">#874</a> - Scale degree display - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/893">#893</a> - singer name localization - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/894">#894</a> - [DiffSinger] Fix invalid tensor in memory when errors occur during *.emb loading - (<a href="https://github.com/yqzhishen">@yqzhishen</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/895">#895</a> - [DiffSinger] Fix note pitch masked unexpectedly when applying nearest interpolation - (<a href="https://github.com/yqzhishen">@yqzhishen</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/890">#890</a> - [English X-SAMPA Phonemizer] ValidateAlias() bug fix/refinement + some vowel fixes/refinements - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/888">#888</a> - Display track No. currently rendering - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/886">#886</a> - ctrl-click to add note into selection without deselecting the other notes - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/867">#867</a> - Fix parse pitchbend from plugins - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/878">#878</a> - improve classic pitch algorithm - (<a href="https://github.com/lennyservant">@lennyservant</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/882">#882</a> - Add DiffSinger Support - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/881">#881</a> - fix note bend entanglement when changing portamento in note properties - (<a href="https://github.com/lennyservant">@lennyservant</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/879">#879</a> - fix unable to load portraits shorter than 800px - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/876">#876</a> - Show location for vogen voicebank - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/877">#877</a> - fixed:classic pitch when changing tempo - (<a href="https://github.com/delta-kimigatame">@delta-kimigatame</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/875">#875</a> - Fix import/export prefixmap - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/872">#872</a> - Fix openutau crashing when the sample isn't a valid audio file - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/871">#871</a> - fix piano roll keyboard shortcuts blocking text box input - (<a href="https://github.com/lennyservant">@lennyservant</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/870">#870</a> - Editing macro: Reset phoneme aliases - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/868">#868</a> - Fix paste param dialog bug - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/861">#861</a> - Add import / export prefix.map - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/860">#860</a> - [vLabeler integration] Use existing lbp file before creating a new one - (<a href="https://github.com/sdercolin">@sdercolin</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/863">#863</a> - fix openutau crash when trying to play sample for enunu or vogen singer - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/865">#865</a> - Fix singer dialog - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/862">#862</a> - Fixed classic pitch - (<a href="https://github.com/delta-kimigatame">@delta-kimigatame</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/852">#852</a> - [Singers window] Add button to show readme.txt - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/859">#859</a> - Update Strings.it-IT.axaml - (<a href="https://github.com/IDOLTRASH">@IDOLTRASH</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/840">#840</a> - Refactor search dialog to a searchbar like in browsers and text editors - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/849">#849</a> - Update Strings.ru-RU.axaml - (<a href="https://github.com/KagamineP">@KagamineP</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/851">#851</a> - Update simplified Chinese localization - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/853">#853</a> - [Singer window] Play sample on click + [Wave.cs] Support reading AIFF format - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/854">#854</a> - Add github codespace support - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/855">#855</a> - Linking vibrato and volume - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/856">#856</a> - editing macro: Insert slur lyric - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/857">#857</a> - [Portrait height] Set default int to 0 (no default height if below 800px) - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+</ul>
+<h3 id="september">September<a class="headerlink" href="#september" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/847">#847</a> - Allow to change keyboard color in PianoRoll Window - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/846">#846</a> - Reflect track color in ghost notes - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/844">#844</a> - Fix Note Properties and Add vibrato drift (RERE) - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/848">#848</a> - [character.yaml] Option to set portrait height (width will be relative) - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/839">#839</a> - Fix unable to install vb from Mac on Windows - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/841">#841</a> - Check voice color when edit subbanks - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/842">#842</a> - Sort language groups of phonemizers alphabetically - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/843">#843</a> - Refactor phonemizer test utility method - (<a href="https://github.com/The-UTAU-Black-Supermarket">@The-UTAU-Black-Supermarket</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/830">#830</a> - Fix pitch paste bug - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/832">#832</a> - [PinyinLyricsHelper] Convert pinyin to lower variant in PinyinLyricsHelper - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/834">#834</a> - Check and Remapping voice color - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/835">#835</a> - Small bug fixes - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/836">#836</a> - Update avalonia to 11.0.4 - (<a href="https://github.com/lilyinstarlight/upd">@lilyinstarlight/upd</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/838">#838</a> - Correction of structure names, etc. - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/829">#829</a> - Alias search is now available at ENUNU. - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/825">#825</a> - Fix unable to save oto when the voicebank contains wavs that haven't been oto'd - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/827">#827</a> - [JA Presamp Phonemizer] Supports "っ", etc - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/817">#817</a> - Update Japanese translations - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/821">#821</a> - Make it easier to extend the tail of a project - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/826">#826</a> - Set icon for singers - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/820">#820</a> - Add legacy plugins shortcuts - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/819">#819</a> - Add option to change default renderer (for classic voicebanks) - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/818">#818</a> - Add option to automatically clear cache on quit - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/816">#816</a> - Add Search Note - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/815">#815</a> - Add "Select and paste parameters" and related methods - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/811">#811</a> - [German VCCV Phonemizer] VCC refactor + CC refactor + ValidateAlias() fix + split diphthong fix - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/810">#810</a> - Add Lengthen crossfades in batch menu - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/804">#804</a> - Save displayed expressions in Ustx - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/807">#807</a> - [BREAKING] Rename "ENDeltaPhonemizer" to "EnXSampaPhonemizer" + some fixes - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/808">#808</a> - Merge Notes - (<a href="https://github.com/hilmiyafia">@hilmiyafia</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/806">#806</a> - [JA CVVC &amp; Presamp] Semi-fix for voice color fallbacks - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+</ul>
+<h3 id="august">August<a class="headerlink" href="#august" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/797">#797</a> - [EN Delta] Refactoring code + fix ValidateAlias bugs + restore proper VCC connections + fix single consonants - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/799">#799</a> - Auto Legato Removes Rests and Overlaps - (<a href="https://github.com/hilmiyafia">@hilmiyafia</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/778">#778</a> - Fix voice color resetting - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/798">#798</a> - Reworded missing info message - (<a href="https://github.com/The-UTAU-Black-Supermarket">@The-UTAU-Black-Supermarket</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/801">#801</a> - Tweaked piano roll menus - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/802">#802</a> - ZH CVV: _uai should fall back to _ai - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/803">#803</a> - Add German UI language - (<a href="https://github.com/schustobias">@schustobias</a>)</li>
+</ul>
+<h3 id="july">July<a class="headerlink" href="#july" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/793">#793</a> - Fix the scale of icon in pianoroll window - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/794">#794</a> - [ES to JA Phonemizer] Consonant bug fixes - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/795">#795</a> - [Phonetic Assistant] Add German Lyrics Helper + missing Spanish view model option - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/773">#773</a> - [EN DELTA] Starting CC + ValidateAlias refinement - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/776">#776</a> - ZH CVV: custom dictionary support - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/779">#779</a> - Fix a bug when creating a new project - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/780">#780</a> - Ignore SearchTerms exception when loading singers - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/781">#781</a> - fix unable to import midi in "import tracks" - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/782">#782</a> - add an editing macro to remove tail "R" or tail "-" - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/785">#785</a> - Add Japanese contracted sound processing to EditLyrics - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/783">#783</a> - EN to JA test suite and fixes - (<a href="https://github.com/The-UTAU-Black-Supermarket">@The-UTAU-Black-Supermarket</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/787">#787</a> - Show a dialog when editing macros throw an error - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/789">#789</a> - [German for OU] Add German G2P, phonemizers, tests, custom dicts - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/790">#790</a> - Support ufdata import - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/772">#772</a> - For fine control of volume and panning. - (<a href="https://github.com/rokujyushi">@rokujyushi</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/768">#768</a> - Fix unable to use classic plugins when using machine learning renderers - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/765">#765</a> - Add Track color - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/767">#767</a> - EN ARPA and ENUNU EN: support extending syllables with +~ or +* - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/766">#766</a> - [JA CVVC &amp; JA Presamp] Add "m" consonant fallback - (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/762">#762</a> - Fix solo and mute - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/763">#763</a> - Fix Preferences dialog - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/761">#761</a> - Fix wordline-R stop on pitch snaps - (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/751">#751</a> - [WIP] Add Note Params panel - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<hr />
+<h1 id="0115801157b-06-19-2023"><a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.158">0.1.158</a>~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.157">0.1.157b</a> (06-19-2023)<a class="headerlink" href="#0115801157b-06-19-2023" title="Permanent link">&para;</a></h1>
+<h2 id="major-changes_1">Major Changes<a class="headerlink" href="#major-changes_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/commit/d60f403">d60f403</a> - Upgrade to avalonia 11 (<a href="https://github.com/stakira">@stakira</a>)<ul>
+<li>Version upgrade + series of fixes to breaking changes. See <code>Misc</code> for further relevant commits.</li>
+<li>Keep an eye out for bugs!</li>
+</ul>
+</li>
+<li><a href="https://github.com/stakira/OpenUtau/commit/08d7693">08d7693</a> - Installer version available (nsis installer) (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/738">#738</a> - Solo and Mute Improvements - (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/746">#746</a> - Add a dialog when installing .dll phonemizers (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)<ul>
+<li>Added a dialog when installing .dll phonemizers because hackers can disguise .dll as .ustx
+<img alt="Screenshot of dialogue reading &quot;Installing phonemizer&quot;" src="https://i.imgur.com/KDNq1jd.png" /></li>
+</ul>
+</li>
+</ul>
+<h2 id="bug-fixes_22">Bug Fixes<a class="headerlink" href="#bug-fixes_22" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/commit/b020209">b020209</a> - fix UST tempo parsing (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/commit/ee91432">ee91432</a> - Fix nullness in release configuration (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/commit/78fc333">78fc333</a> - Fix tab key for lyric box (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/commit/91bc579">91bc579</a> - Fix Mac build (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/commit/5a47b79">5a47b79</a> + <a href="https://github.com/stakira/OpenUtau/commit/bf0c8be">bf0c8be</a> + <a href="https://github.com/stakira/OpenUtau/commit/22a674f">22a674f</a> - UI fixes </li>
+<li><a href="https://github.com/stakira/OpenUtau/commit/8c92eb3">8c92eb3</a> - fix crash scrolling slightly beyond bottom note (<a href="https://github.com/stakira">@stakira</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_18">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_18" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/736">#736</a> - <code>VOGEN</code> Fix consonant timing (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/731">#731</a> - <code>ES SYL</code> Starting CCV + VV transition fix (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/732">#732</a> - <code>ES VCCV</code> Code and function optimization (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/734">#734</a> - <code>JA CVVC</code> Read CV append voice color (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/737">#737</a> - <code>VIE VCV</code> Phonemizer Update (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/743">#743</a> - <code>KO CVC</code> Fix tense consonant VC + add batchim end breath support (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/745">#745</a> - <code>FR VCCV</code> Starting - CC and ending CC - behaviour fix (<a href="https://github.com/mmemim">@mmemim</a>)</li>
+</ul>
+<h2 id="translations">Translations<a class="headerlink" href="#translations" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/747">#747</a> - fix translations (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+</ul>
+<h2 id="misc_22">Misc<a class="headerlink" href="#misc_22" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/commit/704b54c">704b54c</a> - Clean up views (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/commit/723109f">723109f</a> - Fix pianoroll interactions (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/commit/1e1a052">1e1a052</a> - Rewrite oto view (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/commit/d33a440">d33a440</a> - Better waveform drawing  (<a href="https://github.com/stakira">@stakira</a>)
+(<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/commit/839ac40">839ac40</a> - Fix dropping file  (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/commit/8227dee">8227dee</a> - Update packages, refactor file picker and nullness (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/commit/a52c64d">a52c64d</a> - Add select singer type step to install (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/commit/a227d56">a227d56</a> - tweak singer setup view (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/748">#748</a> + <a href="https://github.com/stakira/OpenUtau/pull/747">#747</a> - Changed the behavior of DrawPitchTool (RE) (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/742">#742</a> - Display ENUNU phonemes in the SingersList (<a href="https://github.com/rokujyushi">@rokujyushi</a>)<ul>
+<li>Allows ENUNU phoneme information (from .hed files) to be seen in the singer window. This works even without a dummy voicebank (wav + oto.ini) packaged with the model.</li>
+</ul>
+</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/633">#633</a> - Update README (<a href="https://github.com/CarpetBook">@CarpetBook</a>)</li>
+</ul>
+<hr />
+<h1 id="01119-05-28-2023">~<a href="https://github.com/stakira/OpenUtau/releases/tag/build%2F0.1.119">0.1.119</a> (05-28-2023)<a class="headerlink" href="#01119-05-28-2023" title="Permanent link">&para;</a></h1>
+<h2 id="features_20">Features<a class="headerlink" href="#features_20" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/691">#691</a> - Singer Window Improvements, etc (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)<ul>
+<li>General improvements to the singer window have been made! Primary additions are alias search, as well as pre-selecting the singer based on active part. <br>
+<img alt="example of alias search function" src="https://imgur.com/1rTdCKL.gif" /></li>
+</ul>
+</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/711">#711</a> - General Lyrics Replacement tool (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)<ul>
+<li>This new macro uses regular expressions to convert lyrics. It is highly scalable and simplifies replacement of any language. Adding and sharing new presets is encouraged!
+<br><img alt="example animation of 'General lyrics replacement' in action" src="https://imgur.com/BFib5mt.gif" /></li>
+</ul>
+</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/712">#712</a> - Drag and drop to install .dll phonemizers, .exe resamplers and wavtools (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)<ul>
+<li>Externally provided phonemizers, resamplers and wavtools should no longer require manual folder management. Just drag and drop to install! 
+<div class="highlight"><pre><span></span><code>OS-specific feedback required: Mac and Linux
+</code></pre></div>
+<img alt="example of .exe install via drag and drop" src="https://user-images.githubusercontent.com/54425948/239664701-1fffee4f-3626-43ab-b4db-d7c7b3b32f47.png" /></li>
+</ul>
+</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/713">#713</a> - Add support for Classic Ust Flags (<a href="https://github.com/arkfinn">@arkfinn</a>)<ul>
+<li><a href="https://github.com/stakira/OpenUtau/commit/94b00a5">94b00a5</a> fixes some issues with the original implementation.</li>
+</ul>
+</li>
+</ul>
+<h2 id="bug-fixes_23">Bug Fixes<a class="headerlink" href="#bug-fixes_23" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/708">#708</a> - <code>Pitch Baking</code> Fix PITD erasing region misplaced, process the whole part by default (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_19">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_19" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/693">#693</a> - <code>ES VCCV</code> VCC/CC fix + ValidateAlias for "E" semivowel (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/707">#707</a> - <code>ZH CVV</code> Use new mapping style + voice color support + "yan" vowel fix + "_un" ending alternative</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/709">#709</a> - <code>KO CVC</code> "ch" VC fix (romaja/mixed VC) (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/710">#710</a> - <code>Various JA phoemizers</code> PhoneticHint support and Unicode countermeasures (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/716">#716</a> - <code>EN VCCV</code> phonemizer refactor (<a href="https://github.com/mmemim">@mmemmim</a> &amp; <a href="https://github.com/cubialpha">@cubialpha</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/720">#720</a> - <code>ES VCCV</code> Add different consonant lengths support (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+</ul>
+<h2 id="misc_23">Misc<a class="headerlink" href="#misc_23" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/commit/11fa8cc">11fa8cc</a> - nicer version compare  (<a href="https://github.com/stakira">@stakira</a>)</li>
+</ul>
+<hr />
+<h1 id="0196-05-21-2023">~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.96">0.1.96</a> (05-21-2023)<a class="headerlink" href="#0196-05-21-2023" title="Permanent link">&para;</a></h1>
+<p><div class="highlight"><pre><span></span><code><span class="gu">@@ Major Change @@</span>
+</code></pre></div>
+From this point on, OpenUtau has a <a href="https://github.com/stakira/OpenUtau/tree/stable">Stable</a> and <a href="https://github.com/stakira/OpenUtau/tree/master">Beta</a> branch. You may opt into the Beta in-program by going to <code>Tools</code>&gt;<code>Preferences</code>&gt;<code>Advanced</code>, and toggling <code>Beta</code> to On. Doing so may open you up to experiencing bugs, so exercise caution!</p>
+<h2 id="misc_24">Misc<a class="headerlink" href="#misc_24" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/commit/dd2d0f2">dd2d0f2</a> - adds stale workflow and increases releases kept (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/commit/bd5641c">bd5641c</a> - Setup beta and stable release channels (<a href="https://github.com/stakira">@stakira</a>)<ul>
+<li><a href="https://github.com/stakira/OpenUtau/commit/225b97d">225b97d</a> corrects beta releases link, title and description.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h1 id="0192-05-16-2023">~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.92">0.1.92</a> (05-16-2023)<a class="headerlink" href="#0192-05-16-2023" title="Permanent link">&para;</a></h1>
+<h2 id="misc_25">Misc<a class="headerlink" href="#misc_25" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/commit/af16021">#af16021</a> - Refactor locale initialization (<a href="https://github.com/stakira">@stakira</a>)<ul>
+<li>Preventative measures for situations similar to the 0.1.90 bug, general refactoring.</li>
+<li>This commit also changes the <code>mid</code> on the <code>stereo panning slider</code> to <strong><code>C</code></strong> (for Center).</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h1 id="0191-05-15-2023">~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.91">0.1.91</a> (05-15-2023)<a class="headerlink" href="#0191-05-15-2023" title="Permanent link">&para;</a></h1>
+<h2 id="bug-fixes_24">Bug Fixes<a class="headerlink" href="#bug-fixes_24" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/689">#689</a> - fix en-US language saving and loading (<a href="https://github.com/lennyservant">@lennyservant</a>)<ul>
+<li>This should resolve the critical errors (preferences crash, singers not loading) from 0.1.90. Sorry for the inconvenience!</li>
+<li>If still encountering issues, navigate to the <code>prefs.json</code> file in your OpenUtau folder structure, and remove the line <code>"language": "axaml",</code> and save.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h1 id="0190-05-15-2023">~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.90">0.1.90</a> (05-15-2023)<a class="headerlink" href="#0190-05-15-2023" title="Permanent link">&para;</a></h1>
+<div class="admonition danger">
+<p class="admonition-title">Caution</p>
+<p>This build has known bugs!</p>
+</div>
+<ul>
+<li>Selecting <code>preferences</code> currently causes OpenUtau to crash. Fix incoming at <a href="https://github.com/stakira/OpenUtau/pull/689">#689</a>. </li>
+</ul>
+<p>Fix note: If you at any point updated to this version and ran it, and have been experiencing persistent issues even after updating to new versions -- you may need to remove the "languages" line from your prefs.JSON, or simply delete the prefs.JSON wholly (warning: this will reset any customization OpenUtau stores in preferences to the default).</p>
+<h2 id="features_21">Features<a class="headerlink" href="#features_21" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><a href="https://github.com/stakira/OpenUtau/pull/668">#668</a> - Stereo Panning Slider (<a href="https://github.com/nfrid">@nfrid</a>)</p>
+<ul>
+<li>Stereo panning now available in the <code>track header</code>, under the <code>volume slider</code>. It works similarly to volume; left click and hold to drag, and right click will set the slider to mid. <br>
+<img alt="example animation of 'Stereo Panning Slider' set to mid" src="https://user-images.githubusercontent.com/13046595/234082612-b803c922-7328-476c-9ff7-55113ed9fcca.png" /> <br>
+<img alt="example animation of 'Stereo Panning Slider' set to left" src="https://user-images.githubusercontent.com/13046595/234082697-c123fdcd-12dd-4f17-8b09-7a24bd954bbc.png" /> <br>
+<img alt="example animation of 'Stereo Panning Slider' set to right" src="https://user-images.githubusercontent.com/13046595/234082665-3ef4ec83-6d42-4d59-b025-99a934effca7.png" /></li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/stakira/OpenUtau/pull/676">#676</a> - Move Suffix to Voice Color (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</p>
+<ul>
+<li>A macro to remove suffixes from lyrics and move them to the voice color panel if a matching suffix is found in the voice color settings. If not found, the suffix will remain in the lyric.
+<img alt="example animation of 'Move Suffix to Voice Color' in action" src="https://i.imgur.com/p108qe0.gif" /></li>
+</ul>
+</li>
+</ul>
+<h2 id="phonemizer-changes_20">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_20" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/667">#667</a> - <strong>Removed Phonemizer: <code>EN Teto</code></strong> (<a href="https://github.com/adlez27">@adlez27</a>)<ul>
+<li>Depreciated. It is recommended to use <code>EN Delta</code> Phonemizer when using Kasane Teto's English voicebank. The seperately compiled version of <code>EN Teto</code> can be found here if necessary: https://github.com/adlez27/OpenUtau/releases/tag/Teto-0.1.0</li>
+</ul>
+</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/681">#681</a> - <strong>Merged Phonemizers: <code>EN Delta V1</code> and <code>EN Delta V2</code></strong> (<a href="https://github.com/lottev1991">@lottev1991</a>)<ul>
+<li><code>EN Delta V1</code> and <code>EN Delta V2</code> are now merged into one Phonemizer: <strong><code>EN Delta</code></strong>. <ul>
+<li>Split strings are now handled automatically rather than having to manually select which version you require.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/674">#674</a> + <a href="https://github.com/stakira/OpenUtau/pull/677">#677</a>- <strong>Add Spanish and Italian G2P</strong> (<a href="https://github.com/lottev1991">@lottev1991</a>)<ul>
+<li>G2P allows you to write words that may not appear in the dictionary. It will use the data it was trained on to take a guess at the phonemes for the word written, rather than just resulting in a <code>word not found</code> error. Support for this has been added to <em>all</em> current Spanish Phonemizers, and <code>IT SYL</code>!</li>
+</ul>
+</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/680">#680</a> - <code>JA VCV &amp; CVVC</code> Add presamp.ini <code>VCPAD</code> support, fix a bug when single pitch voicebank (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/675">#675</a> - <code>ES VCCV</code>  Starting CCV bug fix (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/684">#684</a> - <code>ES VCCV</code> Add stop consonant/affricate CC ValidateAlias (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/688">#688</a> - <code>Vietnamese Phonemizers</code> Updated to fix Voice Color support (<a href="https://github.com/janikyou">@janikyou</a>)</li>
+</ul>
+<h2 id="translation_7">Translation<a class="headerlink" href="#translation_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/676">#676</a> - Add and improve Japanese translations (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/679">#679</a> - Fix around language (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)<ul>
+<li>Fixed a bug that caused the language to run in the same language as InstalledUICulture the first time it was launched, but reset to en-US when the preference window was opened</li>
+</ul>
+</li>
+</ul>
+<h2 id="misc_26">Misc<a class="headerlink" href="#misc_26" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/commit/4dca53d78ddfd9569a01c975e0e961c948ee53bf">#4dca53d</a> - Adds g2p training code (<a href="https://github.com/stakira">@stakira</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/669">#669</a> - Refactor PluginRunner to OpenUtau.Core and make testable (<a href="https://github.com/arkfinn">@arkfinn</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/676">#676</a> - Add and fix LyricBatchEdits (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)<ul>
+<li><em>Fix RemoveToneSuffix</em></li>
+<li><em>Add ChangeVoiceColorCommand in NoteCommand</em></li>
+</ul>
+</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/680">#680</a> - Add PresampSamplePhonemizer and fixes (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)<ul>
+<li><em>Sample for developers. Not included in release build</em></li>
+</ul>
+</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/682">#682</a> - Defaults to paging instead of scrolling (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/686">#686</a> - Flag filter based on resampler manifests (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)<ul>
+<li>Support for an <code>expression-filter</code> feature in resampler manifests. To quote: <blockquote>
+<p>Many resamplers are unable to parse flags correctly when there are moresampler-specific flags, because most resamplers only use single-character flags, but moresampler uses multi-character flags, such as "Mt", "Me", "Mb". To solve this issue, we can pass only the supported flags (specified in resampler manifest) into the resampler."</p>
+</blockquote>
+</li>
+<li>This is one part of a broader feature implementation. See also <code>Let renderers provide expression suggestions</code> - <a href="https://github.com/stakira/OpenUtau/pull/599">#599</a>. </li>
+</ul>
+</li>
+</ul>
+<hr />
+<h1 id="01570173-04-23-2023"><a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.57">0.1.57</a>~<a href="https://github.com/stakira/OpenUtau/releases/tag/build/0.1.73">0.1.73</a> (04-23-2023)<a class="headerlink" href="#01570173-04-23-2023" title="Permanent link">&para;</a></h1>
+<p><strong>Past release notes:</strong> This is the first! If you need to know about previous releases, please see the github commit history. Efforts will be made to make sure that features up until this point are documented on the wiki. See <a href="https://github.com/stakira/OpenUtau/wiki/Getting-Started">Getting Started</a>.</p>
+<h2 id="features_22">Features<a class="headerlink" href="#features_22" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/661">#661</a> - Pitch Baking (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)<ul>
+<li>
+<p>A macro has been added under the <code>notes</code> topline menu item in the piano roll: <code>convert PITD to pitch control points</code>:</p>
+<p><img alt="example animation of 'convert PITD to pitch control points' in action" src="https://i.imgur.com/JcbJlRs.gif" />
+- <a href="https://github.com/stakira/OpenUtau/pull/662">#662</a> - Support for importing and exporting time signatures in MIDI files (<a href="https://github.com/liuycsd">@liuycsd</a>)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="bug-fixes_25">Bug Fixes<a class="headerlink" href="#bug-fixes_25" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/commit/89550fe94cbdf5e6f808904626154cf5ebf5ce62">#89550fe</a> - revert macos dylib hack from #6fc7b35 (<a href="https://github.com/stakira">@stakira</a>)<ul>
+<li><strong>This should address the mac builds from 0.1.53 though 0.1.57 giving a Failed to render error on MacOS.</strong> </li>
+</ul>
+</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/657">#657</a> - Fix disappearing notes on plugin execution (<a href="https://github.com/arkfinn">@arkfinn</a>)</li>
+</ul>
+<h2 id="phonemizer-changes_21">Phonemizer Changes<a class="headerlink" href="#phonemizer-changes_21" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/644">#644</a> - <code>EN Delta V1</code> VCC ending fix (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/646">#646</a> - <code>JA CVVC</code> Add crossfade CV support for non-vowels (<a href="https://github.com/lottev1991">@lottev1991</a>)</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/655">#655</a> - <strong>New Phonemizer: <code>JA VCV &amp; CVVC</code></strong> (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)<ul>
+<li><code>JA VCV &amp; CVVC</code> allows support of multiple voicebank formats in one phonemiser. It supports CV, VCV and CVVC Japanese voicebanks (including pitches or colors of differing formats within the same hierarchy). With the settings one can adjust within a presamp.ini file, this is a powerful addition to the Phonemizer roster. Please give it a try if it suits your needs. <ul>
+<li>Introduces a new base class for phonemizers that work with the existing presamp.ini file type.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/656">#656</a> - Improved loading of Append.maps for multi-prefix maps (<a href="https://github.com/maiko3tattun">@maiko3tattun</a>)<ul>
+<li>Within this PR, full implementation of the presamp.ini parsing for <code>JA VCV &amp; CVVC</code> is included. Relevant tests have also been added at <a href="https://github.com/stakira/OpenUtau/pull/656/commits/06c8475fbae109beabe925c7169916e2185406bf">#06c8475</a>.</li>
+</ul>
+</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/659">#659</a> - Adjustments to Phonemizer and SyllableBasedPhonemizer to allow automated testing (<a href="https://github.com/adlez27">@adlez27</a>)<ul>
+<li>Some example tests have been provided. It is encouraged to write tests for SBP phonemizers both existing and in development. <a href="https://github.com/stakira/OpenUtau/pull/666">#666</a> - Read dictionary sync when testing is related.</li>
+</ul>
+</li>
+<li><a href="https://github.com/stakira/OpenUtau/pull/663">#663</a>, <a href="https://github.com/stakira/OpenUtau/pull/664">#664</a>, <a href="https://github.com/stakira/OpenUtau/pull/665">#665</a> - <code>EN Delta V1</code> Add additional X-SAMPA vowels + misc fixes (<a href="https://github.com/lottev1991">@lottev1991</a>)<ul>
+<li>The dictionary template has also been updated to support these.</li>
+</ul>
+</li>
+</ul>
+<h2 id="misc_27">Misc<a class="headerlink" href="#misc_27" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/stakira/OpenUtau/pull/647">#647</a> - Add .vscode folder into gitignore (<a href="https://github.com/oxygen-dioxide">@oxygen-dioxide</a>)</li>
+</ul>
+<hr />
+<blockquote>
+<p><em>OpenUtau's version numbers increase per accepted PR request. As such, these changelogs are grouped with the date of acceptance treated as a "release".</em></p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

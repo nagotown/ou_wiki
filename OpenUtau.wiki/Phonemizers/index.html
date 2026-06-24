@@ -1,0 +1,5992 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://nagotown.github.io/ou_wiki/OpenUtau.wiki/Phonemizers/">
+      
+      
+        <link rel="prev" href="../Keyboard-Shortcuts/">
+      
+      
+        <link rel="next" href="../Resamplers-and-Wavtools/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Phonemizers - OpenUtau Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-does-vcvcvvcvccvetc-work" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OpenUtau Wiki" class="md-header__button md-logo" aria-label="OpenUtau Wiki" data-md-component="logo">
+      
+  <img src="../../favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OpenUtau Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Phonemizers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nagotown/ou_wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OpenUtau Wiki" class="md-nav__button md-logo" aria-label="OpenUtau Wiki" data-md-component="logo">
+      
+  <img src="../../favicon.png" alt="logo">
+
+    </a>
+    OpenUtau Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nagotown/ou_wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For beginners
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    For beginners
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Keyboard-Shortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keyboard Shortcuts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phonemizers
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phonemizers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-vcvcvvcvccvetc-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        *How does VCV/CVVC/VCCV/etc. work?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DEFAULT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-arpa-english-arpasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EN ARPA (English ARPAsing)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EN ARPA (English ARPAsing)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-dictionary-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auxiliary dictionary files:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-arpa-english-arpasing_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EN ARPA+ (English ARPAsing+)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EN ARPA+ (English ARPAsing+)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-dictionary-files_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auxiliary dictionary files:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auxiliary dictionary files:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallbacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fallbacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replacements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-cv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EN C+V
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EN C+V">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-dictionary-files_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auxiliary dictionary files:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auxiliary dictionary files:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbols_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallbacks_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fallbacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replacements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timings_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diphthongs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diphthongs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fil-vcv-cvvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIL VCV &amp; CVVC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FIL VCV &amp; CVVC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-dictionary-files_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auxiliary dictionary files:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auxiliary dictionary files:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbols_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallbacks_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fallbacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacements_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replacements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timings_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entries_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zh-cvv-chinese-cvv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZH CVV (Chinese CVV)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ja-presamp-japanese-vcv-cvvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JA Presamp (Japanese VCV &amp; CVVC)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ja-cvvc-japanese-cvvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JA CVVC (Japanese CVVC)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ja-vcv-japanese-vcv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JA VCV (Japanese VCV)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ko-cvc-korean-cvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KO CVC (Korean CVC)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ko-cvvc-korean-cvvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KO CVVC (Korean CVVC)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ko-cvvc-korean-cvvc-standard-pronuciation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KO CVVC (Korean CVVC standard pronuciation)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ko-vcv-korean-vcv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KO VCV (Korean VCV)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ko-cv-korean-cv-ko-cbnn-korean-combinationcbnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KO CV (Korean CV) &amp; KO CBNN (Korean Combination/CBNN)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KO CV (Korean CV) &amp; KO CBNN (Korean Combination/CBNN)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Features (공통 가이드)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ko-cv-korean-cv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KO CV (Korean CV)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KO CV (Korean CV)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ko-cvini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ko-CV.ini
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ko-CV.ini">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Use (가이드)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ko-cbnn-korean-cbnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KO CBNN (Korean CBNN)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pt-br-cvc-brazilian-portuguese-cvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PT-BR CVC (Brazilian Portuguese CVC)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PT-BR CVC (Brazilian Portuguese CVC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Feature
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special Feature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-to-ja-english-to-japanese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EN to JA (English to Japanese)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fr-cvvc-french-cvvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FR CVVC (French CVVC+)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FR CVVC (French CVVC+)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input-lyrics-helper-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input &amp; lyrics helper input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional support
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#es-syl-spanish-syllable-based-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ES SYL (Spanish Syllable-Based Phonemizer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ES SYL (Spanish Syllable-Based Phonemizer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonetic-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phonetic input
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phonetic input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phoneme-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phoneme list
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternate-aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternate aliases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-notes-on-vcv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important notes on VCV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consonant-length-adjustment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consonant length adjustment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#es-vccv-spanish-vccv-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ES VCCV (Spanish VCCV Phonemizer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ES VCCV (Spanish VCCV Phonemizer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonetic-input_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phonetic input
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phonetic input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phoneme-list_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phoneme list
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternate-aliases_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternate aliases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-dictionary-files-uses-njokisyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auxiliary dictionary files (uses njokis.yaml):
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auxiliary dictionary files (uses njokis.yaml):">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbols_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacements_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replacements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entries_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#es-makku-spanish-makkusan-style-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ES MAKKU (Spanish Makkusan-style Phonemizer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ES MAKKU (Spanish Makkusan-style Phonemizer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonetic-input_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phonetic input
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phonetic input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phoneme-list_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phoneme list
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternate-aliases_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternate aliases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-vccv-czs-english-vccv-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EN VCCV (Cz's English VCCV phonemizer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EN VCCV (Cz&#39;s English VCCV phonemizer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-dictionary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom dictionary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-dictionary-files-uses-envccvyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auxiliary dictionary files (uses envccv.yaml):
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auxiliary dictionary files (uses envccv.yaml):">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbols_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacements_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replacements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entries_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#es-to-ja-spanish-to-japanese-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ES to JA (Spanish to Japanese Phonemizer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ES to JA (Spanish to Japanese Phonemizer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lyric input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CV:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cvvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CVVC:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vcv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VCV:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonetic-input_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phonetic input
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phonetic input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phoneme-list_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phoneme list
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rolled-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rolled "r"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consonant-length-adjustment_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consonant length adjustment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consonant length adjustment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lengthening" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lengthening:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shortening" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shortening:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vietnamese-cvvcvcv-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vietnamese CVVC/VCV Phonemizer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-x-sampa-english-x-sampa-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EN X-SAMPA (English X-SAMPA phonemizer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EN X-SAMPA (English X-SAMPA phonemizer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonetic-input_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phonetic input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split-diphthongs-and-affricates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Split diphthongs and affricates
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Split diphthongs and affricates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phoneme-list_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phoneme list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-dictionary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom dictionary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-dictionary-files_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auxiliary dictionary files:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auxiliary dictionary files:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbols_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallbacks_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fallbacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacements_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replacements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timings_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entries_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#italian-syllable-based-phonemizer-it-syl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Italian Syllable-Based Phonemizer (IT SYL)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Italian Syllable-Based Phonemizer (IT SYL)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonetic-input_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phonetic input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phoneme-list_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phoneme list
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#german-diphone-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        German Diphone Phonemizer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="German Diphone Phonemizer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonetic-input_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phonetic input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phoneme-list-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phoneme list (default)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combined-english-german-diphonic-arpasing-banks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combined English-German diphonic (Arpasing) banks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Combined English-German diphonic (Arpasing) banks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#german-addon-for-english-bank" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        German addon for English bank
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="German addon for English bank">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-vowels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extra vowels:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-consonants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extra consonants:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#english-addon-for-german-bank" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        English addon for German bank
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="English addon for German bank">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-vowels_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extra vowels:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#german-vccv-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        German VCCV Phonemizer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="German VCCV Phonemizer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonetic-input_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phonetic input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phoneme-list_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phoneme list
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#korean-to-japanese-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Korean-to-Japanese Phonemizer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Korean-to-Japanese Phonemizer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#romaja-based-hangul-qwerty-keyboard-for-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Romaja-based Hangul QWERTY keyboard for Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mechanism
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Other functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consonant-velocity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consonant velocity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-sounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extra sounds
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-phonemizers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other phonemizers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Resamplers-and-Wavtools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resamplers and Wavtools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Expressions-%28Flags%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About expressions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Legacy-Plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UTAU Plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Voicebank-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Voicebank development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-note-%E2%80%90-character.yaml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech note ‐ character.yaml
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ENUNU-NNSVS-Support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ENUNU NNSVS Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DiffSinger-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DiffSinger support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VOICEVOX-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VOICEVOX support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release-Notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For Developers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    For Developers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Compiling-from-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiling OpenUtau from source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-new-phonemizers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing new phonemizers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Compiling-G2p-Models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiling G2p Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Adding-support-for-a-new-synthesis-engine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding support for a new synthesis engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contributing-to-OpenUtau%27s-localization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing to OpenUtau's localization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../USTX-file-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    USTX file format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%5BPROPOSAL%5D-svs.io-%E2%80%90-singing-voice-synthesis-backend-API/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    [PROPOSAL] svs.io ‐ singing voice synthesis backend API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-note-%E2%80%90-music-is-music%2C-phonetics-is-phonetics-%28also-why-you-don%27t-need-legacy-plugins%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech note ‐ music is music, phonetics is phonetics (also why you don't need legacy plugins)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Known-Bugs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Known bugs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Fork-OpenUtau-and-develop-a-new-editor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-vcvcvvcvccvetc-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        *How does VCV/CVVC/VCCV/etc. work?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DEFAULT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-arpa-english-arpasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EN ARPA (English ARPAsing)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EN ARPA (English ARPAsing)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-dictionary-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auxiliary dictionary files:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-arpa-english-arpasing_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EN ARPA+ (English ARPAsing+)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EN ARPA+ (English ARPAsing+)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-dictionary-files_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auxiliary dictionary files:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auxiliary dictionary files:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallbacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fallbacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replacements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-cv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EN C+V
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EN C+V">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-dictionary-files_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auxiliary dictionary files:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auxiliary dictionary files:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbols_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallbacks_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fallbacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replacements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timings_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diphthongs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diphthongs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fil-vcv-cvvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIL VCV &amp; CVVC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FIL VCV &amp; CVVC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-dictionary-files_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auxiliary dictionary files:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auxiliary dictionary files:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbols_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallbacks_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fallbacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacements_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replacements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timings_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entries_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zh-cvv-chinese-cvv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZH CVV (Chinese CVV)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ja-presamp-japanese-vcv-cvvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JA Presamp (Japanese VCV &amp; CVVC)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ja-cvvc-japanese-cvvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JA CVVC (Japanese CVVC)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ja-vcv-japanese-vcv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JA VCV (Japanese VCV)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ko-cvc-korean-cvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KO CVC (Korean CVC)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ko-cvvc-korean-cvvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KO CVVC (Korean CVVC)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ko-cvvc-korean-cvvc-standard-pronuciation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KO CVVC (Korean CVVC standard pronuciation)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ko-vcv-korean-vcv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KO VCV (Korean VCV)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ko-cv-korean-cv-ko-cbnn-korean-combinationcbnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KO CV (Korean CV) &amp; KO CBNN (Korean Combination/CBNN)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KO CV (Korean CV) &amp; KO CBNN (Korean Combination/CBNN)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Features (공통 가이드)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ko-cv-korean-cv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KO CV (Korean CV)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KO CV (Korean CV)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ko-cvini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ko-CV.ini
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ko-CV.ini">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Use (가이드)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ko-cbnn-korean-cbnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KO CBNN (Korean CBNN)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pt-br-cvc-brazilian-portuguese-cvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PT-BR CVC (Brazilian Portuguese CVC)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PT-BR CVC (Brazilian Portuguese CVC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Feature
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special Feature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-to-ja-english-to-japanese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EN to JA (English to Japanese)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fr-cvvc-french-cvvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FR CVVC (French CVVC+)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FR CVVC (French CVVC+)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input-lyrics-helper-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input &amp; lyrics helper input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional support
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#es-syl-spanish-syllable-based-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ES SYL (Spanish Syllable-Based Phonemizer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ES SYL (Spanish Syllable-Based Phonemizer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonetic-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phonetic input
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phonetic input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phoneme-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phoneme list
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternate-aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternate aliases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-notes-on-vcv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important notes on VCV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consonant-length-adjustment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consonant length adjustment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#es-vccv-spanish-vccv-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ES VCCV (Spanish VCCV Phonemizer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ES VCCV (Spanish VCCV Phonemizer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonetic-input_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phonetic input
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phonetic input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phoneme-list_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phoneme list
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternate-aliases_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternate aliases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-dictionary-files-uses-njokisyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auxiliary dictionary files (uses njokis.yaml):
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auxiliary dictionary files (uses njokis.yaml):">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbols_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacements_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replacements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entries_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#es-makku-spanish-makkusan-style-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ES MAKKU (Spanish Makkusan-style Phonemizer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ES MAKKU (Spanish Makkusan-style Phonemizer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonetic-input_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phonetic input
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phonetic input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phoneme-list_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phoneme list
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternate-aliases_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternate aliases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-vccv-czs-english-vccv-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EN VCCV (Cz's English VCCV phonemizer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EN VCCV (Cz&#39;s English VCCV phonemizer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-dictionary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom dictionary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-dictionary-files-uses-envccvyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auxiliary dictionary files (uses envccv.yaml):
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auxiliary dictionary files (uses envccv.yaml):">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbols_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacements_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replacements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entries_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#es-to-ja-spanish-to-japanese-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ES to JA (Spanish to Japanese Phonemizer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ES to JA (Spanish to Japanese Phonemizer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lyric input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CV:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cvvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CVVC:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vcv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VCV:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonetic-input_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phonetic input
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phonetic input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phoneme-list_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phoneme list
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rolled-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rolled "r"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consonant-length-adjustment_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consonant length adjustment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consonant length adjustment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lengthening" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lengthening:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shortening" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shortening:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vietnamese-cvvcvcv-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vietnamese CVVC/VCV Phonemizer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-x-sampa-english-x-sampa-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EN X-SAMPA (English X-SAMPA phonemizer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EN X-SAMPA (English X-SAMPA phonemizer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonetic-input_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phonetic input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split-diphthongs-and-affricates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Split diphthongs and affricates
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Split diphthongs and affricates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phoneme-list_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phoneme list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-dictionary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom dictionary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-dictionary-files_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auxiliary dictionary files:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auxiliary dictionary files:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbols_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallbacks_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fallbacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacements_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replacements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timings_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entries_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#italian-syllable-based-phonemizer-it-syl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Italian Syllable-Based Phonemizer (IT SYL)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Italian Syllable-Based Phonemizer (IT SYL)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonetic-input_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phonetic input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phoneme-list_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phoneme list
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#german-diphone-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        German Diphone Phonemizer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="German Diphone Phonemizer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonetic-input_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phonetic input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phoneme-list-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phoneme list (default)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combined-english-german-diphonic-arpasing-banks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combined English-German diphonic (Arpasing) banks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Combined English-German diphonic (Arpasing) banks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#german-addon-for-english-bank" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        German addon for English bank
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="German addon for English bank">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-vowels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extra vowels:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-consonants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extra consonants:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#english-addon-for-german-bank" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        English addon for German bank
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="English addon for German bank">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-vowels_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extra vowels:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#german-vccv-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        German VCCV Phonemizer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="German VCCV Phonemizer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyric-input_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyric input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonetic-input_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phonetic input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phoneme-list_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phoneme list
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#korean-to-japanese-phonemizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Korean-to-Japanese Phonemizer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Korean-to-Japanese Phonemizer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#romaja-based-hangul-qwerty-keyboard-for-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Romaja-based Hangul QWERTY keyboard for Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mechanism
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Other functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consonant-velocity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consonant velocity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-sounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extra sounds
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-phonemizers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other phonemizers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Phonemizers</h1>
+
+<p>This page is written for end users. Developers interested in working on new phonemizers should refer to the <a href="https://github.com/stakira/OpenUtau/wiki/Developing-new-phonemizers">API Doc</a>.</p>
+<p>When phonemizers break notes into multiple phonemes, you can adjust the envelopes and parameters for each of these independently.</p>
+<p>In order to change the phonemizer, click DEFAULT on the vocal track and choose the phonemizer from there.</p>
+<p><img alt="phonemizer" src="https://i.imgur.com/mBf2VOY.png" /></p>
+<h2 id="how-does-vcvcvvcvccvetc-work">*How does VCV/CVVC/VCCV/etc. work?<a class="headerlink" href="#how-does-vcvcvvcvccvetc-work" title="Permanent link">&para;</a></h2>
+<ul>
+<li>VCV and CVVC voicebanks, also known as "continuous sound" or 連続音 (<em>renzokuon</em>), use natural transitions between notes to smoothly blend sounds together during rendering. The standard method to organize these sounds is to directly type sound aliases from the <code>oto.ini</code> file into notes. Effectively, this is like hand-picking samples from the voicebank and connecting them together manually.<br />
+If this style is preferred, it can be utilized via the "Default" phonemizer in OpenUtau.</li>
+<li>OpenUtau offers special phonemizers for many languages to handle aliases from VCV or CVVC banks automatically. Phonemizers emulate old UTAU plugins, such as presamp or AutoCVVC, with different advantages:  <ol>
+<li>Phonemizers operate in realtime while editing lyrics.</li>
+<li>Results from phonemizers are displayed intuitively in the envelope editor below the notes.  </li>
+<li>In the envelope editor, the timing of the sound can be easily adjusted.  </li>
+</ol>
+</li>
+<li>Not all voicebanks will play nicely with OpenUtau. Some banks have specific quirks that the phonemizer cannot use, and OpenUtau does not support every type of voicebank in every language.</li>
+</ul>
+<h2 id="default">DEFAULT<a class="headerlink" href="#default" title="Permanent link">&para;</a></h2>
+<p>No phonemization is applied.
+You can input <code>+</code> to extend the previous lyric over multiple notes.<br />
+(Older versions of OpenUtau may use <code>...</code> instead of <code>+</code>.)</p>
+<p><img alt="+ extension" src="https://i.imgur.com/JlHc6bq.png" /></p>
+<h2 id="en-arpa-english-arpasing">EN ARPA (English ARPAsing)<a class="headerlink" href="#en-arpa-english-arpasing" title="Permanent link">&para;</a></h2>
+<p><a href="https://arpasing.tubs.wtf/en/directories/reclists">Reclist</a></p>
+<p>You may input lyrics in three different ways.
+- Plain English words (eg. <code>live</code>)<br />
+<img alt="plain english words" src="https://i.imgur.com/PZJe73G.png" />
+- Plain English words + phonetic hint (eg. <code>live[l ih v]</code>)<br />
+<img alt="english word + hint" src="https://i.imgur.com/YmvhUaL.png" />
+- Phonetic hint only (eg. <code>[l ih v]</code>)<br />
+<img alt="hint only" src="https://i.imgur.com/6hKOYsn.png" /></p>
+<p>For multisyllabic words, type the whole word in the first note, then use <code>+</code> to extend it across the following notes.<br />
+If the syllables are misaligned, add numbers after <code>+</code> to force alignment to the nth phoneme in the word.<br />
+(Older versions of OpenUtau may use <code>...</code> instead of <code>+</code>.)</p>
+<p><img alt="multisyllable" src="https://i.imgur.com/zjoVXxP.png" /></p>
+<h3 id="auxiliary-dictionary-files">Auxiliary dictionary files:<a class="headerlink" href="#auxiliary-dictionary-files" title="Permanent link">&para;</a></h3>
+<ul>
+<li>You can find an example <code>arpasing.yaml</code> file in Plugins folder. You can add new entries to it.</li>
+<li>A copy of <code>arpasing.yaml</code> file can be added to singer folder for a specific singer. You can even distribute an <code>arpasing.yaml</code> file with your voicebank.</li>
+<li>The lookup order is <code>plugin dictionary</code> -&gt; <code>singer dictionary</code> -&gt; <code>default dictionary</code>.</li>
+</ul>
+<h2 id="en-arpa-english-arpasing_1">EN ARPA+ (English ARPAsing+)<a class="headerlink" href="#en-arpa-english-arpasing_1" title="Permanent link">&para;</a></h2>
+<p><a href="https://arpasing.tubs.wtf/en/directories/reclists">Reclist</a></p>
+<ul>
+<li>Same mechanics for lyric input </li>
+<li>Supports more alias formats such as: <code>cv</code>, <code>c v</code>, <code>ccv</code>, <code>cc v</code>, <code>v v</code>, <code>splitted vv</code>, <code>v c</code>, <code>v cc</code>, <code>c c</code>, <code>c cc</code> and so on</li>
+</ul>
+<h3 id="auxiliary-dictionary-files_1">Auxiliary dictionary files:<a class="headerlink" href="#auxiliary-dictionary-files_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<h4 id="symbols">Symbols<a class="headerlink" href="#symbols" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Add a new symbol and define its symbol type for the phonemizer to recognize (<code>vowel</code>, <code>stop</code>, <code>affricate</code>, <code>fricative</code>, <code>aspirate</code>, <code>liquid</code>, <code>nasal</code>, <code>semivowel</code>, <code>tail</code>).</li>
+<li><code>affricate</code>'s are prioritized because they produce a sound.</li>
+<li>indicate the phoneme as <code>tail</code> to use them as a trailing tail note.</li>
+<li>encapsulate the whole symbol with <code>' '</code> if it starts with a special symbol.
+<div class="highlight"><pre><span></span><code>symbols:
+  - {symbol: ea, type: vowel}
+  - {symbol: ix, type: vowel}
+  - {symbol: dd, type: tap}
+  - {symbol: j, type: fricative}
+  - {symbol: &#39;@r&#39;, type: vowel}
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<h4 id="fallbacks">Fallbacks<a class="headerlink" href="#fallbacks" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Fallbacks missing phoneme/alias to the mapped phoneme/alias.</li>
+<li>supports <code>1:1</code> phoneme mappings only.
+<div class="highlight"><pre><span></span><code>fallbacks:
+# 1:1 (one-to-one mappings)
+  - {from: ax, to: ah}
+  - {from: ch oy, to: ch ow}
+
+# format can be like this
+    - from: b@
+    to: bV
+    - from: b
+    to: bh
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<h4 id="replacements">Replacements<a class="headerlink" href="#replacements" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Replaces certain phoneme or sequence of phonemes defined in the replacements entry.</li>
+<li>supports <code>1:1</code>, <code>1:M</code>, <code>M:1</code>, <code>M:M</code> phoneme replacements.
+<div class="highlight"><pre><span></span><code>replacements:
+# 1:1 (one-to-one mappings)
+  - {from: ax, to: ah}
+  - {from: cl, to: q}
+# 1:M (one-to-many mappings) (splitting)
+  - {from: dr, to: [d, r]}
+  - {from: tr, to: [t, sh, r]}
+  - {from: aw, to: [aa, w]}
+# M:1 (many-to-one mappings) (merging)
+  - {from: [ih, ng], to: ing}
+  - {from: [eh, ax, m], to: eam}
+# M:M (many-to-many mappings)
+  - {from: [ih, ng], to: [ix, ng]}
+  - {from: [ay, l], to: [ay, ax, el]}
+
+# format can be like this
+    - from: [ae, n]
+    to: [eh, ax, n]
+    - from: b
+    to: bh
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<h4 id="timings">Timings<a class="headerlink" href="#timings" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Defines the certain phoneme to be in this phoneme group's phoneme length.</li>
+<li>Overrides specific alias to be in that length (in seconds).
+<div class="highlight"><pre><span></span><code>timings:
+  - {symbol: dh, value: 1.2}
+  - {symbol: vf, value: 2.8}
+  - {symbol: st, value: 3.5}
+  - {symbol: a r, value: 0.5}
+  - {symbol: e r, value: 0.5}
+  - {symbol: i r, value: 0.5}
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<h4 id="entries">Entries<a class="headerlink" href="#entries" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Add a new dictionary entry to override certain word pronunciations.</li>
+<li>no limit to characters as long as it covered by unicode so you can add kana, hangul, hieroglyphics grapheme etc entries to <code>arpasing.yaml</code>.
+<div class="highlight"><pre><span></span><code>entries:
+  - {grapheme: hello, phonemes: [hh, ax, l, ow]}
+  - {grapheme: 안녕하세요, phonemes: [aa, n, y, ao, ng, hh, ah, s, eh, y ao]}
+# format can be like this
+  - grapheme: stars
+    phonemes: s, t, aa, r, z
+  - grapheme: drops
+    phonemes: dr, aa, p, s
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h2 id="en-cv">EN C+V<a class="headerlink" href="#en-cv" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Same mechanics for lyric input </li>
+<li>Supports more alias formats such as: <code>v</code>, <code>c</code>, <code>cc</code>, <code>v c</code> and so on</li>
+<li>Supported alias varieties <code>spaced</code>, <code>no-space</code></li>
+<li><code>Note that the new version of the [en-cPv.yaml] will be created in OU version 0.1.566, the old yaml file will be renamed as [en-cPv_backup.yaml]</code></li>
+</ul>
+<h3 id="auxiliary-dictionary-files_2">Auxiliary dictionary files:<a class="headerlink" href="#auxiliary-dictionary-files_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<h4 id="symbols_1">Symbols<a class="headerlink" href="#symbols_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Add a new symbol and define its symbol type for the phonemizer to recognize (<code>vowel</code>, <code>stop</code>, <code>affricate</code>, <code>fricative</code>, <code>aspirate</code>, <code>liquid</code>, <code>nasal</code>, <code>semivowel</code>, <code>tail</code>, <code>diphthong</code>).</li>
+<li><code>affricate</code>'s are prioritized because they produce a sound.</li>
+<li>indicate the phoneme as <code>tail</code> to use them as a trailing tail note.</li>
+<li>encapsulate the whole symbol with <code>' '</code> if it starts with a special symbol.
+<div class="highlight"><pre><span></span><code>symbols:
+  - {symbol: ea, type: vowel}
+  - {symbol: ix, type: vowel}
+  - {symbol: dd, type: tap}
+  - {symbol: j, type: fricative}
+  - {symbol: &#39;@r&#39;, type: vowel}
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<h4 id="fallbacks_1">Fallbacks<a class="headerlink" href="#fallbacks_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Fallbacks missing phoneme/alias to the mapped phoneme/alias.</li>
+<li>supports <code>1:1</code> phoneme mappings only.
+<div class="highlight"><pre><span></span><code>fallbacks:
+# 1:1 (one-to-one mappings)
+  - {from: ax, to: ah}
+  - {from: ch oy, to: ch ow}
+
+# format can be like this
+    - from: b@
+    to: bV
+    - from: b
+    to: bh
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<h4 id="replacements_1">Replacements<a class="headerlink" href="#replacements_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>If the vb you're using in not in arpabet, you can remap them to the desired phoneme system with this method.</li>
+<li>Replaces certain phoneme or sequence of phonemes defined in the replacements entry.</li>
+<li>supports <code>1:1</code>, <code>1:M</code>, <code>M:1</code>, <code>M:M</code> phoneme replacements.
+<div class="highlight"><pre><span></span><code>replacements:
+# 1:1 (one-to-one mappings)
+  - {from: ax, to: ah}
+  - {from: cl, to: q}
+# 1:M (one-to-many mappings) (splitting)
+  - {from: dr, to: [d, r]}
+  - {from: tr, to: [t, sh, r]}
+  - {from: aw, to: [aa, w]}
+# M:1 (many-to-one mappings) (merging)
+  - {from: [ih, ng], to: ing}
+  - {from: [eh, ax, m], to: eam}
+# M:M (many-to-many mappings)
+  - {from: [ih, ng], to: [ix, ng]}
+  - {from: [ay, l], to: [ay, ax, el]}
+
+# format can be like this
+    - from: [ae, n]
+    to: [eh, ax, n]
+    - from: b
+    to: bh
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<h4 id="timings_1">Timings<a class="headerlink" href="#timings_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Defines the certain phoneme to be in this phoneme group's phoneme length.</li>
+<li>Overrides specific alias to be in that length (in seconds).
+<div class="highlight"><pre><span></span><code>timings:
+  - {symbol: dh, value: 1.2}
+  - {symbol: vf, value: 2.8}
+  - {symbol: st, value: 3.5}
+  - {symbol: a r, value: 0.5}
+  - {symbol: e r, value: 0.5}
+  - {symbol: i r, value: 0.5}
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<h4 id="diphthongs">Diphthongs<a class="headerlink" href="#diphthongs" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Defines the certain phoneme as a diphthong in the symbols list so it splits the phoneme into 2.
+  <div class="highlight"><pre><span></span><code>symbols:
+  - {symbol: aU, type: dihpthong}
+  - {symbol: A, type: dihpthong}
+</code></pre></div></li>
+<li>Default dipthong splitting will be <code>V-</code>.</li>
+<li>Can furthre customize the diphthong phoneme splitting with these parameter</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code>diphthong:
+  - {from: aw, to: _aw}
+  - {from: EI, to: EI--}
+</code></pre></div>
+- #### Entries
+- Add a new dictionary entry to override certain word pronunciations.
+- no limit to characters as long as it covered by unicode so you can add kana, hangul, hieroglyphics grapheme etc entries to <code>en-cPv.yaml</code>.
+<div class="highlight"><pre><span></span><code>entries:
+  - {grapheme: hello, phonemes: [hh, ax, l, ow]}
+  - {grapheme: 안녕하세요, phonemes: [aa, n, y, ao, ng, hh, ah, s, eh, y ao]}
+# format can be like this
+  - grapheme: stars
+    phonemes: s, t, aa, r, z
+  - grapheme: drops
+    phonemes: dr, aa, p, s
+</code></pre></div></p>
+<h2 id="fil-vcv-cvvc">FIL VCV &amp; CVVC<a class="headerlink" href="#fil-vcv-cvvc" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Same mechanics for lyric input </li>
+<li>Takes the notes and splits them into phonemes depending in the phonemes listed in the yaml file</li>
+<li>Supports more alias formats such as: <code>cv</code>, <code>c v</code>, <code>ccv</code>, <code>cc v</code>, <code>v v</code>, <code>splitted vv</code>, <code>v c</code>, <code>v cc</code>, <code>c c</code>, <code>c cc</code> and so on</li>
+<li>Supports separate starting C's or starting CV's</li>
+</ul>
+<h3 id="auxiliary-dictionary-files_3">Auxiliary dictionary files:<a class="headerlink" href="#auxiliary-dictionary-files_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<h4 id="symbols_2">Symbols<a class="headerlink" href="#symbols_2" title="Permanent link">&para;</a></h4>
+</li>
+<li>Add a new symbol and define its symbol type for the phonemizer to recognize (<code>vowel</code>, <code>stop</code>, <code>affricate</code>, <code>fricative</code>, <code>aspirate</code>, <code>liquid</code>, <code>nasal</code>, <code>semivowel</code>, <code>tail</code>).</li>
+<li><code>affricate</code>'s are prioritized because they produce a sound.</li>
+<li>indicate the phoneme as <code>tail</code> to use them as a trailing tail note.</li>
+<li>encapsulate the whole symbol with <code>' '</code> if it starts with a special symbol.
+<div class="highlight"><pre><span></span><code>symbols:
+  - {symbol: ea, type: vowel}
+  - {symbol: ix, type: vowel}
+  - {symbol: dd, type: tap}
+  - {symbol: j, type: fricative}
+  - {symbol: &#39;@r&#39;, type: vowel}
+</code></pre></div></li>
+<li>
+<h4 id="fallbacks_2">Fallbacks<a class="headerlink" href="#fallbacks_2" title="Permanent link">&para;</a></h4>
+</li>
+<li>Fallbacks missing phoneme/alias to the mapped phoneme/alias.</li>
+<li>supports <code>1:1</code> phoneme mappings only.
+<div class="highlight"><pre><span></span><code>fallbacks:
+# 1:1 (one-to-one mappings)
+  - {from: a, to: A}
+  - {from: ts, to: ch}
+
+# format can be like this
+    - from: b@
+    to: bV
+    - from: b
+    to: bh
+</code></pre></div></li>
+<li>
+<h4 id="replacements_2">Replacements<a class="headerlink" href="#replacements_2" title="Permanent link">&para;</a></h4>
+</li>
+<li>Replaces certain phoneme or sequence of phonemes defined in the replacements entry.</li>
+<li>supports <code>1:1</code>, <code>1:M</code>, <code>M:1</code>, <code>M:M</code> phoneme replacements.
+<div class="highlight"><pre><span></span><code>replacements:
+# 1:1 (one-to-one mappings)
+  - {from: ax, to: ah}
+  - {from: cl, to: q}
+# 1:M (one-to-many mappings) (splitting)
+  - {from: dr, to: [d, r]}
+  - {from: tr, to: [t, sh, r]}
+  - {from: aw, to: [aa, w]}
+# M:1 (many-to-one mappings) (merging)
+  - {from: [ih, ng], to: ing}
+  - {from: [eh, ax, m], to: eam}
+# M:M (many-to-many mappings)
+  - {from: [ih, ng], to: [ix, ng]}
+  - {from: [ay, l], to: [ay, ax, el]}
+
+# format can be like this
+    - from: [ae, n]
+    to: [eh, ax, n]
+    - from: b
+    to: bh
+</code></pre></div></li>
+<li>
+<h4 id="timings_2">Timings<a class="headerlink" href="#timings_2" title="Permanent link">&para;</a></h4>
+</li>
+<li>Defines the certain phoneme to be in this phoneme group's phoneme length.</li>
+<li>Overrides specific alias to be in that length (in seconds).
+<div class="highlight"><pre><span></span><code>timings:
+  - {symbol: dh, value: 1.2}
+  - {symbol: vf, value: 2.8}
+  - {symbol: st, value: 3.5}
+  - {symbol: a r, value: 0.5}
+  - {symbol: e r, value: 0.5}
+  - {symbol: i r, value: 0.5}
+</code></pre></div></li>
+<li>
+<h4 id="entries_1">Entries<a class="headerlink" href="#entries_1" title="Permanent link">&para;</a></h4>
+</li>
+<li>Add a new dictionary entry to override certain word pronunciations.</li>
+<li>no limit to characters as long as it covered by unicode so you can add kana, hangul, hieroglyphics grapheme etc entries to <code>filipino.yaml</code>.
+<div class="highlight"><pre><span></span><code>entries:
+  - {grapheme: hello, phonemes: [hh, ax, l, ow]}
+  - {grapheme: 안녕하세요, phonemes: [aa, n, y, ao, ng, hh, ah, s, eh, y ao]}
+# format can be like this
+  - grapheme: stars
+    phonemes: s, t, aa, r, z
+  - grapheme: drops
+    phonemes: dr, aa, p, s
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h2 id="zh-cvv-chinese-cvv">ZH CVV (Chinese CVV)<a class="headerlink" href="#zh-cvv-chinese-cvv" title="Permanent link">&para;</a></h2>
+<p>Lyrics should be written in pinyin. The phonemizer will insert endings for syllables that need them.<br />
+<img alt="zh cvv" src="https://i.imgur.com/TJfiNit.png" /></p>
+<h2 id="ja-presamp-japanese-vcv-cvvc">JA Presamp (Japanese VCV &amp; CVVC)<a class="headerlink" href="#ja-presamp-japanese-vcv-cvvc" title="Permanent link">&para;</a></h2>
+<p>You can use all of CV, VCV and CVVC voicebank.<br />
+The phonemizer first tries VCV, and if it isn't available in the voice bank, it will falls back to CVVC, then CV.<br />
+Preference is given to CVVC with matching color over VCV with default color.<br />
+<img alt="presamp" src="https://imgur.com/SKzYtIb.png" />  </p>
+<p>The phonemizer converts romaji to hiragana (see below for details).<br />
+<img alt="presamp romaji" src="https://imgur.com/bNSFg6g.png" /><br />
+Glottal stops should be written as [あ・].  </p>
+<p>This phonemizer follows the behavior of presamp. If voicebank has <code>presamp.ini</code>, use it.<br />
+Supporting <code>presamp.ini</code> features:<br />
+[VOWEL][CONSONANT][PRIORITY][REPLACE][ALIAS(VCPAD,VCVPAD)]  </p>
+<p>The default [REPLACE] includes romaji to hiragana conversion, so the phonemizer converts romaji to hiragana if there is no <code>presamp.ini</code> or there are descriptions in [REPLACE] of <code>presamp.ini</code> to convert romaji to hiragana.(Only for exact matches)<br />
+The default VC length is the preutterance of the following CV.  </p>
+<p>If phonetic hint is entered, use it and do not convert to VCV or CVVC.<br />
+<img alt="JaPhoneticHint" src="https://i.imgur.com/vgVHiJ2.png" /></p>
+<h2 id="ja-cvvc-japanese-cvvc">JA CVVC (Japanese CVVC)<a class="headerlink" href="#ja-cvvc-japanese-cvvc" title="Permanent link">&para;</a></h2>
+<p>Lyrics should be written in hiragana. If your lyrics are written in romaji, you can convert it to hiragana using the Romaji to Hiragana transformer.<br />
+<img alt="roma to hira" src="https://i.imgur.com/XmfItiZ.png" /></p>
+<p>The phonemizer will insert VCs and convert vowels to VV. The default VC length is the preutterance of the following CV. <code>presamp.ini</code> settings from the voicebank are not supported yet.<br />
+<img alt="ja cvvc" src="https://i.imgur.com/GDaGjLu.png" /></p>
+<p>If phonetic hint is entered, use it and do not convert to CVVC.<br />
+<img alt="JaPhoneticHint" src="https://i.imgur.com/WRp2vub.png" /></p>
+<h2 id="ja-vcv-japanese-vcv">JA VCV (Japanese VCV)<a class="headerlink" href="#ja-vcv-japanese-vcv" title="Permanent link">&para;</a></h2>
+<p>Lyrics should be written in hiragana. If your lyrics are written in romaji, you can convert it to hiragana using the Romaji to Hiragana transformer.<br />
+<img alt="roma to hira" src="https://i.imgur.com/XmfItiZ.png" /></p>
+<p>The phonemizer will automatically convert CV to VCV. If a VCV sample isn't available in the voicebank, it will fall back on CV. <code>presamp.ini</code> settings from the voicebank are not supported yet.<br />
+<img alt="ja vcv" src="https://i.imgur.com/QYp3J3J.png" /></p>
+<p>If phonetic hint is entered, use it and do not convert to VCV.<br />
+<img alt="JaPhoneticHint" src="https://i.imgur.com/vgVHiJ2.png" /></p>
+<h2 id="ko-cvc-korean-cvc">KO CVC (Korean CVC)<a class="headerlink" href="#ko-cvc-korean-cvc" title="Permanent link">&para;</a></h2>
+<p>This is a program to modify existing oto.ini file for use in OpenUtau (made by myself)<br />
+└&gt; https://app.box.com/s/t973p0rznirqg0naa04436p8re0ktfyy<br />
+You can write lyrics in Romaji and Hangul, and the phonemizer will automatically insert VCs between each CV.<br />
+<img alt="kr cvc" src="https://i.imgur.com/6w87k41.png" /><br />
+you can write final consonant(<code>n</code>, <code>m</code>, <code>ng</code>, <code>l</code>, <code>k</code>, <code>p</code>, <code>t</code>),<br />
+but you should write the vowel of preNote in front of final consonant without spaces (ex. <code>an(안)</code>, <code>im(임)</code>, <code>ung(웅)</code>, <code>el(엘)</code>, <code>ok(옥)</code>, <code>eup(읍)</code>, <code>eot(엇)</code>).<br />
+final consonant is classified as CV, but VC isn't inserted next note.<br />
+<img alt="kr cvc final consonant" src="https://i.imgur.com/yB012mW.png" /><br />
+There's no insert VC behind vowel and <code>w</code>, <code>y</code>, <code>l</code> note (ex. <code>a</code>, <code>ya</code>, <code>weo</code>, <code>li</code>)<br />
+<img alt="kr cvc vowel" src="https://i.imgur.com/WsTELSm.png" /><br />
+write Hangeul, you can use combine final consonants<br />
+<img alt="kr cvc" src="https://i.imgur.com/Ffn0mNK.jpg" /><br />
+write lyrics in Hangeul, apply phonological rules(연음화 / 유기음화 / 경음화 / 구개음화 / 비음화 / 유음화 / 탈락 / 음절끝소리규칙)  </p>
+<h2 id="ko-cvvc-korean-cvvc">KO CVVC (Korean CVVC)<a class="headerlink" href="#ko-cvvc-korean-cvvc" title="Permanent link">&para;</a></h2>
+<p>You should write the lyrics in Hangeul. Romaji will be updated soon.<br />
+Automatically insert VC between CV and CV.<br />
+<img alt="kr cvvc" src="https://i.imgur.com/vrftrEJ.png" /></p>
+<p>you can write final consonant(<code>ㄴ</code>, <code>ㅁ</code>, <code>ㅇ</code>, <code>ㄹ</code>, <code>ㄱ</code>, <code>ㄲ</code>, <code>ㅂ</code>, <code>ㅍ</code>, <code>ㅅ</code>, <code>ㄷ</code>, <code>ㅌ</code>)
+You can fill it out right after the note like CV.
+Even if CV comes after final consonant, VC is not generated.<br />
+<img alt="kr cvvc final consonant" src="https://i.imgur.com/2RQfG4F.png" /></p>
+<p>When entering Vowel and Vowel, it is converted like VCV.<br />
+<img alt="kr cvvc vowel" src="https://i.imgur.com/ubiRAgb.png" /></p>
+<h2 id="ko-cvvc-korean-cvvc-standard-pronuciation">KO CVVC (Korean CVVC standard pronuciation)<a class="headerlink" href="#ko-cvvc-korean-cvvc-standard-pronuciation" title="Permanent link">&para;</a></h2>
+<p>Followed the standard pronunciation method for Hangul.
+This support all Korean final consonants, consonant assimilation(자음동화), 된소리되기, abbreviate consonants(자음 축약), 탈락, sandhi(연음).  </p>
+<p><img alt="Korean CVVC standard pronuciation" src="https://i.imgur.com/unXXxVq.png" /></p>
+<h2 id="ko-vcv-korean-vcv">KO VCV (Korean VCV)<a class="headerlink" href="#ko-vcv-korean-vcv" title="Permanent link">&para;</a></h2>
+<p>Lyrics can be input in Hangul (ex. <code>한 글</code>) or as an Arpasing-style phonetic hint (ex. <code>[h a n] [g eu l]</code>). When a note has both a lyric and a phonetic hint, the phonetic hint takes precedence.</p>
+<p><img alt="Hangul and phonetic hint support" src="https://i.imgur.com/1CKRtFl.png" /></p>
+<p>The phonemizer supports both lowercase and uppercase batchim aliases. No need to worry about modifying the oto.ini files.</p>
+<p><img alt="Lowercase batchim alias support" src="https://i.imgur.com/uw72Arh.png" />
+<img alt="Uppercase batchim alias support" src="https://i.imgur.com/eA5yfCo.png" /></p>
+<p>When inputting phonetic hints, take note of the following:
+* Each syllable must be in its own note (<code>[h a n] [g eu l]</code> O / <code>[h a n g eu l]</code> X).
+* ㅐ, ㅒ, and ㅙ can be written as <code>ae</code>, <code>yae</code>, and <code>wae</code>, respectively. You do not need to convert them to an <code>e</code> vowel.
+* ㄲ, ㄸ, and ㅃ can be written as <code>gg / kk</code>, <code>dd / tt</code>, and <code>bb / pp</code>, respectively.
+* ㅢ can be written as <code>eui</code> or <code>ui</code>.
+* ㅚ can be written as <code>oi</code> or <code>oe</code>.
+* Each sound <em>must</em> be separated with spaces (<code>[h a n]</code> O / <code>[han]</code> X).
+* Glides (<code>w</code> and <code>y</code>) are part of the vowel and should <em>not</em> be treated as an initial consonant (<code>[wae]</code> O / <code>[w ae]</code> X).</p>
+<p>Phonetic hints and Hangul can be used together, which may be useful for voicebanks that offer English sounds like /f/ and /v/.</p>
+<p><img alt="Hangul and phonetic hint mixing" src="https://i.imgur.com/k0lux1a.png" /></p>
+<p>Although the phonemizer supports all Hangul jamo, it is strongly recommended to rewrite the lyrics in phonetic Hangul (such as the pronunciation guides on the Naver Korean Dictionary or Wiktionary) for best results, especially with words that go through consonant sound changes (ex. 입력 → 임녁, 꽃잎 → 꼰닙, 있어 → 이써, etc.).</p>
+<h2 id="ko-cv-korean-cv-ko-cbnn-korean-combinationcbnn">KO CV (Korean CV) &amp; KO CBNN (Korean Combination/CBNN)<a class="headerlink" href="#ko-cv-korean-cv-ko-cbnn-korean-combinationcbnn" title="Permanent link">&para;</a></h2>
+<p>Phonemizer for Korean CV, <a href="https://github.com/EX3exp/UTAU-Korean-CBNN">Korean CBNN</a>. <br>
+한국어 단독음, <a href="https://github.com/EX3exp/UTAU-Korean-CBNN">한국어 CBNN</a> 포네마이저의 설명입니다. <br></p>
+<h3 id="common-features">Common Features (공통 가이드)<a class="headerlink" href="#common-features" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Supports almost all Korean phoneme variations, except <code>palatalization</code> and <code>ㄴ addition</code>. <br>
+<code>구개음화</code>와 <code>ㄴ첨가</code> 이외의 거의 모든 음운변동을 반영합니다. 
+<img alt="image" src="https://github.com/stakira/OpenUtau/assets/100339835/c13dfb89-6f5b-4cd9-bcd6-55559fa4ecdf" /> <br></p>
+</li>
+<li>
+<p>Can extend phonemes by <code>+</code>. <br>
+<code>+</code>로 음소를 연장합니다. 
+<img alt="image" src="https://github.com/stakira/OpenUtau/assets/100339835/1c4d4c9a-2f8c-49e8-9861-07749f8cec85" /> <br></p>
+</li>
+<li>
+<p>Can insert phonemes by <code>[</code> <code>]</code>. </p>
+</li>
+<li>Supports flexible VV phoneme input.</li>
+<li>(If phonemes include <code>a i</code>, but if current singer doesn't have <code>a i</code> (but has <code>i</code>) : Phonemizer automatically puts <code>i</code> instead of <code>a i</code> and vice versa.) <br> <br>
+<code>[</code>와 <code>]</code>를 사용해 발음 기호를 넣습니다.</li>
+<li>유연한 VV 음소 입력을 지원합니다.</li>
+<li>
+<p>(발음 기호에 <code>a i</code>가 포함되어 있지만 노래중인 음원에겐 <code>a i</code>가 없을 때, 음소화기가 자동으로 <code>a i</code>대신 <code>i</code>를 붙여줍니다. 반대도 성립합니다.)
+<img alt="image" src="https://github.com/stakira/OpenUtau/assets/100339835/8fae60c4-f677-4d36-b0b0-729cfa2b510d" /> <br></p>
+</li>
+<li>
+<p>Supports two special phoneme symbols about phoneme variation, <code>!</code> and <code>.</code>. <br>
+음운변동을 조정하는 고유 발음기호 <code>!</code>와 <code>.</code>를 지원합니다. <br></p>
+</li>
+<li>
+<p><code>!</code>(Ex: !가) : Ignores all phoneme variation regarding current note. Previour and next note will be not affected by current note which starts with <code>!</code>.</p>
+</li>
+<li><code>!</code>(Ex: !가) : 현 노트와 연관된 모든 음운변동을 무시합니다. 현 노트는 이웃 노트들의 음운변동에서도 배제됩니다.</li>
+</ol>
+<p><img alt="image" src="https://github.com/stakira/OpenUtau/assets/100339835/ed42c984-5a9d-40fc-a951-304d11d75b73" /> <br></p>
+<ul>
+<li><code>.</code>(Ex: 가.) : Regard current note as <em>end of word</em>, and applies different phoneme variation rule.</li>
+<li><code>.</code>(Ex: 가.) : 현 노트에서 *단어가 끝난 것*으로 간주하고, 음운 변동을 알맞게 바꾸어 적용합니다.</li>
+</ul>
+<p><img alt="image" src="https://github.com/stakira/OpenUtau/assets/100339835/2cce0c35-ff0e-4f86-8a16-4453ccd73514" /> <br></p>
+<h3 id="ko-cv-korean-cv">KO CV (Korean CV)<a class="headerlink" href="#ko-cv-korean-cv" title="Permanent link">&para;</a></h3>
+<p><img alt="image" src="https://github.com/stakira/OpenUtau/assets/100339835/8e94a40f-1287-4736-83f0-b1c435944e65" /></p>
+<h4 id="ko-cvini">Ko-CV.ini<a class="headerlink" href="#ko-cvini" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code>[CV]
+Use rentan=False 
+Use &#39;shi&#39; for &#39;시&#39;(otherwise &#39;si&#39;)=False
+Use &#39;i&#39; for &#39;의&#39;(otherwise &#39;eui&#39;)=False
+
+[BATCHIM]
+Use &#39;aX&#39; instead of &#39;a X&#39;=False
+</code></pre></div>
+- Config file, to handle <em>various form of Korean CV voicebanks</em>.
+- If singer doesn't have <code>Ko-CV.ini</code>, it automatically generates file with default one. 
+- *형태가 다양한 한국어 단독음 음원*을 모두 다루기 위한 설정 파일입니다. 
+- 음원이 <code>Ko-CV.ini</code>를 보유하고 있지 않을 경우, 자동으로 파일이 생성됩니다. <br> <br></p>
+<h5 id="how-to-use">How to Use (가이드)<a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Use rentan</strong>: handles singer which is RENTAN. <br> <blockquote>
+<p>Uses <code>- &lt;CV&gt;</code>(example: - ka) when <em>True</em>, otherwise not(example: ka). <br>
+If <code>- &lt;CV&gt;</code> not exists when <em>True</em>, uses <code>&lt;CV&gt;</code> instead. </p>
+</blockquote>
+</li>
+<li><strong>Use 'shi' for '시'(otherwise 'si')</strong> : handles phoneme of <code>시</code><blockquote>
+<p>Uses <code>shi</code> for input character <code>시</code> when <em>True</em>, otherwise not.(uses <code>si</code> for input character <code>시</code>). </p>
+</blockquote>
+</li>
+<li><strong>Use 'i' for '의'(otherwise 'eui')</strong> : handles phoneme of <code>의</code><blockquote>
+<p>Uses <code>i</code> instead of  for vowel <code>ㅢ</code> when <em>True</em>, otherwise not.(uses <code>eui</code> for vowel <code>ㅢ</code>). <br>
+If <code>eui</code> not exists when <em>False</em>, uses <code>i</code> instead.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Use 'aX' instead of 'a X'</strong> : handles Batchim phoneme's format.</p>
+<blockquote>
+<p>Uses <code>&lt;vowel&gt;&lt;batchim&gt;</code>(example: ang) when <em>True</em>, otherwise not.(uses <code>&lt;vowel&gt; &lt;batchim&gt;</code>(example: a ng)
+<br>  </p>
+</blockquote>
+</li>
+<li>
+<p><strong>Use rentan</strong> : 연단음 음원 여부. </p>
+<blockquote>
+<p>*True*이면<code>- &lt;CV&gt;</code>(예: - ka)사용, *False*이면 <code>&lt;CV&gt;</code>(예: ka)사용. <br>
+설정값이 *True*더라도, 음원이 <code>- &lt;CV&gt;</code>를 미보유했다면 상응하는 <code>&lt;CV&gt;</code>를 사용합니다.</p>
+</blockquote>
+</li>
+<li><strong>Use 'shi' for '시'(otherwise 'si')</strong> : <code>시</code>의 발음기호 결정.<blockquote>
+<p>*True*이면 <code>시</code>에 <code>shi</code>를 사용, *False*이면 <code>시</code>에 <code>si</code>를 사용. <br> </p>
+</blockquote>
+</li>
+<li><strong>Use 'i' for '의'(otherwise 'eui')</strong> : <code>ㅢ</code>의 발음기호 결정.<blockquote>
+<p>*True*이면 <code>ㅢ</code>에 <code>i</code> 사용, *False*이면 <code>ㅢ</code>에 <code>eui</code> 사용. <br>
+설정값이 *False*더라도, 음원이 <code>eui</code>를 미보유했다면 상응하는 <code>i</code>를 사용합니다.</p>
+</blockquote>
+</li>
+<li><strong>Use 'aX' instead of 'a X'</strong> : <blockquote>
+<p>*True*이면 받침 음소에 <code>&lt;모음&gt;&lt;받침&gt;</code>(예: ang) 사용, *False*면 받침 음소에 <code>&lt;vowel&gt; &lt;batchim&gt;</code>(example: a ng)사용</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="ko-cbnn-korean-cbnn">KO CBNN (Korean CBNN)<a class="headerlink" href="#ko-cbnn-korean-cbnn" title="Permanent link">&para;</a></h3>
+<p><img alt="image" src="https://github.com/stakira/OpenUtau/assets/100339835/86a9b181-7e59-4be4-8da7-45f9bc7c0238" /></p>
+<h2 id="pt-br-cvc-brazilian-portuguese-cvc">PT-BR CVC (Brazilian Portuguese CVC)<a class="headerlink" href="#pt-br-cvc-brazilian-portuguese-cvc" title="Permanent link">&para;</a></h2>
+<p>Made with <a href="https://github.com/Team-BRAPA/BRAPA">BRAPA</a> conotation, this phonemizer uses a built-in G2P Dictionary. The main accent is the <code>Neutral</code></p>
+<h3 id="uses">Uses<a class="headerlink" href="#uses" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Portuguese Words (eg. <code>leite</code>)<br />
+<img alt="ptbr cvc with dictionary - ptbr words" src="https://i.imgur.com/nMqi6Ai.png" />  </li>
+<li>Portuguese Words + phonetic hint (eg. <code>leite[l e y t e]</code>)<br />
+<img alt="ptbr cvc with dictionary - ptbr words + phonetic hint" src="https://i.imgur.com/dHOMSPf.png" />  </li>
+<li>Phonetic hint only (eg. <code>[l e y t e]</code>)<br />
+<img alt="ptbr cvc with dictionary - only phonetic hint" src="https://i.imgur.com/d4K5kaY.png" />  </li>
+</ol>
+<h3 id="common-feature">Common Feature<a class="headerlink" href="#common-feature" title="Permanent link">&para;</a></h3>
+<p>With or without a dictionary, you can use the features listed below:</p>
+<ol>
+<li>Separate words or phonemes by syllable using <code>+</code>.<br />
+<img alt="ptbr cvc - separating syllables" src="https://i.imgur.com/Jr3CwY5.png" />  </li>
+<li>Extend a syllable or phonemes using <code>+*</code> or <code>+~</code>.<br />
+<img alt="ptbr cvc - extending syllables" src="https://i.imgur.com/WS6aCM5.png" />  </li>
+<li>Using a single phoneme with <code>?</code>.<br />
+Obs. If exists a linked note behind that finishes with <code>V-</code>, <code>VC-</code> or <code>VC</code> + <code>C-</code>, this function removes those samples in order to cross fade with previous <code>V</code> or <code>CV</code>.<br />
+<img alt="ptbr cvc - ? function" src="https://i.imgur.com/iYtHmlz.png" />  </li>
+</ol>
+<h3 id="special-feature">Special Feature<a class="headerlink" href="#special-feature" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Support to VV and _V<br />
+Even tho CVC don't have vowel connections by default, the phonemizer supports it for extras. The priority is <code>VV</code> -&gt; <code>_V</code> -&gt; <code>V</code><br />
+<img alt="ptbr cvc - vv connections" src="https://i.imgur.com/4sehINo.png" />  </li>
+<li>rh CV connection<br />
+<code>rh</code> is a rhotic vowel only found in front of a vowel or in between a vowel and a consonant. If somehow, during the usage, they are found in between vowels, the phoneme <code>r</code> will show up to make a connection, since it's their natural approximant. Like the example: <code>par a par</code><br />
+<img alt="ptbr cvc - rh connection" src="https://i.imgur.com/vSmKcs1.png" />  </li>
+</ol>
+<h2 id="en-to-ja-english-to-japanese">EN to JA (English to Japanese)<a class="headerlink" href="#en-to-ja-english-to-japanese" title="Permanent link">&para;</a></h2>
+<p>This phonemizer converts English lyrics to phonemes for Japanese voicebanks. It will automatically adapt to CV, VCV, and CVVC voicebanks.</p>
+<p>Standard input<br />
+<img alt="en to ja standard" src="https://i.imgur.com/EqCxHM5.png" /></p>
+<p>Phonetic input<br />
+<img alt="en to ja phonetic" src="https://i.imgur.com/5jAAJ9N.png" /></p>
+<p>Consonants: <code>b by ch d dh f g gy h hy j k ky l ly m my n ny ng p py r ry s sh t th v w y z zh</code><br />
+Vowels: <code>a i u e o ay ey oy ow aw</code></p>
+<p>Forced input<br />
+Prefix the lyric with <code>?</code> to use a specific alias from the voicebank.<br />
+<img alt="en to ja forced" src="https://i.imgur.com/676moY0.png" /></p>
+<p>Use <code>+</code> to extend multisyllable words across multiple notes.<br />
+<img alt="en to ja extend" src="https://i.imgur.com/hFkEWut.png" /></p>
+<p>Use <code>+*</code> or <code>+~</code> to extend the previous syllable instead of going to the next syllable<br />
+<img alt="en to ja extend special" src="https://i.imgur.com/jzbSJQJ.png" /></p>
+<p>Example with VCV voicebank<br />
+<img alt="en to ja vcv" src="https://i.imgur.com/k1hqCdR.png" /></p>
+<p>Example with CVVC voicebank<br />
+<img alt="en to ja cvvc" src="https://i.imgur.com/SfLHlle.png" /></p>
+<p>Example with VCV+CVVC voicebank<br />
+<img alt="en to ja vcv cvvc" src="https://i.imgur.com/rVorLTO.png" /><br />
+When both VCV and CVVC phonemes are available, CVVC is prioritized.</p>
+<p>If the voicebank has no VC phonemes, it is recommended to edit the timing of the final consonant to remove the vowel sound.<br />
+<img alt="en to ja final consonant" src="https://i.imgur.com/qSAMRht.png" /></p>
+<h2 id="fr-cvvc-french-cvvc">FR CVVC (French CVVC+)<a class="headerlink" href="#fr-cvvc-french-cvvc" title="Permanent link">&para;</a></h2>
+<p>This phonemizer is compatible with <a href="https://fraloids.wixsite.com/collection">Fraloids</a> UTAUs, <a href="https://simelomad.wixsite.com/crabkids/copie-de-gros-mot">Petit Mot</a> &amp; <a href="https://simelomad.wixsite.com/crabkids/about-new">Gros Mot</a>, it can support basic CVVC, CVVC+ and VCV-VC. For more information on compatible UTAUs, tutorials and help with French UTAUs you can go <a href="https://frenchutauhelp.carrd.co/">here</a>.</p>
+<h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h3>
+<p>It works with a <a href="https://github.com/mmemim/OpenUTAU-French-Dictionary">dictionary</a> (version 1.2 and higher) available <a href="https://github.com/mmemim/OpenUTAU-French-Dictionary">here</a>. For the phonemizer to work, you need to download <code>cmudict-fr.txt</code> and put it in your <code>Dictionaries</code> folder. If there's no Dictionaries folder, create one at the root of your OpenUtau install folder.</p>
+<p><img alt="dictionary goes in the dictionaries folder at the root" src="https://i.imgur.com/szewSA7.png" /></p>
+<p>There is also a <a href="https://drive.google.com/file/d/1FpZTf2FOjWz-BjpWcGZEha-ZBhanEyDj/view?usp=sharing">sample package</a> available with a ustx that showcases the basic rules of the dictionary as well as ustx with French lyrics.</p>
+<h3 id="lyric-input-lyrics-helper-input">Lyric input &amp; lyrics helper input<a class="headerlink" href="#lyric-input-lyrics-helper-input" title="Permanent link">&para;</a></h3>
+<p>You can input lyrics, phonetic hints <code>[]</code> or force input with <code>?</code> (note that force input will break the phonemizer transitions). Phonetic hints will need to be input in Mot or Fraloid aliasing depending on the aliasing the voicebank is using.
+Use <code>+</code> to break words into syllables and <code>+~</code> or <code>+*</code> to extend a syllable.</p>
+<p><img alt="fr cvvc lyric input vs phonetic input vs force input" src="https://i.imgur.com/qaPUUNH.png" /></p>
+<p>Sentences with apostrophes like "j'aime" or "j't'aime" need to be input <code>j' aime</code> and <code>j' t' aime</code>. You can also input "est-ce" as <code>est -ce</code>. Please note the <strong>space</strong> between the two words. </p>
+<p>Some common word combinations such as <code>j'ai</code> or <code>qu'elle</code> have been added for easier input, though you should always default to <code>C' + word</code>.</p>
+<p><img alt="fr cvvc handling of apostrophes" src="https://i.imgur.com/y1ovzSm.png" /></p>
+<p>Since French has a lot of silent sounds, you will sometimes need a second or third form of the word depending on the context (silent "e", liaison...). Usually, <code>word</code> is the basic form, <code>word(2)</code> adds the silent "e", <code>word(3)</code> adds the liaison <strong>&amp;</strong> silent "e" and <code>word(4)</code> adds the liaison but no silent "e". </p>
+<p>However, there may be exceptions to this rule. </p>
+<p><img alt="fr cvvc alternative forms" src="https://i.imgur.com/9dqeGbs.jpg" /></p>
+<p><em>If this doesn't work as intended, please ensure that your dictionary is <strong>version 1.2 or higher</strong>. Version number should be written at the start of the .txt.</em></p>
+<p>If you encounter a <strong>"word not found"</strong> error, you can use the French G2p Lyrics Helper. To use it, go to <strong>Tools &gt; Preferences &gt; Advanced **and choose **FrenchG2pLyricsHelper</strong>. You can now use it to input unknown words in the dictionary.</p>
+<p><img alt="french lyrics helper" src="https://i.imgur.com/alQCc4N.png" /></p>
+<h3 id="additional-support">Additional support<a class="headerlink" href="#additional-support" title="Permanent link">&para;</a></h3>
+<p>The phonemizer can also read hiragana (with approximate French sounds).</p>
+<p><img alt="hiragana support" src="https://i.imgur.com/52cjlcf.png" /></p>
+<p>With the phonetic hint, you can input additional sounds that are voicebank-specific. In this example you can see glottal stops <code>.</code> &amp; long end breaths <code>R</code>, but you could also use additional consonants or vowels (like English <code>h</code> or Japanese <code>4</code>...)</p>
+<p><img alt="additionalsounds" src="https://i.imgur.com/OuZ8t5c.png" /></p>
+<h3 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h3>
+<p>These rules are showcased in more detail in the PhonemizerInputHelp.ustx, available in the <a href="https://drive.google.com/file/d/1FpZTf2FOjWz-BjpWcGZEha-ZBhanEyDj/view?usp=sharing">sample package</a>. </p>
+<p>For more information on compatible UTAUs, tutorials and help with French UTAUs you can go <a href="https://frenchutauhelp.carrd.co/">here</a>.</p>
+<h2 id="es-syl-spanish-syllable-based-phonemizer">ES SYL (Spanish Syllable-Based Phonemizer)<a class="headerlink" href="#es-syl-spanish-syllable-based-phonemizer" title="Permanent link">&para;</a></h2>
+<h3 id="setup_1">Setup<a class="headerlink" href="#setup_1" title="Permanent link">&para;</a></h3>
+<p>While this phonemizer uses Teren000's Spanish CVVC list as a base, it's intended to support many different methods, including VCV (with some caveats; more on that below).</p>
+<p>Downloading a separate dictionary is no longer necessary. Instead, it now uses the in-built Spanish G2P. As a result, it can now read words that are not in the dictionary.</p>
+<h3 id="lyric-input">Lyric input<a class="headerlink" href="#lyric-input" title="Permanent link">&para;</a></h3>
+<p>With the help of the dictionary linked above, you can write Spanish words directly on the first note:</p>
+<p><img alt="Dictionary input with extender notes" src="https://i.ibb.co/4JZZ9ZR/Dictionary-input.png" />
+As seen in the above image, you can extend the word over multiple notes by typing a <code>+</code> on the next notes (otherwise, all syllables will be on the same note).</p>
+<p>If you want to extend only a specific syllable in a word, you can do that by typing either <code>+*</code> or <code>+~</code> on the next note(s):</p>
+<p><img alt="Syllable extender note example" src="https://i.ibb.co/rFkZYnX/Syllable-extender-note.png" /></p>
+<h3 id="phonetic-input">Phonetic input<a class="headerlink" href="#phonetic-input" title="Permanent link">&para;</a></h3>
+<p>You can also input lyrics phonetically, this can be done on separate notes as well. Note to write the phonemes in brackets (<code>[]</code>), separated with spaces, otherwise they won't be recognized:</p>
+<p><img alt="Phonetic input in brackets, on separate notes, with spaces in-between" src="https://i.ibb.co/FXkkKvx/Phonetic-input.png" /></p>
+<p>There's also the option to input phonetic suggestions after the lyrical input, in brackets after the lyric (this has to be done on the first syllable):</p>
+<p><img alt="Lyric input with phonetic suggestion in brackets" src="https://i.ibb.co/3rMjBMt/Phonetic-suggestion.png" /></p>
+<h4 id="phoneme-list">Phoneme list<a class="headerlink" href="#phoneme-list" title="Permanent link">&para;</a></h4>
+<p>Consonants: b, ch, d, <strong>dz</strong>, f, g, h, <strong>hh</strong>, j, k, l, ll, m, n, nh, p, r, rr, s, <strong>sh</strong>, t, <strong>ts</strong>, w, y, z, <strong>zz</strong>, <strong>zh</strong></p>
+<p>Vowels: a, e, i, o, u</p>
+<p>The bolded letters are sounds that don't natively occur in Spanish and only work through phonetic input. Please also note that the phonemizer by default uses <code>j</code> for <code>ll</code> (and <code>h</code> for <code>j/gi/ge</code>).</p>
+<p>Sounds not listed above, but that are present in the voicebank, can still be used through phonetic input, eg. <code>x</code> or <code>ah</code>.</p>
+<h3 id="alternate-aliases">Alternate aliases<a class="headerlink" href="#alternate-aliases" title="Permanent link">&para;</a></h3>
+<p>Does your voicebank use <code>bia</code> instead of <code>bya</code> and/or <code>bua</code> instead of <code>bwa</code> etc.? (Replace <code>b</code> with any consonant.) No problem, the phonemizer applies the correct spelling automatically:</p>
+<p><img alt="Using &quot;W&quot; (default behavior)" src="https://i.ibb.co/ZmpRRdY/Buena-with-W-default.png" />
+<img alt="Using &quot;U&quot; (alternative method)" src="https://i.ibb.co/gZ82Px8/Buena-with-U-alternate.png" /></p>
+<p>Alternatively, if your voicebank doesn't have <code>z</code>, it will use <code>s</code> instead (known as "seseo" in Spanish). This is useful for voicebanks with Latin-American-based pronunciation:</p>
+<p><img alt="&quot;Seseo&quot; for when no &quot;z&quot; is present" src="https://i.ibb.co/4mm8Swk/Seseo.png" /></p>
+<p>Similarly, many (if not most) Spanish voicebanks use <code>ny</code> for <code>ñ</code>, so this will be applied automatically as well if the voicebank doesn't have <code>nh</code> (which is the default):</p>
+<p><img alt="Default usage: &quot;nh&quot;" src="https://i.ibb.co/sjRpcZ4/Default-nh-usage.png" />
+<img alt="Alternate usage: &quot;nh&quot;" src="https://i.ibb.co/4JZZ9ZR/Dictionary-input.png" /></p>
+<p>If you need to insert a consonant in a cluster that doesn't exist in the voicebank as a CC transition (usually an <code>s</code>), it will insert it by itself as a standalone consonant:</p>
+<p><img alt="Loose consonant insertion (with CC)" src="https://i.ibb.co/9WpWpqW/Consonant-insertion-2.png" />
+<img alt="Loose consonant insertion (no CC)" src="https://i.ibb.co/hKZBQNd/Consonant-insertion-1.png" /></p>
+<p><strong>IMPORTANT:</strong> Please note that the vowel fallback function has been removed, as it was causing issues. As a result, <em>please</em> make sure to amend the oto to include a loose consonant if a CC transition does not exist. Apologies for the inconvenience!</p>
+<h3 id="important-notes-on-vcv">Important notes on VCV<a class="headerlink" href="#important-notes-on-vcv" title="Permanent link">&para;</a></h3>
+<p>Currently, the phonemizer does not support automatic "syllable splitting" with semivowels. This is common with Spanish VCV banks, but also occurs sometimes with other methods. This function is planned however, so please stay tuned!</p>
+<p>For now though, you can alleviate it with a phonetic suggestion (in this case, you need to treat the semivowel as a separate "full" vowel, so make sure to insert a <code>+</code> (<em>not</em> <code>+~/+*</code>! ) to split the notes):</p>
+<p><img alt="Phonetic suggestion alternative for semivowels" src="https://i.ibb.co/RzJzTzF/Glide-alternative.png" /></p>
+<h3 id="consonant-length-adjustment">Consonant length adjustment<a class="headerlink" href="#consonant-length-adjustment" title="Permanent link">&para;</a></h3>
+<p>This likely won't be a problem with full VCV banks due to the oto, but it can be a problem with CVVC (even when it has some VCV support). In this case, sometimes a syllable ending VC can come off as a little short (this is somewhat accounted for in the phonemizer, but there's a limit to that without ruining other functions). It's recommended to lengthen the VC in that case, which you can do by stretching the phoneme in question (the exact part is highlighted in the image):</p>
+<p><img alt="Short VC before stretching" src="https://i.ibb.co/Bc1HqxJ/VC-stretch-before.png" /></p>
+<p>Afterward, it should look something like this:</p>
+<p><img alt="Longer VC after stretching" src="https://i.ibb.co/ZxsbkWg/VC-stretch-after.png" /></p>
+<p>The exact length is difficult to predict, so you're suggested to do it by ear until the point you think it sounds good.</p>
+<h2 id="es-vccv-spanish-vccv-phonemizer">ES VCCV (Spanish VCCV Phonemizer)<a class="headerlink" href="#es-vccv-spanish-vccv-phonemizer" title="Permanent link">&para;</a></h2>
+<h3 id="setup_2">Setup<a class="headerlink" href="#setup_2" title="Permanent link">&para;</a></h3>
+<p>This phonemizer was based on the nJokis VCCV method.</p>
+<p>Downloading a separate dictionary is no longer necessary. Instead, it now uses the in-built Spanish G2P. As a result, it can now read words that are not in the dictionary.</p>
+<h3 id="lyric-input_1">Lyric input<a class="headerlink" href="#lyric-input_1" title="Permanent link">&para;</a></h3>
+<p>With the help of the dictionary linked above, you can write Spanish words directly on the first note:</p>
+<p><img alt="Dictionary input with extender notes" src="https://i.ibb.co/MsXBZSh/Example1.png" /></p>
+<p>As seen in the above image, you can extend the word over multiple notes by typing a <code>+</code> on the next notes (otherwise, all syllables will be on the same note).</p>
+<p>If you want to extend only a specific syllable in a word, you can do that by typing either <code>+*</code> or <code>+~</code> on the next note(s):</p>
+<p><img alt="Syllable extender note example" src="https://i.ibb.co/s3zBHJK/Example2.png" /></p>
+<h3 id="phonetic-input_1">Phonetic input<a class="headerlink" href="#phonetic-input_1" title="Permanent link">&para;</a></h3>
+<p>You can also input lyrics phonetically, this can be done on separate notes as well. Note to write the phonemes in brackets (<code>[]</code>), separated with spaces, otherwise they won't be recognized:</p>
+<p><img alt="Phonetic input in brackets, on separate notes, with spaces in-between" src="https://i.ibb.co/712NKKG/Example3.png" /></p>
+<p>There's also the option to input phonetic suggestions after the lyrical input, in brackets after the lyric (this has to be done on the first syllable):</p>
+<p><img alt="Lyric input with phonetic suggestion in brackets" src="https://i.ibb.co/Tk34tx6/Example4.png" /></p>
+<h4 id="phoneme-list_1">Phoneme list<a class="headerlink" href="#phoneme-list_1" title="Permanent link">&para;</a></h4>
+<p>Consonants: b, B, ch, d, D, E, f, g, G, h, I, jj, k, l, L, m, n, nJ, p, r, rr, s, sh, t, U, w, x, y, z</p>
+<p>Vowels: a, e, i, o, u, <strong>BB</strong> ,<strong>DD</strong> ,<strong>ff</strong> ,<strong>GG</strong> ,<strong>ll</strong> ,<strong>mm</strong> ,<strong>nn</strong> ,<strong>rrr</strong> ,<strong>ss</strong> ,<strong>xx</strong></p>
+<p>The bolded vowels aren't actual vowels (rather syllabic consonants), but are treated as such by the phonemizer. They only work through phonetic input.</p>
+<p>Note that you can add any type of extra consonants (but not vowels) to your bank that aren't listed, since the phonemizer will automatically recognize it. Though, like above, they will only work through phonetic input.</p>
+<h3 id="alternate-aliases_1">Alternate aliases<a class="headerlink" href="#alternate-aliases_1" title="Permanent link">&para;</a></h3>
+<p>This phonemizer uses phonetic substitutes for when a consonant sound isn't present, this is achived through <code>ValidateAlias()</code>.</p>
+<p>For example, if your voicebank doesn't have <code>z</code>, it will use <code>s</code> instead (known as "seseo" in Spanish). This is useful for voicebanks with Latin-American-based pronunciation:</p>
+<p><img alt="&quot;Seseo&quot; for when no &quot;z&quot; is present" src="https://i.ibb.co/89V9nRS/Example5.png" /></p>
+<p>Similarly, <code>h</code> is a substitute for <code>x</code>, while <code>sh</code> and <code>L</code> are substitutes for "jj".</p>
+<p>Note that Latin-American-style aspirated endings (where <code>h</code> is used in place of <code>s</code> at the end of syllables) can only be achieved through phonetic input, since it's technically an informal style of pronunciation.</p>
+<h3 id="auxiliary-dictionary-files-uses-njokisyaml">Auxiliary dictionary files (uses njokis.yaml):<a class="headerlink" href="#auxiliary-dictionary-files-uses-njokisyaml" title="Permanent link">&para;</a></h3>
+<p><strong><code>Note: only 1:1 replacements are supported for now and multiple phoneme replacements are still pending in</code></strong><a href="https://github.com/stakira/OpenUtau/pull/1534"><strong>pr 1534</strong></a></p>
+<ul>
+<li>
+<h4 id="symbols_3">Symbols<a class="headerlink" href="#symbols_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Add a new symbol and define its symbol type for the phonemizer to recognize.</li>
+<li>encapsulate the whole symbol with <code>' '</code> if it starts with a special symbol
+<div class="highlight"><pre><span></span><code>symbols:
+    - {symbol: ea, type: vowel}
+    - {symbol: ix, type: vowel}
+    - {symbol: dd, type: tap}
+    - {symbol: j, type: fricative}
+    - {symbol: &#39;@r&#39;, type: vowel}
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<h4 id="replacements_3">Replacements<a class="headerlink" href="#replacements_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Replaces certain symbol or sequence of symbols defined in the replacements entry</li>
+<li>supports <code>1:1</code>, <code>1:M</code>, <code>M:1</code>, <code>M:M</code> phoneme replacements
+<div class="highlight"><pre><span></span><code>replacements:
+# 1:1 (one-to-one mappings)
+  - {from: ax, to: ah}
+  - {from: cl, to: q}
+# 1:M (one-to-many mappings) (splitting)
+  - {from: dr, to: [d, r]}
+  - {from: tr, to: [t, sh, r]}
+  - {from: aw, to: [aa, w]}
+# M:1 (many-to-one mappings) (merging)
+  - {from: [ih, ng], to: ing}
+  - {from: [eh, ax, m], to: eam}
+# M:M (many-to-many mappings)
+  - {from: [ih, ng], to: [ix, ng]}
+  - {from: [ay, l], to: [ay, ax, el]}
+
+# format can be like this
+    - from: [ae, n]
+      to: [eh, ax, n]
+    - from: b
+      to: bh
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<h4 id="entries_2">Entries<a class="headerlink" href="#entries_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Add a new dictionary entry to override certain word pronunciations</li>
+<li>no limit to characters as long as it covered by unicode so you can add kana, hangul, hieroglyphics grapheme etc entries to <code>arpasing.yaml</code>
+<div class="highlight"><pre><span></span><code>entries:
+    - {grapheme: hello, phonemes: [hh, ax, l, ow]}
+    - {grapheme: 안녕하세요, phonemes: [aa, n, y, ao, ng, hh, ah, s, eh, y ao]}
+# format can be like this
+    - grapheme: stars
+      phonemes: s, t, aa, r, z
+    - grapheme: drops
+      phonemes: dr, aa, p, s
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h2 id="es-makku-spanish-makkusan-style-phonemizer">ES MAKKU (Spanish Makkusan-style Phonemizer)<a class="headerlink" href="#es-makku-spanish-makkusan-style-phonemizer" title="Permanent link">&para;</a></h2>
+<h3 id="setup_3">Setup<a class="headerlink" href="#setup_3" title="Permanent link">&para;</a></h3>
+<p>This phonemizer was created to be used with Italian voicebanks using Makkusan's reclist, as long as it contains extra sounds for Spanish. It works similarly to the Italian Syllable-Based phonemizer.</p>
+<p>Downloading a separate dictionary is no longer necessary. Instead, it now uses the in-built Spanish G2P. As a result, it can now read words that are not in the dictionary.</p>
+<h3 id="lyric-input_2">Lyric input<a class="headerlink" href="#lyric-input_2" title="Permanent link">&para;</a></h3>
+<p>With the help of the dictionary linked above, you can write Spanish words directly on the first note:</p>
+<p><img alt="Dictionary input with extender notes" src="https://i.ibb.co/P5pgbnh/Example1.png" /></p>
+<p>As seen in the above image, you can extend the word over multiple notes by typing a <code>+</code> on the next notes (otherwise, all syllables will be on the same note).</p>
+<p>If you want to extend only a specific syllable in a word, you can do that by typing either <code>+*</code> or <code>+~</code> on the next note(s):</p>
+<p><img alt="Syllable extender note example" src="https://i.ibb.co/KmGBK4S/Example2.png" /></p>
+<h3 id="phonetic-input_2">Phonetic input<a class="headerlink" href="#phonetic-input_2" title="Permanent link">&para;</a></h3>
+<p>You can also input lyrics phonetically, this can be done on separate notes as well. Note to write the phonemes in brackets (<code>[]</code>), separated with spaces, otherwise they won't be recognized:</p>
+<p><img alt="Phonetic input in brackets, on separate notes, with spaces in-between" src="https://i.ibb.co/b3mZPf8/Example3.png" /></p>
+<p>There's also the option to input phonetic suggestions after the lyrical input, in brackets after the lyric (this has to be done on the first syllable):</p>
+<p><img alt="Lyric input with phonetic suggestion in brackets" src="https://i.ibb.co/5nqNGBk/Example4.png" /></p>
+<h4 id="phoneme-list_2">Phoneme list<a class="headerlink" href="#phoneme-list_2" title="Permanent link">&para;</a></h4>
+<p>Consonants: b, d, <strong>dz</strong>, <strong>dZ</strong>, f, g, gn, <strong>j</strong>, k, l, m, <strong>M</strong>, n, <strong>N</strong>, p, r, rr, s, <strong>S</strong>, t, <strong>ts</strong>, tS, <strong>v</strong>, w, y, <strong>z</strong>, B, D, G, h, T, x, Y, ' (apostrophe for vocal fry)</p>
+<p>Vowels: a, e, i, o, u, <strong>3</strong>, <strong>0</strong></p>
+<p>The bolded sounds are sounds that occur in Italian and only work through phonetic input in this phonemizer. Some of these can possibly occur in specific Spanish dialects.</p>
+<h3 id="alternate-aliases_2">Alternate aliases<a class="headerlink" href="#alternate-aliases_2" title="Permanent link">&para;</a></h3>
+<p>This phonemizer uses phonetic substitutes for when a consonant sound isn't present, this is achived through <code>ValidateAlias()</code>.</p>
+<p>For example, if your voicebank doesn't have <code>T</code>, it will use <code>s</code> instead (known as "seseo" in Spanish). This is useful for voicebanks oriented towards a more Latin-American-based pronunciation.</p>
+<p>Similarly, <code>h</code> is a substitute for <code>x</code>, while <code>y</code> is a substitute for <code>Y</code>.</p>
+<p>Another example occurs between voiced stops and their intervocalic fricative counterparts: <code>b</code> for <code>B</code>, <code>d</code> for <code>D</code>, and <code>g</code> for <code>G</code>.</p>
+<h2 id="en-vccv-czs-english-vccv-phonemizer">EN VCCV (Cz's English VCCV phonemizer)<a class="headerlink" href="#en-vccv-czs-english-vccv-phonemizer" title="Permanent link">&para;</a></h2>
+<p>This is a temporary solution of a phonemizer for <a href="http://utaulanguageresources.weebly.com/czs-vccv.html">Cz's VCCV method</a>, it is right now not a plug and play solution. If you wish for one, please use <a href="https://snowphones.weebly.com/lyric-parser-20.html">Lyric Parser 2.1</a> which is fully compatible with Open Utau.</p>
+<ul>
+<li><code>Note that the new version of the [envccv.yaml] will be created in OU version 0.1.566, the old yaml file will be renamed as [envccv_backup.yaml]</code></li>
+</ul>
+<h3 id="lyric-input_3">Lyric input<a class="headerlink" href="#lyric-input_3" title="Permanent link">&para;</a></h3>
+<p>You can input lyrics in plain English <code>love</code>, plain English + phonetic hint <code>love [l u v]</code> or phonetic hint only <code>[l u v]</code>. </p>
+<p><img alt="vccv_phonemeinput" src="https://user-images.githubusercontent.com/35538523/168469343-1519dbe9-b85f-4807-9d08-daf7d2aadb17.png" /></p>
+<p>You can then use <code>+</code> to break words into syllables, and <code>+*</code>or <code>+~</code> to extend a sound.</p>
+<p>Use the pink line to stretch or shorten a sound so that the pronunciation is good. You can also switch sounds by double clicking on the box below to change the alias, so that you can switch between <code>V C</code>, <code>VC</code> or <code>VC-</code> as you please.</p>
+<p><img alt="vccv_phonemetweak" src="https://user-images.githubusercontent.com/35538523/168469015-823cf9fc-bd5a-4c0a-ac43-d9736caa4d40.png" /></p>
+<h3 id="custom-dictionary">Custom dictionary<a class="headerlink" href="#custom-dictionary" title="Permanent link">&para;</a></h3>
+<p>Since the phonemizer uses an arpabet dictionary there may be conflicts with some sounds. If there are missing sounds, you can double click on the box below to change the sound used. However, you can now download a converted version of snowphones' Lyric Parser dictionary <a href="https://github.com/mmemim/OU-EN-VCCV-Custom-Dictionary">here</a> and put it in <code>OpenUtau/Plugins</code>.</p>
+<p>If there are any other issue, don't hesitate to share them on the Discord.</p>
+<h3 id="auxiliary-dictionary-files-uses-envccvyaml">Auxiliary dictionary files (uses envccv.yaml):<a class="headerlink" href="#auxiliary-dictionary-files-uses-envccvyaml" title="Permanent link">&para;</a></h3>
+<p><strong><code>Note: only 1:1 replacements are supported for now and multiple phoneme replacements are still pending in</code></strong><a href="https://github.com/stakira/OpenUtau/pull/1534"><strong>pr 1534</strong></a></p>
+<ul>
+<li>
+<h4 id="symbols_4">Symbols<a class="headerlink" href="#symbols_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Add a new symbol and define its symbol type for the phonemizer to recognize.</li>
+<li>encapsulate the whole symbol with <code>' '</code> if it starts with a special symbol
+<div class="highlight"><pre><span></span><code>symbols:
+    - {symbol: ea, type: vowel}
+    - {symbol: ix, type: vowel}
+    - {symbol: dd, type: tap}
+    - {symbol: j, type: fricative}
+    - {symbol: &#39;@r&#39;, type: vowel}
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<h4 id="replacements_4">Replacements<a class="headerlink" href="#replacements_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Replaces certain symbol or sequence of symbols defined in the replacements entry</li>
+<li>supports <code>1:1</code>, <code>1:M</code>, <code>M:1</code>, <code>M:M</code> phoneme replacements
+<div class="highlight"><pre><span></span><code>replacements:
+# 1:1 (one-to-one mappings)
+  - {from: ax, to: ah}
+  - {from: cl, to: q}
+# 1:M (one-to-many mappings) (splitting)
+  - {from: dr, to: [d, r]}
+  - {from: tr, to: [t, sh, r]}
+  - {from: aw, to: [aa, w]}
+# M:1 (many-to-one mappings) (merging)
+  - {from: [ih, ng], to: ing}
+  - {from: [eh, ax, m], to: eam}
+# M:M (many-to-many mappings)
+  - {from: [ih, ng], to: [ix, ng]}
+  - {from: [ay, l], to: [ay, ax, el]}
+
+# format can be like this
+    - from: [ae, n]
+      to: [eh, ax, n]
+    - from: b
+      to: bh
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<h4 id="entries_3">Entries<a class="headerlink" href="#entries_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Add a new dictionary entry to override certain word pronunciations</li>
+<li>no limit to characters as long as it covered by unicode so you can add kana, hangul, hieroglyphics grapheme etc entries to <code>arpasing.yaml</code>
+<div class="highlight"><pre><span></span><code>entries:
+    - {grapheme: hello, phonemes: [hh, ax, l, ow]}
+    - {grapheme: 안녕하세요, phonemes: [aa, n, y, ao, ng, hh, ah, s, eh, y ao]}
+# format can be like this
+    - grapheme: stars
+      phonemes: s, t, aa, r, z
+    - grapheme: drops
+      phonemes: dr, aa, p, s
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h2 id="es-to-ja-spanish-to-japanese-phonemizer">ES to JA (Spanish to Japanese Phonemizer)<a class="headerlink" href="#es-to-ja-spanish-to-japanese-phonemizer" title="Permanent link">&para;</a></h2>
+<h3 id="setup_4">Setup<a class="headerlink" href="#setup_4" title="Permanent link">&para;</a></h3>
+<p>This phonemizer lets you make Japanese voicebanks sing in Spanish. It works similarly to the EN to JA Phonemizer, sharing many of its functions.</p>
+<p>This phonemizer uses the same dictionary as the Spanish Syllable-Based Phonemizer, which you can download <a href="https://github.com/lottev1991/OpenUTAU-Spanish-Dictionary">here</a>. This dictionary should go into OpenUtau's <code>Dictionaries</code> folder; if it doesn't exist, make it. (If a word is missing in the dictionary, or a transcription is incorrect, feel free to push merge requests on the dictionary repo. I am more than willing to expand the word list and correct errors.)</p>
+<h3 id="lyric-input_4">Lyric input<a class="headerlink" href="#lyric-input_4" title="Permanent link">&para;</a></h3>
+<p>Just like in the ES SYL phonemizer, you type in a Spanish word on the first note of the word. This phonemizer will then use Japanese sounds to create the closest match to Spanish sounds. It will use CV, VCV and/or CVVC combinations, depending on what's in the voicebank:</p>
+<h4 id="cv">CV:<a class="headerlink" href="#cv" title="Permanent link">&para;</a></h4>
+<p><img alt="CV example" src="https://i.ibb.co/Vt9kpjJ/Espa-ol-CV.png" /></p>
+<h4 id="cvvc">CVVC:<a class="headerlink" href="#cvvc" title="Permanent link">&para;</a></h4>
+<p><img alt="CVVC example" src="https://i.ibb.co/59Frh5p/Espa-ol-CVVC.png" /></p>
+<h4 id="vcv">VCV:<a class="headerlink" href="#vcv" title="Permanent link">&para;</a></h4>
+<p><img alt="VCV example" src="https://i.ibb.co/4ZmHLYh/Espa-ol-VCV.png" /></p>
+<h3 id="phonetic-input_3">Phonetic input<a class="headerlink" href="#phonetic-input_3" title="Permanent link">&para;</a></h3>
+<p>You can also input lyrics phonetically, this can be done on separate notes as well. Note to write the phonemes in brackets (<code>[]</code>), separated with spaces, otherwise they won't be recognized:</p>
+<p><img alt="Phonetic input in brackets, on separate notes, with spaces in-between" src="https://i.ibb.co/rG5q3vX/Espa-ol-Phonetic.png" /></p>
+<p>There's also the option to input phonetic suggestions after the lyrical input, in brackets after the lyric (this has to be done on the first syllable):</p>
+<p><img alt="Lyric input with phonetic suggestion in brackets" src="https://i.ibb.co/TKj3DH7/Espa-ol-Phonetic-After-Lyric.png" /></p>
+<p>As you can see above, you can type "+" on the successive notes in order to spread the syllables over several notes, instead of just the first one.</p>
+<p>If you want to extend only a specific syllable in a word, you can do that by typing either <code>+*</code> or <code>+~</code> on the next note(s):</p>
+<p><img alt="Syllable extender note example" src="https://i.ibb.co/bsy0dc1/Vowel-Extension.png" /></p>
+<h4 id="phoneme-list_3">Phoneme list<a class="headerlink" href="#phoneme-list_3" title="Permanent link">&para;</a></h4>
+<p>Consonants: b, B, ch, d, D, f, g, G, h, <strong>hh</strong>, j, k, l, m, n, ny, p, r, rr, s, t, w, y, z</p>
+<p>Vowels: a, e, i, o, u</p>
+<p>The "hh"-sound here is used for end breaths and gets mapped to "息". It only works through phonetic input.</p>
+<p>This phonemizer also doesn't use "nh" for "ñ", instead it always uses "ny".</p>
+<p>Please also note that this phonemizer <strong>always uses seseo</strong>, even when you do type a phonetic "z". This is because the Japanese "z" is very different from the Spanish "z":</p>
+<p><img alt="Example of consistent seseo usage" src="https://i.ibb.co/dpRv97s/Always-Seseo.png" /></p>
+<p>If you <em>really</em> wish to use the Japanese "z" for your Spanish (which is usually <strong>not recommended</strong> unless the voicebank in question already has an Iberian Spanish accent), you can double-click on the note in question in the bottom bar to override the alias:</p>
+<p><img alt="Override Alias text box, before applying" src="https://i.ibb.co/KNdC6Wj/Override-Alias-Before.png" />
+<img alt="After applying Override Alias" src="https://i.ibb.co/hD1qWw7/Override-Alias-After.png" /></p>
+<p>You can also do this for other sounds, for instance when you want to use an "l" in the voicebank (the phonemizer defaults to "r" for "l", even with phonetic input).</p>
+<h3 id="rolled-r">Rolled "r"<a class="headerlink" href="#rolled-r" title="Permanent link">&para;</a></h3>
+<p>As we all know, Spanish has a rolled "r"-sound, also known as the "double r". This sound does not appear by default in most Japanese voicebanks (although it does sometimes appear in Japanese speech and occasionally singing). This phonemizer substitutes it with several consecutive "r" notes containing the same initial (semi-)vowel as the main note:</p>
+<p><img alt="Rolled &quot;r&quot; with &quot;full&quot; vowel" src="https://i.ibb.co/7SFxVbG/RolledR1.png" /></p>
+<p><img alt="Rolled &quot;r&quot; with semivowel" src="https://i.ibb.co/ww0mDsw/RolledR2.png" /></p>
+<p>Keep in mind that depending on the accent of the voicebank, the rolled "r" could possibly sound a bit odd. This sadly isn't something that the phonemizer can fix.</p>
+<h3 id="consonant-length-adjustment_1">Consonant length adjustment<a class="headerlink" href="#consonant-length-adjustment_1" title="Permanent link">&para;</a></h3>
+<p>Sometimes, it just so happens that an ending consonant is too long or too short. In that case, you can adjust the length manually by dragging the note at the bottom bar (the exact part is highlighted in the images):</p>
+<h4 id="lengthening">Lengthening:<a class="headerlink" href="#lengthening" title="Permanent link">&para;</a></h4>
+<p><img alt="Lengthening a consonant" src="https://i.ibb.co/j5YD4jL/Consonant-Lengthening.png" /></p>
+<h4 id="shortening">Shortening:<a class="headerlink" href="#shortening" title="Permanent link">&para;</a></h4>
+<p><img alt="Shortening a consonant" src="https://i.ibb.co/4VzxgfX/Consonant-Shortening.png" /></p>
+<p>The exact length is difficult to predict, so you're suggested to do it by ear until the point you think it sounds good.</p>
+<h2 id="vietnamese-cvvcvcv-phonemizer">Vietnamese CVVC/VCV Phonemizer<a class="headerlink" href="#vietnamese-cvvcvcv-phonemizer" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Support marking in Vietnamese</li>
+<li>Extensions include: <br>
+R : exhale at the end of the note <br>
+breath : take a breath</li>
+<li><strong>Vietnamese CVVC Phonemizer</strong>
+<img alt="" src="https://drive.google.com/u/0/uc?id=17PiS964StogOMIXV_8YFCMuUdGJWKPIj&amp;export=download" /></li>
+<li><strong>Vietnamese VCV Phonemizer</strong>
+<img alt="" src="https://drive.google.com/u/0/uc?id=1JT4aPsaaeIPKnXP2P2dVKRdj3Xps38YN&amp;export=download" /></li>
+</ul>
+<h2 id="en-x-sampa-english-x-sampa-phonemizer">EN X-SAMPA (English X-SAMPA phonemizer)<a class="headerlink" href="#en-x-sampa-english-x-sampa-phonemizer" title="Permanent link">&para;</a></h2>
+<p>Compatible reclists
+- <a href="https://tl.tubs.wtf/2020/11/09/delta-eng">Delta-style English Lists</a>
+- <a href="https://wastelandutau.neocities.org/en/overview">Salem-Style English CVVC</a>
+- <a href="https://assbackwardsp.wixsite.com/utaubackwards/reclists">GrayGlish</a>
+- More to be added</p>
+<p><strong>NOTE:</strong> This phonemizer used to be called the "English Delta Phonemizer", but as the scope of the phonemizer has increased, it has been renamed to the more general "English X-SAMPA phonemizer".</p>
+<h3 id="setup_5">Setup<a class="headerlink" href="#setup_5" title="Permanent link">&para;</a></h3>
+<p>This phonemizer is pretty similar to the Teto English phonemizer. However, there are a few important differences:
+- This phonemizer was made to support X-SAMPA-encoded English banks in general, not just Delta banks (and not only Kasane Teto, although her English bank is supported). Some examples are:
+  - Split diphthongs, when applicable (this is a known feature of some Delta reclists);
+  - Some alternate aliasing methods, outside of the Delta scope (e.g. English Vocaloid-style X-SAMPA);
+  - Aliasing fallbacks, in case a voicebank merges some vowels;
+  - Support for spaced CV's (similar to Arpasing/diphonic voicebanks), as in <code>[C V]</code>;
+- This phonemizer accepts VCV for all consonants (including clusters), if the voicebank contains them;
+- This phonemizer has support for some extra sounds that aren't in the dictionary by default, but should be supported through custom dictionaries and/or phonetic hints.</p>
+<h3 id="lyric-input_5">Lyric input<a class="headerlink" href="#lyric-input_5" title="Permanent link">&para;</a></h3>
+<p>You write the word on the first note, then spread the syllables by writing a <code>+</code> on the next notes:</p>
+<p><img alt="Lyrics showcase example with syllable extender notes" src="https://i.ibb.co/K28FqLC/Example.png" /></p>
+<p>If you only want to extend one syllable in the word, you can use either <code>+*</code> or <code>+~</code>:</p>
+<p><img alt="Showcasing syllable extender notes" src="https://i.ibb.co/LPxnnGK/Example2.png" /></p>
+<h3 id="phonetic-input_4">Phonetic input<a class="headerlink" href="#phonetic-input_4" title="Permanent link">&para;</a></h3>
+<p>You can also use phonetic hints after lyrics, you put those in between brackets (<code>[]</code>) with spaces in-between. This is handy when certain phonemes aren't quite right, or for pure stylistic reasons. You write the hint on the first note of the word:</p>
+<p><img alt="Showcasing phonetic hints" src="https://i.ibb.co/6P5wvFD/Example3.png" /></p>
+<p>You can also opt for pure phonetic input instead, it works the same as above except not right after a lyric:</p>
+<p><img alt="Showcasing pure phonetic input" src="https://i.ibb.co/mGPL9g2/Example4.png" /></p>
+<h3 id="split-diphthongs-and-affricates">Split diphthongs and affricates<a class="headerlink" href="#split-diphthongs-and-affricates" title="Permanent link">&para;</a></h3>
+<p>This phonemizer now supports automatic splitting of Diphthongs and affricates, depending on the voicebank:</p>
+<p><img alt="Automatic affricate splitting" src="https://i.ibb.co/QJ5CnHF/Affricate-Splitting.png" /></p>
+<p><strong>Note:</strong> This phonemizer used to have an issue where the second half of a split diphthong had to be treated as if it were a different syllable. However, this problem has since been resolved and this method is no longer necessary, splitting them within the same syllable instead:</p>
+<p><img alt="The phonemizer now splits diphthongs within the same syllable" src="https://i.ibb.co/DMcGKvx/Correct-Diphthong-Splitting.png" /></p>
+<p>If you only want to extend one syllable in the word, you can use either <code>+*</code> or <code>+~</code>:</p>
+<p><img alt="Syllable extender notes" src="https://i.ibb.co/bd4w5NV/Lightning2.png" /></p>
+<h4 id="phoneme-list_4">Phoneme list<a class="headerlink" href="#phoneme-list_4" title="Permanent link">&para;</a></h4>
+<p>Consonants: b, d, f, g, h, j, k, l, m, n, p, r, s, t, v, w, z, 4, D, N, S, T, Z, dZ, tS, ・, _</p>
+<p>Vowels: a, A, @, {, V, O, aU, aI, E, 3, eI, I, i, oU, OI, U, u, Q, Ol, Ql, aUn, e@, eN, IN, e, o, Ar, Qr, Er, Ir, Or, Ur, ir, ur, aIr, aUr, A@, Q@, E@, I@, O@, U@, i@, u@, aI@, aU@, @r, @l, @m, @n, @N, 1, e@m, e@n, y, I\, M, U\, Y, @\, @`\, 3`\, A`\, Q`\, E`\, I`\, O`\, U`\, i`\, u`\, aI`\, aU`\, }, 2, 3\, 6, 7, 8, 9, &amp;, {~\, I~\, aU~\, VI, VU, @U, i:, u:, O:, e@0, E~\, e~\, 3r, ar, or, {l, Al, al, El, Il, il, ul, Ul, mm, nn, ll, NN</p>
+<p>Among the phonemes are:
+- General X-SAMPA vowels. You can find more information about X-SAMPA <a href="https://en.wikipedia.org/wiki/X-SAMPA">here</a>;
+- Sounds used by the UTAU <a href="https://www.supergoodboi.com/peiton.html/">Peiton</a>'s English voicebank, as well any other voicebanks that might use that list. By default, they only work through phonetic input, unless a custom dictionary is created;
+- Sounds used in Salem's S-CVVC English reclist;
+- English Vocaloid-style sounds (including extra sounds found in Vocaloid 4 onward);
+- Canadian raising;
+- Alternate ways for rhoticization and nasalization.</p>
+<p>These extra sounds mostly only work either through phonetic input, or a custom dictionary. However, some automatically work through <code>ValidateAlias()</code> and associated booleans.</p>
+<h4 id="custom-dictionary_1">Custom dictionary<a class="headerlink" href="#custom-dictionary_1" title="Permanent link">&para;</a></h4>
+<p>This phonemizer now has support for custom dictionaries. The dictionary should be named either <code>en-xsampa.yaml</code> or <code>xsampa.yaml</code> (the latter for legacy support/backwards compatibility with existing voicebanks) and be put in the main/top folder of a specific voicebank. For an idea on what a custom dictionary should look like, you can look at the <code>arpasing.yaml</code> file that comes with OpenUtau by default.</p>
+<p><strong>!!IMPORTANT NOTE!!:</strong> Certain X-SAMPA symbols should be contained within single quotes ('') when included in the custom dictionary file, otherwise your dictionary will not load. Some of the affected phonemes are:</p>
+<ul>
+<li><code>{</code> and any phoneme that contains it;</li>
+<li><code>}</code> and any phoneme that contains it;</li>
+<li><code>@</code> and any phoneme starting with it (but not when at the end/center), ex. <code>@l</code> (but not <code>e@</code>);</li>
+<li><code>&amp;</code> and any phoneme that contains it;</li>
+<li>Any phoneme containing a colon (<code>:</code>);</li>
+<li>Any phoneme containing a slash (<code>\</code> or <code>/</code>);</li>
+<li>Some other, non-English/non-default X-SAMPA symbols might also be affected. It is highly recommended to test which specific ones beforehand.</li>
+</ul>
+<p>Note that the Arpabet symbols included by default in the CMU Pronouncing Dictionary can also be used to note down custom words, though for any symbols that aren't included, X-SAMPA notation is required.</p>
+<h3 id="auxiliary-dictionary-files_4">Auxiliary dictionary files:<a class="headerlink" href="#auxiliary-dictionary-files_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<h4 id="symbols_5">Symbols<a class="headerlink" href="#symbols_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Add a new symbol and define its symbol type for the phonemizer to recognize (<code>vowel</code>, <code>stop</code>, <code>affricate</code>, <code>fricative</code>, <code>aspirate</code>, <code>liquid</code>, <code>nasal</code>, <code>semivowel</code>, <code>tail</code>).</li>
+<li><code>affricate</code>'s are prioritized because they produce a sound.</li>
+<li>indicate the phoneme as <code>tail</code> to use them as a trailing tail note.</li>
+<li>encapsulate the whole symbol with <code>' '</code> if it starts with a special symbol.
+<div class="highlight"><pre><span></span><code>symbols:
+  - {symbol: ea, type: vowel}
+  - {symbol: ix, type: vowel}
+  - {symbol: dd, type: tap}
+  - {symbol: j, type: fricative}
+  - {symbol: &#39;@r&#39;, type: vowel}
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<h4 id="fallbacks_3">Fallbacks<a class="headerlink" href="#fallbacks_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Fallbacks missing phoneme/alias to the mapped phoneme/alias.</li>
+<li>supports <code>1:1</code> phoneme mappings only.
+<div class="highlight"><pre><span></span><code>fallbacks:
+# 1:1 (one-to-one mappings)
+  - {from: a, to: A}
+  - {from: ts, to: ch}
+
+# format can be like this
+    - from: b@
+    to: bV
+    - from: b
+    to: bh
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<h4 id="replacements_5">Replacements<a class="headerlink" href="#replacements_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Replaces certain phoneme or sequence of phonemes defined in the replacements entry.</li>
+<li>supports <code>1:1</code>, <code>1:M</code>, <code>M:1</code>, <code>M:M</code> phoneme replacements.
+<div class="highlight"><pre><span></span><code>replacements:
+# 1:1 (one-to-one mappings)
+  - {from: ax, to: ah}
+  - {from: cl, to: q}
+# 1:M (one-to-many mappings) (splitting)
+  - {from: dr, to: [d, r]}
+  - {from: tr, to: [t, sh, r]}
+  - {from: aw, to: [aa, w]}
+# M:1 (many-to-one mappings) (merging)
+  - {from: [ih, ng], to: ing}
+  - {from: [eh, ax, m], to: eam}
+# M:M (many-to-many mappings)
+  - {from: [ih, ng], to: [ix, ng]}
+  - {from: [ay, l], to: [ay, ax, el]}
+
+# format can be like this
+    - from: [ae, n]
+    to: [eh, ax, n]
+    - from: b
+    to: bh
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<h4 id="timings_3">Timings<a class="headerlink" href="#timings_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Defines the certain phoneme to be in this phoneme group's phoneme length.</li>
+<li>Overrides specific alias to be in that length (in seconds).
+<div class="highlight"><pre><span></span><code>timings:
+  - {symbol: dh, value: 1.2}
+  - {symbol: vf, value: 2.8}
+  - {symbol: st, value: 3.5}
+  - {symbol: a r, value: 0.5}
+  - {symbol: e r, value: 0.5}
+  - {symbol: i r, value: 0.5}
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<h4 id="entries_4">Entries<a class="headerlink" href="#entries_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Add a new dictionary entry to override certain word pronunciations.</li>
+<li>no limit to characters as long as it covered by unicode so you can add kana, hangul, hieroglyphics grapheme etc entries to <code>xsampa.yaml</code> or <code>en-xsampa.yaml</code>.
+<div class="highlight"><pre><span></span><code>entries:
+  - {grapheme: hello, phonemes: [hh, ax, l, ow]}
+  - {grapheme: 안녕하세요, phonemes: [aa, n, y, ao, ng, hh, ah, s, eh, y ao]}
+# format can be like this
+  - grapheme: stars
+    phonemes: s, t, aa, r, z
+  - grapheme: drops
+    phonemes: dr, aa, p, s
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h2 id="italian-syllable-based-phonemizer-it-syl">Italian Syllable-Based Phonemizer (IT SYL)<a class="headerlink" href="#italian-syllable-based-phonemizer-it-syl" title="Permanent link">&para;</a></h2>
+<h3 id="setup_6">Setup<a class="headerlink" href="#setup_6" title="Permanent link">&para;</a></h3>
+<p><strong>!!IMPORTANT NOTE!!</strong> This phonemizer is <strong>NOT</strong> to be confused with the older Italian CVVC Phonemizer. The biggest difference is that the Italian Syllable-Based Phonemizer uses a dictionary (see below), whereas the older Italian CVVC Phonemizer is a simple port of the Japanese CVVC Phonemizer. However, both are based upon <a href="https://drive.google.com/file/d/1KHLocNVjC87pW74xFE1NuzW2Mvp1IJrF/view">Makkusan's Italian reclist</a>.</p>
+<p>Downloading a separate dictionary is no longer necessary. Instead, it now uses the in-built Italian G2P. As a result, it can now read words that are not in the dictionary.</p>
+<p>Please note that at this time, this phonemizer only supports the above-mentioned Makkusan method. However, I might add support for other methods if there's demand for it.</p>
+<h3 id="lyric-input_6">Lyric input<a class="headerlink" href="#lyric-input_6" title="Permanent link">&para;</a></h3>
+<p>You write the word on the first note, then spread the syllables by writing a <code>+</code> on the next note(s):</p>
+<p><img alt="Lyrics showcase example with syllable spreading notes" src="https://i.ibb.co/bJPdfLJ/giorno.png" /></p>
+<p><img alt="Showcasing syllable extender notes" src="https://i.ibb.co/v4G5z5S/giorno2.png" /></p>
+<p>Note that falling diphthongs (aka semivowels at the end of a note) should essentially be treated as a separate syllable, since they are treated as regular vowels in both the dictionary and the phonemizer:</p>
+<p><img alt="Showcasing correct treatment of falling diphthongs" src="https://i.ibb.co/8Pbhvq7/Falling-Diphthongs-Correct.png" /></p>
+<p>Whereas if you don't do that, the latter half of the diphthongs will accidentally spread over to the next note:</p>
+<p><img alt="How NOT to do falling diphthongs" src="https://i.ibb.co/qx3mCNx/Falling-Diphthongs-Wrong.png" /></p>
+<p>Note that when followed by a vowel within the same word, the phonemes <code>y</code> (for short <code>i</code>) and <code>w</code> (for short <code>u</code>) are used instead, so this does not apply in those cases.</p>
+<p>Also note that as of writing, the phonemizer sadly does not yet support <code>[V]i R</code> and <code>[V]u R</code> etc. semivowel endings notes (where <code>[V]</code> represents a "full" vowel). This is on the roadmap, but is predicted to be difficult to implement.</p>
+<h3 id="phonetic-input_5">Phonetic input<a class="headerlink" href="#phonetic-input_5" title="Permanent link">&para;</a></h3>
+<p>You can also use phonetic hints after lyrics, you put those in between brackets (<code>[]</code>) with spaces in-between. This is handy when certain phonemes aren't quite right, or for pure stylistic reasons. You write the hint on the first note of the word:</p>
+<p><img alt="Showcasing phonetic hints" src="https://i.ibb.co/RQnndyq/Phonetic-Hint1.png" /></p>
+<p>You can also opt for pure phonetic input instead, it works the same as above except not right after a lyric:</p>
+<p><img alt="Showcasing pure phonetic input" src="https://i.ibb.co/R63rCc3/Phonetic-Hint2.png" /></p>
+<h3 id="phoneme-list_5">Phoneme list<a class="headerlink" href="#phoneme-list_5" title="Permanent link">&para;</a></h3>
+<p>Vowels: a, e, i, o, u, 3, 0</p>
+<p>Consonants: b, d, dz, dZ, f, g, gn, j, k, l, m, M, n, N, p, r, rr, s, S, t, ts, tS, v, w, y, z, <strong>B</strong>, <strong>D</strong>, <strong>G</strong>, <strong>h</strong>, <strong>T</strong>, <strong>x</strong>, <strong>Y</strong>, '</p>
+<p>The bolded phonemes are extra sounds for Spanish. They're not in the dictionary and only work through phonetic input (the latter also counts for <code>'</code>, which represents vocal fry).</p>
+<h2 id="german-diphone-phonemizer">German Diphone Phonemizer<a class="headerlink" href="#german-diphone-phonemizer" title="Permanent link">&para;</a></h2>
+<h3 id="setup_7">Setup<a class="headerlink" href="#setup_7" title="Permanent link">&para;</a></h3>
+<p>This phonemizer works similarly to the Arpasing phonemizer, as it uses the same API. Custom dictionaries are supported. (For an example of what a custom dictionary should look like, take a look at the <code>arpasing.yaml</code> file in the <code>Plugins</code> folder of OpenUtau.)</p>
+<p>This phonemizer uses the in-built German G2P, so downloading an external dictionary is not necessary. However, since the G2P isn't error-free, users are encouraged to override incorrect transcriptions in a custom dictionary, if they encounter any errors.</p>
+<h3 id="lyric-input_7">Lyric input<a class="headerlink" href="#lyric-input_7" title="Permanent link">&para;</a></h3>
+<p>You write the word on the first note, then spread the syllables by writing a <code>+</code> on the next note(s):</p>
+<p><img alt="Lyrics showcase example with syllable spreading notes" src="https://i.ibb.co/Wx0XDZL/Example1.png" /></p>
+<h3 id="phonetic-input_6">Phonetic input<a class="headerlink" href="#phonetic-input_6" title="Permanent link">&para;</a></h3>
+<p>You can also use phonetic hints after lyrics, you put those in between brackets (<code>[]</code>) with spaces in-between. This is handy when certain phonemes aren't quite right, or for pure stylistic reasons. You write the hint on the first note of the word:</p>
+<p><img alt="Showcasing phonetic hints" src="https://i.ibb.co/zb0LLw3/Phonetic-Hint.png" /></p>
+<p>You can also opt for pure phonetic input instead, it works the same as above except not right after a lyric:</p>
+<p><img alt="Showcasing pure phonetic input" src="https://i.ibb.co/VLPBLFQ/Phonetic-Hint-Pure.png" /></p>
+<p>Note that the rhotic sound <code>ex</code> ("bess**er**", "He**r**z") should always be treated as a separate vowel; this is because of the in-built dictionary used by OpenUtau.</p>
+<h3 id="phoneme-list-default">Phoneme list (default)<a class="headerlink" href="#phoneme-list-default" title="Permanent link">&para;</a></h3>
+<p>Vowels: aa, ae, <strong>ah</strong>, ao, aw, ax, ay, ee, eh, <strong>er</strong>, ex, ih, iy, oe, ohh, ooh, oy, ue, uh, uw, yy</p>
+<p>Consonants: b, cc, ch, d, <strong>dh</strong>, f, g, hh, <strong>jh</strong>, k, l, m, n, ng, p, pf, q, <strong>r</strong>, rr, s, sh, t, <strong>th</strong>, ts, v, <strong>w</strong>, x, y, z, <strong>zh</strong></p>
+<p>The <strong>bolded</strong> letters represent foreign sounds, most of which come from English. They represent the same sounds as their Arpasing counterparts (more on that below). They do get used in the German G2P for loanwords, however fallbacks do exist in the phonemizer.</p>
+<h3 id="combined-english-german-diphonic-arpasing-banks">Combined English-German diphonic (Arpasing) banks<a class="headerlink" href="#combined-english-german-diphonic-arpasing-banks" title="Permanent link">&para;</a></h3>
+<p>Due to the easy compatibility between English Arpasing and the German diphonic system, you could make a combined English-German diphonic bank (aka, a German addon for Arpasing, or an English arpasing addon for a German bank). Here is a list of required extra phonemes you will need for this combined bank style:</p>
+<h4 id="german-addon-for-english-bank">German addon for English bank<a class="headerlink" href="#german-addon-for-english-bank" title="Permanent link">&para;</a></h4>
+<h5 id="extra-vowels">Extra vowels:<a class="headerlink" href="#extra-vowels" title="Permanent link">&para;</a></h5>
+<ul>
+<li><code>ax</code> - Schwa (often already present in Arpasing banks);</li>
+<li><code>ee</code> - Long german "e" (e.g. "g**eh**e");</li>
+<li><code>ex</code> - German rhotic vowel (e.g. "bess**ex**"); also used for "r" at the end of syllables/words;</li>
+<li><code>oe</code> - Short German "ö" (e.g. "l**ö**schen");</li>
+<li><code>ohh</code> - Long German "ö" (e.g. "b**ö**se");</li>
+<li><code>ooh</code> - Long German "o" (e.g. "Br**o**t");</li>
+<li><code>ue</code> - Long German "ü" (e.g. "f**ü**r");</li>
+<li><code>yy</code> - Short German "ü" (e.g. "m**ü**ssen").</li>
+</ul>
+<h5 id="extra-consonants">Extra consonants:<a class="headerlink" href="#extra-consonants" title="Permanent link">&para;</a></h5>
+<ul>
+<li><code>cc</code> - Ich-Laut (e.g. "di**ch**");</li>
+<li><code>pf</code> - Bilabial affricate (e.g. "**Pf**effer");</li>
+<li><code>q</code> - Glottal stop (often already present in Arpasing banks);</li>
+<li><code>rr</code> - German "r" at the beginning of words/syllables (e.g. "**R**eise");</li>
+<li><code>ts</code> - Dental affricate (e.g. "**z**u");</li>
+<li><code>x</code> - Acht-Laut (e.g. "ma**ch**en").</li>
+</ul>
+<h4 id="english-addon-for-german-bank">English addon for German bank<a class="headerlink" href="#english-addon-for-german-bank" title="Permanent link">&para;</a></h4>
+<h5 id="extra-vowels_1">Extra vowels:<a class="headerlink" href="#extra-vowels_1" title="Permanent link">&para;</a></h5>
+<ul>
+<li><code>ey</code>;</li>
+<li><code>ow</code>.</li>
+</ul>
+<p>All the other necessary vowels, as well as the required extra consonants, are already listed above. However, any other sound can still be added, e.g. "dx" (dental flap/tap), "el"/"em"/"en" (syllabic consonants; can also be used in German), etc.</p>
+<h2 id="german-vccv-phonemizer">German VCCV Phonemizer<a class="headerlink" href="#german-vccv-phonemizer" title="Permanent link">&para;</a></h2>
+<h3 id="setup_8">Setup<a class="headerlink" href="#setup_8" title="Permanent link">&para;</a></h3>
+<p>This phonemizer was based on the system used for <a href="https://utau.fandom.com/wiki/Felix">Felix German VCCV</a>, which is essentially X-SAMPA. Custom dictionaries are supported. (For an example of what a custom dictionary should look like, take a look at the <code>arpasing.yaml</code> file in the <code>Plugins</code> folder of OpenUtau.)</p>
+<p>This phonemizer uses the in-built German G2P, so downloading an external dictionary is not necessary. However, since the G2P isn't error-free, users are encouraged to override incorrect transcriptions in a custom dictionary, if they encounter any errors.</p>
+<h3 id="lyric-input_8">Lyric input<a class="headerlink" href="#lyric-input_8" title="Permanent link">&para;</a></h3>
+<p>You write the word on the first note, then spread the syllables by writing a <code>+</code> on the next note(s):</p>
+<p><img alt="Lyrics showcase example with syllable spreading notes" src="https://i.ibb.co/Wx0XDZL/Example1.png" /></p>
+<p><strong>Note:</strong> This phonemizer used to have an issue where the second half of a split diphthong had to be treated as if it were a different syllable. However, this problem has since been resolved and this method is no longer necessary, splitting them within the same syllable instead:</p>
+<p><img alt="Split diphthongs working correctly" src="https://i.ibb.co/bHqp9QG/Correct-Splits.png" /></p>
+<p>Note that the rhotic sound <code>6</code> ("bess**er**", "He**r**z") should still always be treated as a vowel; this is because of the in-built dictionary used by OpenUtau.</p>
+<h3 id="phonetic-input_7">Phonetic input<a class="headerlink" href="#phonetic-input_7" title="Permanent link">&para;</a></h3>
+<p>You can also use phonetic hints after lyrics, you put those in between brackets (<code>[]</code>) with spaces in-between. This is handy when certain phonemes aren't quite right, or for pure stylistic reasons. You write the hint on the first note of the word:</p>
+<p><img alt="Showcasing phonetic hints" src="https://i.ibb.co/sRDF1YC/Phonetic-Hint1.png" /></p>
+<p>You can also opt for pure phonetic input instead, it works the same as above except not right after a lyric:</p>
+<p><img alt="Showcasing pure phonetic input" src="https://i.ibb.co/tQPZ93W/Phonetic-Hint2.png" /></p>
+<h3 id="phoneme-list_6">Phoneme list<a class="headerlink" href="#phoneme-list_6" title="Permanent link">&para;</a></h3>
+<p>Vowels: a, 6, e, E, 2, 9, i, I, y, Y, u, U, o, O, @, aU, OY, aI</p>
+<p>Consonants: -, b, C, d, f, g, h, j, k, kh, l, m, n, N, p, ph, R;, s, S, t, th, v, x, z, Z, dZ, ks, pf, st, St, tS, w</p>
+<p>Please note that at this time, custom vowels are not supported in user dictionaries, though custom consonants are.</p>
+<h2 id="korean-to-japanese-phonemizer">Korean-to-Japanese Phonemizer<a class="headerlink" href="#korean-to-japanese-phonemizer" title="Permanent link">&para;</a></h2>
+<h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
+<h4 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h4>
+<p>This phonemizer is for making Japanese banks sing Korean, like so:</p>
+<p><strong>CV (with crossfade):</strong></p>
+<p><img alt="Testing Hangul input with Japanese CV voicebank" src="https://i.ibb.co/DYZ7zz7/Hangul-Test-Cv.png" /></p>
+<p><strong>CVVC:</strong></p>
+<p><img alt="Testing Hangul input with Japanese CVVC voicebank" src="https://i.ibb.co/rdRQk0t/Hangul-Test-Cvvc.png" /></p>
+<p><strong>VCV+CVVC:</strong></p>
+<p><img alt="Testing Hangul input with Japanese VCV+CVVC voicebank" src="https://i.ibb.co/MGDP5YY/Hangul-Test-Mix.png" /></p>
+<p><strong>VCV:</strong></p>
+<p><img alt="Testing Hangul input with Japanese VCV voicebank" src="https://i.ibb.co/HFTF4rb/Hangul-Test-Vcv.png" /></p>
+<p>As you can see, crossfade aliases are supported, this includes final consonants.</p>
+<p>The best result is given with either a CVVC voicebank or a VCV+CVVC mixed voicebank. For CV and VCV, it's advised to adjust the length of the final consonant manually until it sounds good.</p>
+<p>Note that Korean <a href="https://en.wikipedia.org/wiki/Sandhi">sandhi</a> (liaison) rules are not implemented, due to being complicated to code. Because of this, it's advised to use use pronunciation-based spelling for Hangul input. (This is similar to the Korean VCV Phonemizer, on which a lot of the code was based.)</p>
+<p>Instead of Hangul input, phonetic hint is also possible (note that this is based on Japanese phonemes, since those are the ones being used):</p>
+<p><img alt="Testing phonetic hint input" src="https://i.ibb.co/fCTQfWT/Phonetic-Hint.png" /></p>
+<p>Note that diphthongs are treated as a separate vowel:</p>
+<p><img alt="Testing phonetic hint diphthongs" src="https://i.ibb.co/WfN0H6p/Phonetic-Hint2.png" /></p>
+<p>As you can also see, it will use <code>しゃ</code> for this particular instance; this has to do with Korean pronunciation, which has similar <a href="https://en.wikipedia.org/wiki/Palatalization_(phonetics)">palatalization</a> rules as Japanese.</p>
+<h5 id="romaja-based-hangul-qwerty-keyboard-for-windows">Romaja-based Hangul QWERTY keyboard for Windows<a class="headerlink" href="#romaja-based-hangul-qwerty-keyboard-for-windows" title="Permanent link">&para;</a></h5>
+<p>For non-Korean users on Windows who'd like to use Hangul, I can recommend the <a href="http://moogi.new21.org/en/ngs/index.htm">Nalgaeset Input System</a>. This way, you can easily type Hangul with a QWERTY keyboard layout, based on Revised Romanization. (You can also create your own layout, e.g. QWERTZ- or AZERTY-based.) This is also convenient for the other Korean phonemizers.</p>
+<h3 id="mechanism">Mechanism<a class="headerlink" href="#mechanism" title="Permanent link">&para;</a></h3>
+<p>Usually, the phonemizer prioritizes VCV over anything else, however there are a few exceptions:
+- Syllables featuring <em>batchim</em> (final consonants, so essentially closed syllables). It will use a VC alias if present, else it will look for VCV, then a crossfade alias, and finally CV.
+- Fallbacks. Let's just say <code>くぁ</code> is present in the oto, but only as a CV alias. VCV only has e.g. <code>a か</code>. In this case, it will use the CV <code>くぁ</code> over the VCV, due to having more accurate pronunciation. It will also insert a VC if present.</p>
+<h3 id="other-functions">Other functions<a class="headerlink" href="#other-functions" title="Permanent link">&para;</a></h3>
+<h4 id="consonant-velocity">Consonant velocity<a class="headerlink" href="#consonant-velocity" title="Permanent link">&para;</a></h4>
+<p>Similarly to the Japanese CVVC Phonemizer, Japanese Presamp Phonemizer and Chinese CVVC phonemizer, the length of VC (and CC) samples can be changed by changing the consonant velocity of the base CV note.</p>
+<h4 id="extra-sounds">Extra sounds<a class="headerlink" href="#extra-sounds" title="Permanent link">&para;</a></h4>
+<p>The phonemizer supports the following extra sounds: f, v, z, ts, sh</p>
+<h2 id="other-phonemizers">Other phonemizers<a class="headerlink" href="#other-phonemizers" title="Permanent link">&para;</a></h2>
+<p>Here is a list of separately distributed phonemizers for OpenUtau. To install, place the <code>.dll</code> file in the Plugins folder of your OpenUtau installation.</p>
+<ul>
+<li><a href="https://github.com/adlez27/OpenUtau/releases/tag/Cyrilji-0.1.0">Cyrillic Japanese Phonemizer</a> by adlez27</li>
+<li><a href="https://github.com/lottev1991/Korean-CVVC-Plus-Phonemizer/releases">Korean CVVC+ Phonemizer</a> by Lotte V</li>
+<li><a href="https://github.com/adlez27/OpenUtau/releases/tag/SHO-0.1.1">SHO Phonemizer</a> by adlez27</li>
+<li><a href="https://github.com/adlez27/OpenUtau/releases/tag/Teto-0.1.0">Teto English Phonemizer</a>  by adlez27</li>
+<li><a href="https://github.com/Cadlaxa/Syllable-Based-ARPAsing-Phonemizer">Syllable-based ARPAsing Phonemizer (ARPA+)</a> by Cadlaxa</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

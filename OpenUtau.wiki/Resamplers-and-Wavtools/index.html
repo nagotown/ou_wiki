@@ -1,0 +1,2009 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://nagotown.github.io/ou_wiki/OpenUtau.wiki/Resamplers-and-Wavtools/">
+      
+      
+        <link rel="prev" href="../Phonemizers/">
+      
+      
+        <link rel="next" href="../Expressions-%28Flags%29/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Resamplers and Wavtools - OpenUtau Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installing-resamplers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OpenUtau Wiki" class="md-header__button md-logo" aria-label="OpenUtau Wiki" data-md-component="logo">
+      
+  <img src="../../favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OpenUtau Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Resamplers and Wavtools
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nagotown/ou_wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OpenUtau Wiki" class="md-nav__button md-logo" aria-label="OpenUtau Wiki" data-md-component="logo">
+      
+  <img src="../../favicon.png" alt="logo">
+
+    </a>
+    OpenUtau Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nagotown/ou_wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For beginners
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    For beginners
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Keyboard-Shortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keyboard Shortcuts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Phonemizers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phonemizers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resamplers and Wavtools
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resamplers and Wavtools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MacOS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Expressions-%28Flags%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About expressions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Legacy-Plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UTAU Plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Voicebank-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Voicebank development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-note-%E2%80%90-character.yaml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech note ‐ character.yaml
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ENUNU-NNSVS-Support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ENUNU NNSVS Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DiffSinger-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DiffSinger support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VOICEVOX-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VOICEVOX support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release-Notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For Developers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    For Developers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Compiling-from-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiling OpenUtau from source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developing-new-phonemizers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing new phonemizers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Compiling-G2p-Models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiling G2p Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Adding-support-for-a-new-synthesis-engine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding support for a new synthesis engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contributing-to-OpenUtau%27s-localization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing to OpenUtau's localization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../USTX-file-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    USTX file format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%5BPROPOSAL%5D-svs.io-%E2%80%90-singing-voice-synthesis-backend-API/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    [PROPOSAL] svs.io ‐ singing voice synthesis backend API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-note-%E2%80%90-music-is-music%2C-phonetics-is-phonetics-%28also-why-you-don%27t-need-legacy-plugins%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech note ‐ music is music, phonetics is phonetics (also why you don't need legacy plugins)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Known-Bugs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Known bugs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Fork-OpenUtau-and-develop-a-new-editor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MacOS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p>In UTAU, resampler is the core engine that does the major works of synthesis: changing the pitch and duration of the audio sample, and applying flags to the audio. Audio rendered with different resamplers has different sound quality. Different resamplers also provide different set of flags. OpenUtau ships with a resampler, <code>worldline</code>. There are also many third-party resamplers.</p>
+<p>Wavtool is the program that concatenates the audio slices from resampler into the final audio. OpenUtau ships with two wavtools, <code>simple</code> and <code>convergence</code>. There are also many third-party wavtools.</p>
+<h1 id="installing-resamplers">Installing Resamplers<a class="headerlink" href="#installing-resamplers" title="Permanent link">&para;</a></h1>
+<p>After you install resampler, please switch to "CLASSIC" renderer to use the resampler you installed.</p>
+<h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
+<p>Resampler must be an executable (<code>.exe</code>). Resamplers can be placed in subfolders inside the <code>Resamplers</code> folder.
+1. In the OpenUtau folder, locate the resampler folder named <code>Resamplers</code>.
+2. Open the resampler folder and place the resampler in the folder.</p>
+<p>In OpenUtau version 0.1.119 or higher, resamplers can be installed by dragging and dropping the <code>.exe</code> file onto the main OpenUtau window and selecting "Install as resampler".</p>
+<p><img src="https://github.com/stakira/OpenUtau/assets/18076904/1a13d37d-b472-451d-b24a-e984b095bd4a" height="250"></p>
+<h2 id="macos">MacOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h2>
+<p>As of writing this, <a href="https://github.com/stakira/OpenUtau/releases/tag/0.1.565">OpenUtau v0.1.565.0</a> has released with a new feature that allows you to directly run the Wine path without creating wrappers for each individual resampler.</p>
+<p><a href="https://keitaiware.com/post/795232450394587136/resamplers-on-openutau-v015650-for-macos">Tutorial</a></p>
+<p><a href="https://keitaiware.com/post/766063532617973761/resamplers-on-macos">Legacy tutorial</a></p>
+<p><a href="https://github.com/stakira/OpenUtau/pull/1571">Original Pull Request</a></p>
+<p>Before we begin installing resamplers, let’s prepare the environment.</p>
+<p><strong>Section 1, “Installing Homebrew.”</strong></p>
+<p>To install Homebrew you will need to head over to the Homebrew website.</p>
+<p><a href="https://brew.sh/">https://brew.sh/</a></p>
+<p>From here, you will want to copy the installation command, and open Terminal. If you are not familiar with Terminal, it is in your <code>Applications &gt; Utilities &gt; Terminal.</code></p>
+<ol>
+<li>In the Terminal control panel, you will want to paste the installation command into the console. It will begin running the installation.</li>
+<li>The installation will pause and ask for your computer’s passkey. Input the passkey and the installation will continue.</li>
+<li>If you are on Intel, after it installs the, “X code command line tools,” it may run into a fatal error when updating the Homebrew install.</li>
+<li>
+<p>Do not worry, head over to, <code>System Preferences &gt; Security and Privacy</code>, and scroll down until you see, <code>“allow install–sh.”</code> Select OK to continue.</p>
+<p>Now it will run the rest of the install and you have successfully Homebrewed your Mac.</p>
+</li>
+</ol>
+<p><strong>Section 2, “Installing Wine.”</strong></p>
+<p>In order to install Wine, head to the WineHQ website.</p>
+<p><a href="https://github.com/Gcenx/macOS_Wine_builds/releases">https://github.com/Gcenx/macOS_Wine_builds/releases</a></p>
+<ol>
+<li>
+<p>Download Wine Staging from the Github releases page.</p>
+</li>
+<li>
+<p>Drag the Wine Staging .zip to your desktop and extract.</p>
+</li>
+<li>
+<p>After extracting the zip, run the Wine Staging application.</p>
+</li>
+<li>
+<p>The Wine installer will run into an error since it is an external application downloaded from the internet. Head to <code>System Preferences &gt; Security and Privacy,</code> and allow Wine access to run. After this, Wine will be installed to your computer.</p>
+</li>
+</ol>
+<p>After performing these two steps, we will then prepare the environment for the resamplers. Inside of Terminal we will want to begin a new session and run the installation for Wine Crossover.</p>
+<p>If brew command is not found, please refer to this stackoverflow thread.</p>
+<p><a href="https://stackoverflow.com/questions/36657321/after-installing-homebrew-i-get-zsh-command-not-found-brew?__cf_chl_tk=.6wS9HkMioqCJf.di8CXEP0K2TKwciAzq3ODvA_CU3w-1750637980-1.0.1.1-pQaU2.nsx7ketSxJpjiJsNezc8ZDdwWJoEBn4If8gVg">zsh command not found</a>
+<div class="highlight"><pre><span></span><code>    brew tap gcenx/wine
+    brew install --cask --no-quarantine wine-crossover
+</code></pre></div>
+After running these two commands your environment is set!</p>
+<p><strong>Section 3, “Finding your Wine path.”</strong></p>
+<p>Before we install anything, we must find our Wine path. The install location of your Wine will differ between Intel and Silicon. To find your Wine path, open Terminal and run …</p>
+<div class="highlight"><pre><span></span><code>which wine
+</code></pre></div>
+<p>For Intel users, your wine path will either contain 32 or 64.</p>
+<div class="highlight"><pre><span></span><code>/usr/local/bin/wine32on64
+</code></pre></div>
+<p>For Silicon users, your Wine path will be inside homebrew.</p>
+<div class="highlight"><pre><span></span><code>/opt/homebrew/bin/wine
+</code></pre></div>
+<p><strong>Section 4, “Installing Resamplers.“</strong></p>
+<p>To install resamplers, you can head into to the Tested Resamplers and Directories section of this page.</p>
+<p>After installing the resampler of your choice, there are two ways to install. You can drag and drop the .exe into the UI, or, you can head over to tools. From there, you can Install Wavtool/Resampler (.exe)…</p>
+<p>To set the Wine path, do, <code>Command + Shift + G</code>, and paste in your Wine path by right-clicking the text field. </p>
+<p>Return to OpenUTAU, and select, “CLASSIC,” in the resampler field. To the right there will be a cog icon. From here, you will be able to select your downloaded resamplers and wavtools. </p>
+<h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/titinko/macres/releases">Macres</a> provides a native Linux version. Put it into the resamplers folder of OpenUtau.</p>
+<p>To use Windows resamplers into Linux, follow this method:</p>
+<ol>
+<li>Install <a href="https://www.winehq.org/">Wine</a></li>
+<li>Put any Windows resampler to <code>Resamplers</code> folder (should be on <code>~/.local/share/OpenUtau/Resamplers</code>). You can also install it by using <code>Tools &gt; Install Wavtool/Resampler (.exe)</code> in OpenUtau. Choose <code>Install as resampler</code>.</li>
+<li>In OpenUtau, enable wine compatibility by setting wine path in <code>Tools &gt; Preferences &gt; Advanced &gt; Wine Path...</code>. Clicking <code>Detect</code> should automatically pick wine from your <code>$PATH</code>, otherwise click <code>Select</code> to pick it yourself.</li>
+<li>You can now use Windows resamplers in OpenUtau.</li>
+</ol>
+<h1 id="tested-resamplers-and-directories">Tested Resamplers and Directories<a class="headerlink" href="#tested-resamplers-and-directories" title="Permanent link">&para;</a></h1>
+<p>This is a list of all UTAU resamplers tested with OpenUtau.</p>
+<h2 id="windows_1">Windows<a class="headerlink" href="#windows_1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Resampler</th>
+<th>Author</th>
+<th>Resample Manifest</th>
+<th>Additional Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>worldline</td>
+<td>StAkira</td>
+<td></td>
+<td>Built into OpenUtau. Works on all platforms.</td>
+</tr>
+<tr>
+<td><a href="http://z-server.game.coocan.jp/utau/utautop.html#bkh01">bkh01.exe</a></td>
+<td>Zteer</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://utau2008.xrea.jp/2020/engine/">doppeltler32.exe</a></td>
+<td>Ameya</td>
+<td><a href="https://github.com/Cadlaxa/Resampler-Manifests/blob/main/Resampler%20Manifests/doppeltler32.yaml">doppeltler32.yaml</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://utau2008.xrea.jp/2020/engine/">doppeltler64.exe</a></td>
+<td>Ameya</td>
+<td><a href="https://github.com/Cadlaxa/Resampler-Manifests/blob/main/Resampler%20Manifests/doppeltler64.yaml">doppeltler64.yaml</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://custom-made.seesaa.net/article/312529786.html">EFB-GT.exe</a></td>
+<td>Custom.Maid</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>EFB-PB.exe</td>
+<td>Custom.maid</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://utau2008.xrea.jp/2020/engine/f2resamp004.zip">f2resamp32.exe</a></td>
+<td>Ameya</td>
+<td><a href="https://github.com/oxygen-dioxide/openutau-manifests/blob/main/f2resamp.yaml">f2resamp32.yaml</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://utau2008.xrea.jp/2020/engine/f2resamp004.zip">f2resamp64.exe</a></td>
+<td>Ameya</td>
+<td><a href="https://github.com/oxygen-dioxide/openutau-manifests/blob/main/f2resamp.yaml">f2resamp64.yaml</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://utau2008.xrea.jp/downloads/fresamp011.zip">fresamp11.exe</a></td>
+<td>Ameya</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fresamp12.exe</td>
+<td>Ameya</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://utau2008.xrea.jp/downloads/fresamp014.zip">fresamp14.exe</a></td>
+<td>Ameya</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://utau2008.xrea.jp/downloads/fresamp014omp.zip">fresamp14omp.exe</a></td>
+<td>Ameya</td>
+<td></td>
+<td>Ported to OpenMP with faster rendering speed than fresamp14.exe.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/YuzukiTsuru/lessampler/releases/">lessampler.exe</a></td>
+<td>YuzukiTsuru</td>
+<td></td>
+<td><a href="https://github.com/stakira/OpenUtau/wiki/Resamplers-and-Wavtools#compatible-with-adjustments">See additonal notes.</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/titinko/macres/releases">macres.exe</a></td>
+<td>titinko</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>model4.exe</td>
+<td>Ameya</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://bowlroll.net/file/139123">moresampler.exe</a></td>
+<td>Kanru Hua</td>
+<td><a href="https://github.com/Cadlaxa/Resampler-Manifests/blob/main/Resampler%20Manifests/moresampler.yaml">moresampler.yaml</a></td>
+<td><a href="https://github.com/stakira/OpenUtau/wiki/Resamplers-and-Wavtools#compatible-with-adjustments">See adjustments for compatibility.</a></td>
+</tr>
+<tr>
+<td><a href="http://utau2008.xrea.jp/downloads/phavoco010.zip">phavoco.exe</a></td>
+<td>Ameya</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://utau2008.xrea.jp/2020/engine/phaavoco001.zip">phaavoco.exe</a></td>
+<td>Ameya</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>resampler.exe</td>
+<td>Ameya</td>
+<td></td>
+<td>UTAU built-in resampler.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/LovelyA72/SpaceWorld/releases">SpaceWorld_win64.exe</a></td>
+<td>LovelyA72</td>
+<td></td>
+<td><a href="https://github.com/stakira/OpenUtau/wiki/Resamplers-and-Wavtools#compatible-with-adjustments">See adjustments for compatibility.</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/Astel123457/straycat-server">StrayCatRunner.exe</a></td>
+<td>Astel123457</td>
+<td><a href="https://github.com/Cadlaxa/Resampler-Manifests/blob/main/Resampler%20Manifests/StrayCatRunner.yaml">StrayCatRunner.yaml</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/UtaUtaUtau/straycat-rs/">straycat-rs.exe</a></td>
+<td>UtaUtaUtau</td>
+<td><a href="https://github.com/Cadlaxa/Resampler-Manifests/blob/main/Resampler%20Manifests/straycat-rs.yaml">straycat-rs.yaml</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/UtaUtaUtau/straycat">StrayCat.py</a></td>
+<td>UtaUtaUtau</td>
+<td><a href="https://github.com/Cadlaxa/Resampler-Manifests/blob/main/Resampler%20Manifests/straycat.yaml">StrayCat.yaml</a></td>
+<td>Deprecated in place of straycat-rs (above)</td>
+</tr>
+<tr>
+<td><a href="http://scientistb.web.fc2.com/program/">TIPS.exe</a></td>
+<td>ScientistB</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://z-server.game.coocan.jp/utau/utautop.html#tn_fnds">tn_fnds.exe</a></td>
+<td>Zteer</td>
+<td><a href="https://github.com/oxygen-dioxide/openutau-manifests/blob/main/tn_fnds.yaml">tn_fnds.yaml</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/YuzukiTsuru/UDB/releases/tag/0.0.3.1">UDB</a></td>
+<td>YuzukiTsuru</td>
+<td></td>
+<td>UDB means UTAU Debug Engine.</td>
+</tr>
+<tr>
+<td><a href="http://ackiesound.ifdef.jp/download.html#vs4u">vs4u.exe</a></td>
+<td>AckieSound</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://utau2008.xrea.jp/downloads/w4u001.zip">w4u.exe</a></td>
+<td>Zany</td>
+<td><a href="https://github.com/oxygen-dioxide/openutau-manifests/blob/main/world4utau.yaml">w4u.yaml</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://custom-made.seesaa.net/article/312530509.html">WARP.exe</a></td>
+<td>Custom.Maid</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://utaforum.net/threads/world4utau-update.20035/">wn4u.exe</a></td>
+<td>Zany</td>
+<td></td>
+<td><a href="https://github.com/stakira/OpenUtau/wiki/Resamplers-and-Wavtools#compatible-with-adjustments">See adjustments for compatibility.</a></td>
+</tr>
+<tr>
+<td><a href="https://bowlroll.net/file/203018">young3.exe</a></td>
+<td>Zany</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="compatible-with-adjustments">Compatible with adjustments<a class="headerlink" href="#compatible-with-adjustments" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://bowlroll.net/file/139123">moresampler.exe</a></li>
+<li>Add <code>moresampler.exe</code> and the default <code>moreconfig.txt</code> to the <code>Resamplers</code> folder.</li>
+<li>Add <code>moresampler.exe</code> to <code>Wavtools</code> folder without <code>moreconfig.txt</code>.</li>
+<li>Moresampler should now function as either resampler only, or as both wavtool and resampler.</li>
+<li>If you're using simple/convergence wavtool and encounter slow rendering times on macOS (possibly other OS too), modify <code>moreconfig.txt</code> and switch <code>multithread-synthesis</code> to <code>off</code>.</li>
+<li><a href="../SpaceWorld_win64.exe" title="https://github.com/LovelyA72/SpaceWorld/releases">https://github.com/LovelyA72/SpaceWorld/releases</a> and <a href="../wn4u.exe" title="https://utaforum.net/threads/world4utau-update.20035/">https://utaforum.net/threads/world4utau-update.20035/</a><ul>
+<li>May experience issues if the voicebank is missing any frq files. SpaceWorld version 1.0.1 will not crash in the event of a missing frq file.</li>
+</ul>
+</li>
+<li><a href="../lessampler" title="https://github.com/YuzukiTsuru/lessampler/releases/">https://github.com/YuzukiTsuru/lessampler/releases/</a><ul>
+<li>In development, lack of flag support</li>
+<li>Oversized Audio Model Attention</li>
+</ul>
+</li>
+</ul>
+<h2 id="macos_1">MacOS<a class="headerlink" href="#macos_1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Resampler</th>
+<th>Author</th>
+<th>Resample Manifest</th>
+<th>Additional Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>worldline</td>
+<td>StAkira</td>
+<td></td>
+<td>Built into OpenUtau. Works on all platforms.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/titinko/macres/releases">macres</a></td>
+<td>titinko</td>
+<td><a href="">macres.yaml</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/UtaUtaUtau/straycat-rs/">straycat-rs.exe</a></td>
+<td>UtaUtaUtau</td>
+<td><a href="https://github.com/Cadlaxa/Resampler-Manifests/blob/main/Resampler%20Manifests/straycat-rs.yaml">straycat-rs.yaml</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="linux_1">Linux<a class="headerlink" href="#linux_1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Resampler</th>
+<th>Author</th>
+<th>Resample Manifest</th>
+<th>Additional Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>worldline</td>
+<td>StAkira</td>
+<td></td>
+<td>Built into OpenUtau. Works on all platforms.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/titinko/macres/releases">macres</a></td>
+<td>titinko</td>
+<td><a href="">macres.yaml</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/UtaUtaUtau/straycat-rs/">straycat-rs.exe</a></td>
+<td>UtaUtaUtau</td>
+<td><a href="https://github.com/Cadlaxa/Resampler-Manifests/blob/main/Resampler%20Manifests/straycat-rs.yaml">straycat-rs.yaml</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="using-multiple-resamplers">Using multiple resamplers:<a class="headerlink" href="#using-multiple-resamplers" title="Permanent link">&para;</a></h2>
+<p>Move to <a href="https://github.com/stakira/OpenUtau/wiki/Expressions-(Flags)#eng-resampler-engine">the flags section of this wiki</a> for more information.</p>
+<h1 id="resampler-manifest">Resampler Manifest<a class="headerlink" href="#resampler-manifest" title="Permanent link">&para;</a></h1>
+<p>A Resampler Manifest is a YAML file that manages expressions supported or unsupported by each resampler.<br />
+The Resampler Manifest primarily serves two purposes:
+- Enables batch addition of supported flags to a project using the <code>Add all expressions suggested by renderers</code> button in the <code>Expressions</code> editor.
+<img width="453" alt="image" src="https://user-images.githubusercontent.com/54425948/227085816-4cced732-98dd-4c76-bc40-9a94f971a066.png"></p>
+<ul>
+<li>Disable expressions not listed in this file to account for cases where each resampler has flags with different default values, maximum/minimum values, or effects.</li>
+</ul>
+<h2 id="create-resampler-manifest">Create Resampler Manifest<a class="headerlink" href="#create-resampler-manifest" title="Permanent link">&para;</a></h2>
+<p>Resampler manifests should have the same name as the resampler executable, stored in the same folder. The manifest must have a <code>.yaml</code> file extension. For example, the resampler manifest for <code>moresampler.exe</code> should be <code>moresampler.yaml</code> located in the same folder with <code>moresampler.exe</code>.</p>
+<p>Below is a full example of a resampler manifest for Moresampler. To create a resampler manifest with OpenUtau, add the resampler's expressions to any <code>.ustx</code> project file. Open the project file in a text editor and copy the <code>expressions:</code> section into a blank manifest file.
+<div class="highlight"><pre><span></span><code><span class="nt">expressions</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">gen</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Gender Factor</span>
+<span class="w">    </span><span class="nt">abbr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gen</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Numerical</span>
+<span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-100</span>
+<span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">is_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">g</span>
+<span class="w">  </span><span class="nt">mbre</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Breathiness (Moresampler)</span>
+<span class="w">    </span><span class="nt">abbr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mbre</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Numerical</span>
+<span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-100</span>
+<span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">is_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mb</span>
+<span class="w">  </span><span class="nt">tens</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Tension</span>
+<span class="w">    </span><span class="nt">abbr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tens</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Numerical</span>
+<span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-100</span>
+<span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">is_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mt</span>
+<span class="w">  </span><span class="nt">pit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pitch deviation (flag)</span>
+<span class="w">    </span><span class="nt">abbr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pit</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Numerical</span>
+<span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1200</span>
+<span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1200</span>
+<span class="w">    </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">is_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">t</span>
+<span class="w">  </span><span class="nt">pkcp</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Peak Compressor</span>
+<span class="w">    </span><span class="nt">abbr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pkcp</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Numerical</span>
+<span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">86</span>
+<span class="w">    </span><span class="nt">is_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">P</span>
+<span class="w">  </span><span class="nt">amp</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Amplitude Modulation</span>
+<span class="w">    </span><span class="nt">abbr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">amp</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Numerical</span>
+<span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-100</span>
+<span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">is_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A</span>
+<span class="w">  </span><span class="nt">cons</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unvoiced Consonant Gain</span>
+<span class="w">    </span><span class="nt">abbr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cons</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Numerical</span>
+<span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-20</span>
+<span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">is_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">b</span>
+<span class="w">  </span><span class="nt">fstr</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Force Stretch</span>
+<span class="w">    </span><span class="nt">abbr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fstr</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Options</span>
+<span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">is_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">options</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;&#39;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">e</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Me</span>
+<span class="w">  </span><span class="nt">opn</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Openness</span>
+<span class="w">    </span><span class="nt">abbr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opn</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Numerical</span>
+<span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-100</span>
+<span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">is_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mo</span>
+<span class="w">  </span><span class="nt">res</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resonance</span>
+<span class="w">    </span><span class="nt">abbr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">res</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Numerical</span>
+<span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-100</span>
+<span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">is_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mr</span>
+<span class="w">  </span><span class="nt">dry</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dryness</span>
+<span class="w">    </span><span class="nt">abbr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dry</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Numerical</span>
+<span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-100</span>
+<span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">is_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Md</span>
+<span class="w">  </span><span class="nt">cors</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Coarseness</span>
+<span class="w">    </span><span class="nt">abbr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cors</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Numerical</span>
+<span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">is_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MC</span>
+<span class="w">  </span><span class="nt">grwl</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Growl</span>
+<span class="w">    </span><span class="nt">abbr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">grwl</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Numerical</span>
+<span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">is_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MG</span>
+<span class="w">  </span><span class="nt">dist</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Distortion</span>
+<span class="w">    </span><span class="nt">abbr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dist</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Numerical</span>
+<span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">is_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MD</span>
+<span class="w">  </span><span class="nt">stbl</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Stabilization</span>
+<span class="w">    </span><span class="nt">abbr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stbl</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Numerical</span>
+<span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">    </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">is_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ms</span>
+<span class="w">  </span><span class="nt">mint</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Model Interpolation</span>
+<span class="w">    </span><span class="nt">abbr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mint</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Numerical</span>
+<span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">default_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">is_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mm</span>
+</code></pre></div>
+To disable flags not listed, add a line <code>expression_filter: true</code> at the beginning or end of the file.</p>
+<h1 id="installing-wavtools">Installing Wavtools<a class="headerlink" href="#installing-wavtools" title="Permanent link">&para;</a></h1>
+<h2 id="windows_2">Windows<a class="headerlink" href="#windows_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>On your unzipped OpenUtau folder, locate the wavtool folder named <code>Wavtools</code>.</li>
+<li>Open the wavtool folder and place the downloaded wavtool on the folder.</li>
+</ol>
+<p>In OpenUtau version 0.1.119 or higher, wavtools can be installed by dragging and dropping the <code>.exe</code> file onto the main OpenUtau window and selecting "Install as wavtool".</p>
+<p><img src="https://github.com/stakira/OpenUtau/assets/18076904/1a13d37d-b472-451d-b24a-e984b095bd4a" height="250"></p>
+<h2 id="macos-linux">macOS / Linux<a class="headerlink" href="#macos-linux" title="Permanent link">&para;</a></h2>
+<p>In OpenUtau 0.1.560 or higher, external Windows wavtools are now supported on macOS and Linux.</p>
+<ol>
+<li>Install Wine (follow the previous guide under macOS/Linux resamplers)</li>
+<li>In OpenUtau, enable wine compatibility by setting wine path in <code>Tools &gt; Preferences &gt; Advanced &gt; Wine Path...</code>. Clicking <code>Detect</code> should automatically pick wine from your <code>$PATH</code>, otherwise click <code>Select</code> to pick it yourself. (skip if you already did this)</li>
+<li>Install Windows wavtools (e.g. <code>wavtool.exe</code>) by using <code>Tools &gt; Install Wavtool/Resampler (.exe)</code>. You can drag and drop the .exe into OpenUtau window on macOS. Choose <code>Install as wavtool</code>.</li>
+<li>You can now use Windows wavtools in OpenUtau</li>
+</ol>
+<p>Do note that only Windows wavtools are supported, no support for external native wavtools at the moment.</p>
+<h1 id="tested-wavtools-and-directories">Tested Wavtools and Directories<a class="headerlink" href="#tested-wavtools-and-directories" title="Permanent link">&para;</a></h1>
+<p>Below is a list of all UTAU wavtools tested with OpenUtau.</p>
+<table>
+<thead>
+<tr>
+<th>Wavtool</th>
+<th>Author</th>
+<th>Additonal Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>simple</td>
+<td>StAkira</td>
+<td>Built into OpenUtau. Works on all platforms.</td>
+</tr>
+<tr>
+<td>convergence</td>
+<td>StAkira</td>
+<td>Also built into OpenUtau. Uses phase compensation.</td>
+</tr>
+<tr>
+<td><a href="https://bowlroll.net/file/139123">moresampler.exe</a></td>
+<td>Kanru Hua</td>
+<td><a href="https://github.com/stakira/OpenUtau/wiki/Resamplers-and-Wavtools#compatible-with-adjustments">See adjustments for compatibility.</a></td>
+</tr>
+<tr>
+<td><a href="http://utau2008.xrea.jp/2020/engine/wavtool64.zip">wavtool64</a></td>
+<td>Ameya</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.mediafire.com/file/1iwrak88c6xzb87/wavtool4vcv20141202.zip/file">wavtool4vcv</a></td>
+<td>nmasao</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
