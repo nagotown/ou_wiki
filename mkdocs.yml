@@ -35,8 +35,9 @@ nav:
 
 theme:
   name: material
-  favicon: material/music-note-outline
-  logo: material/music-note-outline
+  icon:
+    favicon: material/music-note-outline
+    logo: material/music-note-outline
   palette:
     - scheme: slate
       primary: custom
