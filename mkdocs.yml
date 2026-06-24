@@ -1,0 +1,74 @@
+site_name: OpenUtau Wiki
+site_url: https://open.utau.info
+
+nav:
+  - OpenUtau.wiki/Home.md
+  - For beginners:
+    - OpenUtau.wiki/Tutorials.md
+    - OpenUtau.wiki/Install.md
+    - OpenUtau.wiki/Getting-Started.md
+    - OpenUtau.wiki/FAQ.md
+    - OpenUtau.wiki/Keyboard-Shortcuts.md
+  - Basics:
+    - OpenUtau.wiki/Phonemizers.md
+    - OpenUtau.wiki/Resamplers-and-Wavtools.md
+    - OpenUtau.wiki/Expressions-(Flags).md
+    - OpenUtau.wiki/Legacy-Plugins.md
+  - Advanced:
+    - OpenUtau.wiki/Voicebank-development.md
+    - OpenUtau.wiki/tech-note-‐-character.yaml.md
+    - OpenUtau.wiki/ENUNU-NNSVS-Support.md
+    - OpenUtau.wiki/Diffsinger-support.md
+    - OpenUtau.wiki/VOICEVOX-support.md
+    - OpenUtau.wiki/Release-Notes.md
+  - For Developers:
+    - OpenUtau.wiki/Compiling-from-source.md
+    - OpenUtau.wiki/Developing-new-phonemizers.md
+    - OpenUtau.wiki/Compiling-G2p-Models.md
+    - OpenUtau.wiki/Adding-support-for-a-new-synthesis-engine.md
+    - OpenUtau.wiki/Contributing-to-OpenUtau's-localization.md
+    - OpenUtau.wiki/USTX-file-format.md
+    - OpenUtau.wiki/[PROPOSAL]-svs.io-‐-singing-voice-synthesis-backend-API.md
+    - OpenUtau.wiki/tech-note-‐-music-is-music,-phonetics-is-phonetics-(also-why-you-don't-need-legacy-plugins).md
+    - OpenUtau.wiki/Known-Bugs.md
+    - OpenUtau.wiki/Fork-OpenUtau-and-develop-a-new-editor.md
+
+theme:
+  name: material
+  favicon: material/music-note-outline
+  logo: material/music-note-outline
+  palette:
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+  features:
+    - navigation.sections
+extra_css:
+  - stylesheets/extra.css
+plugins:
+  - search
+  - ezlinks
+  - gh-admonitions
+  - redirects:
+      redirect_maps:
+        'index.md': 'OpenUtau.wiki/Home.md'
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
