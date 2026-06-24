@@ -26,5 +26,5 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material 
-      - run: pip install mkdocs-redirects mkdocs-github-admonitions-plugin mkdocs-wikilinks-plugin
+      - run: pip install "mkdocs-material[imaging]" mkdocs-redirects mkdocs-github-admonitions-plugin mkdocs-wikilinks-plugin
       - run: mkdocs gh-deploy --force
