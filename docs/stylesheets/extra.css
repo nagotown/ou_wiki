@@ -1,8 +1,8 @@
 :root  > * {
   /* primary */
-  --md-primary-fg-color:               #4EA6EA;
-  --md-primary-fg-color--light:        #4EA6EA;
-  --md-primary-fg-color--dark:         #4EA6EA;
+  --md-primary-fg-color:               #2e90db;
+  --md-primary-fg-color--light:        #90CAF9;
+  --md-primary-fg-color--dark:         #1E88E5;
   --md-primary-bg-color:               #ffffff;
   --md-primary-bg-color--light:        #ffffff;
   /* accent */
