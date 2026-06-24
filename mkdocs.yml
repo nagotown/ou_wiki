@@ -1,6 +1,6 @@
 site_name: OpenUtau Wiki
 site_url: https://nagotown.github.io/ou_wiki/
-repo_url: 
+repo_url: https://github.com/nagotown/ou_wiki/
 
 nav:
   - OpenUtau.wiki/Home.md
